@@ -60,8 +60,8 @@ class TR3DRoofsDataset(Dataset):
             data = np.loadtxt(self.fns[index]).astype(np.float32)
             point_set = data[:, 0:3] # already normalized
             roof_type = data[:, 3].astype(np.int32)
-            sem_seg = data[:, 4].astype(np.int32)
-            inst_seg = data[:, 5].astype(np.int32)
+            inst_seg = data[:, 4].astype(np.int32)
+            sem_seg = data[:, 5].astype(np.int32)
 
             # TODO: only store the last cache_size points
             if len(self.cache) < self.cache_size:
