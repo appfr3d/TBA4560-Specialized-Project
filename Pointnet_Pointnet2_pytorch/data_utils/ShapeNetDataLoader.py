@@ -29,6 +29,8 @@ class PartNormalDataset(Dataset):
         self.cat = {k: v for k, v in self.cat.items()}
         self.classes_original = dict(zip(self.cat, range(len(self.cat))))
 
+        print(self.classes_original)
+
         if not class_choice is  None:
             self.cat = {k:v for k,v in self.cat.items() if k in class_choice}
         # print(self.cat)
@@ -92,8 +94,11 @@ class PartNormalDataset(Dataset):
         else:
             fn = self.datapath[index]
             cat = self.datapath[index][0]
+            print('cat', cat)
             cls = self.classes[cat]
+            print('cls before', cls)
             cls = np.array([cls]).astype(np.int32)
+            print('cls after ', cls)
             data = np.loadtxt(fn[1]).astype(np.float32)
             if not self.normal_channel:
                 point_set = data[:, 0:3]
@@ -114,5 +119,18 @@ class PartNormalDataset(Dataset):
     def __len__(self):
         return len(self.datapath)
 
+# Test implementation
+if __name__ == '__main__':
+    import torch
 
+
+    data_root = 'data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
+    npoints = 1024
+    data = PartNormalDataset(root=data_root, npoints=1024, split='trainval')
+    DataLoader = torch.utils.data.DataLoader(data, batch_size=12, shuffle=True)
+    for points, label, target in DataLoader:
+        print('points:', points.shape)
+        print('label :', label.shape)
+        print('target:', target.shape)
+        break
 

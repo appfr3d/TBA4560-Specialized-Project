@@ -4,6 +4,8 @@ import ctypes as ct
 import cv2
 import sys
 import os
+import importlib
+import torch
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 showsz = 800
@@ -208,18 +210,29 @@ if __name__ == '__main__':
     sys.path.append(BASE_DIR)
     sys.path.append(os.path.join(ROOT_DIR, 'data_utils'))
 
-    from ShapeNetDataLoader import PartNormalDataset
-    root = '../data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
-    dataset = PartNormalDataset(root = root, npoints=2048, split='test', normal_channel=False, class_choice=opt.category)
-    idx = np.random.randint(0, len(dataset))
-    data = dataset[idx]
-    point_set, _, seg = data
-    choice = np.random.choice(point_set.shape[0], opt.npoints, replace=True)
-    point_set, seg = point_set[choice, :], seg[choice]
-    seg = seg - seg.min()
-    gt = cmap[seg, :]
-    pred = cmap[seg, :]
-    showpoints(point_set, gt, c_pred=pred, waittime=0, showrot=False, magnifyBlue=0, freezerot=False,
-               background=(255, 255, 255), normalizecolor=True, ballradius=opt.ballradius)
+    from TR3DRoofsDataLoader import TR3DRoofsDataset
+
+    root = '../data/tr3d_roof_segmented_dataset/'
+    dataset = TR3DRoofsDataset(root = root, npoints=2048, split='viz')
+
+    '''MODEL LOADING'''
+    log_dir = 'pointnet2_part_seg_msg_tr3d'
+    experiment_dir = 'log/part_seg/' + log_dir
+    model_name = os.listdir(experiment_dir + '/logs')[0].split('.')[0]
+    MODEL = importlib.import_module(model_name)
+    classifier = MODEL.get_model(5).cuda()
+    checkpoint = torch.load(str(experiment_dir) + '/checkpoints/best_model.pth')
+    classifier.load_state_dict(checkpoint['model_state_dict'])
+
+    for idx in range(len(dataset)):
+        data = dataset[idx]
+        point_set, _, seg = data
+        choice = np.random.choice(point_set.shape[0], opt.npoints, replace=True)
+        point_set, seg = point_set[choice, :], seg[choice]
+        seg = seg - seg.min()
+        gt = cmap[seg, :]
+        pred = cmap[seg, :]
+        showpoints(point_set, gt, c_pred=pred, waittime=0, showrot=False, magnifyBlue=0, freezerot=False,
+                background=(255, 255, 255), normalizecolor=True, ballradius=opt.ballradius)
 
 

@@ -21,12 +21,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'Flat': [1], 'Hipped': [2], 'Gabled': [3], 'Corner Element': [4], 'T-Element': [5], 'Cross Element': [6], 'Combination': [7]}
-seg_label_to_cat = {}  # {1:Flat, 2:Hipped, ...7:Combination}
+seg_classes = {'Roof': [0,1,2,3,4,5,6,7,8,9,10,11]}
+seg_label_to_cat = {}  # {0:Roof, 1:Roof, ...11:Roof}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
-
 
 def inplace_relu(m):
     classname = m.__class__.__name__
@@ -103,9 +102,9 @@ def main(args):
     log_string("The number of training data is: %d" % len(TRAIN_DATASET))
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
-    # TODO: check if num classes i scorrect, because what about combinations of roof types...
-    num_classes = 6 # roof types
-    num_inst = 11   # roof plane shapes
+    # TODO: check if num classes is correct, because what about combinations of roof types...
+    num_classes = 1 # roof types
+    num_inst = 12   # roof plane shapes
 
     '''MODEL LOADING'''
     MODEL = importlib.import_module(args.model)
@@ -210,24 +209,22 @@ def main(args):
         # Everything in the with-block below should be placed in a test_instseg.py file as well.
         # only exeption is that test_instseg.py should also have a voting_pool (see line 108 in test_partseg.py)
         with torch.no_grad():
-            test_metrics = {}
-            total_correct = 0
+            test_metrics = {} # keep
+            total_correct = 0 
             total_seen = 0
             total_seen_class = [0 for _ in range(num_inst)]
             total_correct_class = [0 for _ in range(num_inst)]
             shape_ious = {cat: [] for cat in seg_classes.keys()}
-            # seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
 
-            # for cat in seg_classes.keys():
-            #     for label in seg_classes[cat]:
-            #         seg_label_to_cat[label] = cat
+            inst_cov = {cat: [] for cat in seg_classes.keys()}
+            all_mean_cov = [[] for _ in range(num_inst)]
+            all_mean_weighted_cov = [[] for _ in range(num_inst)]
 
             classifier = classifier.eval()
 
             # TODO: check this file for inspiration to calculate mCov, mWCov, mPrec and mRec
             # https://github.com/dlinzhao/JSNet/blob/master/models/JISS/eval_iou_accuracy.py from line 64
             # Can use this file as this part is equal to the test/eval part.
-
             for batch_id, (points, label, target) in tqdm(enumerate(testDataLoader), total=len(testDataLoader), smoothing=0.9):
                 cur_batch_size, NUM_POINT, _ = points.size()
 
@@ -240,8 +237,6 @@ def main(args):
                 cur_pred_val = seg_pred.cpu().data.numpy()
                 cur_pred_val_logits = cur_pred_val
                 cur_pred_val = np.zeros((cur_batch_size, NUM_POINT)).astype(np.int32)
-
-                # Check shape of cur_pred_val_logits... should be (12, 1024)
 
                 # Get target values
                 target = target.cpu().data.numpy()
@@ -260,6 +255,29 @@ def main(args):
                     total_seen_class[l] += np.sum(target == l)
                     total_correct_class[l] += (np.sum((cur_pred_val == l) & (target == l)))
 
+                # instance mucov & mwcov
+
+                # TODO: Mace this a correct cov calculation
+                for i in range(cur_batch_size):
+                    segp = cur_pred_val[i, :]
+                    segl = target[i, :]
+                    cat = seg_label_to_cat[segl[0]]
+                    inst_covs = [0.0 for _ in range(len(seg_classes[cat]))]
+
+                    for l in seg_classes[cat]:
+                        sum_cov = 0
+                        mean_cov = 0
+                        mean_weighted_cov = 0
+                        num_gt_points = 0
+                        
+                        if (np.sum(segl == l) == 0) and (
+                                np.sum(segp == l) == 0):  # inst is not present, no prediction as well
+                            inst_covs[l - seg_classes[cat][0]] = 1.0
+                        else:
+                            # This mus be corrected.
+                            inst_covs[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
+                                np.sum((segl == l) | (segp == l)))
+
                 for i in range(cur_batch_size):
                     segp = cur_pred_val[i, :]
                     segl = target[i, :]
@@ -273,6 +291,9 @@ def main(args):
                             part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                                 np.sum((segl == l) | (segp == l)))
                     shape_ious[cat].append(np.mean(part_ious))
+
+            all_inst_cov = []
+
 
             all_shape_ious = []
             for cat in shape_ious.keys():

@@ -15,22 +15,17 @@ import numpy as np
 
 from pathlib import Path
 from tqdm import tqdm
-from data_utils.ShapeNetDataLoader import PartNormalDataset
-from models.pointnet2_utils import PointNetDataParallel
+from data_utils.TR3DRoofsDataLoader import TR3DRoofsDataset
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = BASE_DIR
 sys.path.append(os.path.join(ROOT_DIR, 'models'))
 
-seg_classes = {'Earphone': [16, 17, 18], 'Motorbike': [30, 31, 32, 33, 34, 35], 'Rocket': [41, 42, 43],
-               'Car': [8, 9, 10, 11], 'Laptop': [28, 29], 'Cap': [6, 7], 'Skateboard': [44, 45, 46], 'Mug': [36, 37],
-               'Guitar': [19, 20, 21], 'Bag': [4, 5], 'Lamp': [24, 25, 26, 27], 'Table': [47, 48, 49],
-               'Airplane': [0, 1, 2, 3], 'Pistol': [38, 39, 40], 'Chair': [12, 13, 14, 15], 'Knife': [22, 23]}
-seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
+seg_classes = {'Roof': [0,1,2,3,4]}
+seg_label_to_cat = {}  # {0:Roof, 1:Roof, ...4:Roof}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
-
 
 def inplace_relu(m):
     classname = m.__class__.__name__
@@ -59,8 +54,6 @@ def parse_args():
     parser.add_argument('--normal', action='store_true', default=False, help='use normals')
     parser.add_argument('--step_size', type=int, default=20, help='decay step for lr decay')
     parser.add_argument('--lr_decay', type=float, default=0.5, help='decay rate for lr decay')
-    parser.add_argument('--multi_gpu', action='store_true', default=False, help='use multiple GPUs')
-
     return parser.parse_args()
 
 
@@ -100,27 +93,25 @@ def main(args):
     log_string('PARAMETER ...')
     log_string(args)
 
-    root = 'data/shapenetcore_partanno_segmentation_benchmark_v0_normal/'
+    root = 'data/tr3d_roof_segmented_dataset/'
 
-    TRAIN_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='trainval', normal_channel=args.normal)
+    TRAIN_DATASET = TR3DRoofsDataset(root=root, npoints=args.npoint, split='trainval', seg_type="sem")
     trainDataLoader = torch.utils.data.DataLoader(TRAIN_DATASET, batch_size=args.batch_size, shuffle=True, num_workers=10, drop_last=True)
-    TEST_DATASET = PartNormalDataset(root=root, npoints=args.npoint, split='test', normal_channel=args.normal)
+    TEST_DATASET = TR3DRoofsDataset(root=root, npoints=args.npoint, split='test', seg_type="sem")
     testDataLoader = torch.utils.data.DataLoader(TEST_DATASET, batch_size=args.batch_size, shuffle=False, num_workers=10)
     log_string("The number of training data is: %d" % len(TRAIN_DATASET))
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
-    num_classes = 16
-    num_part = 50
+    num_classes = 1 # Only Roof
+    num_part = 5 # Each plane is in one of the five shapes.
 
     '''MODEL LOADING'''
     MODEL = importlib.import_module(args.model)
     shutil.copy('models/%s.py' % args.model, str(exp_dir))
     shutil.copy('models/pointnet2_utils.py', str(exp_dir))
 
-    original_model = MODEL.get_model(num_part, normal_channel=args.normal).cuda()
+    classifier = MODEL.get_model(num_part, normal_channel=args.normal).cuda()
     criterion = MODEL.get_loss().cuda()
-
-    classifier = original_model
     
     classifier.apply(inplace_relu)
 
@@ -168,16 +159,6 @@ def main(args):
     best_class_avg_iou = 0
     best_inctance_avg_iou = 0
 
-
-    if args.multi_gpu:
-        # NB: Does not work yet...
-        os.environ['MASTER_ADDR'] = 'localhost'
-        os.environ['MASTER_PORT'] = '5678'
-        gpu_ids = list(range(torch.cuda.device_count()))
-        torch.distributed.init_process_group('nccl', rank=gpu_ids[0], world_size=len(gpu_ids))
-        classifier = PointNetDataParallel(original_model, device_ids=gpu_ids, output_device=gpu_ids[0])
-
-
     for epoch in range(start_epoch, args.epoch):
         mean_correct = []
 
@@ -193,9 +174,7 @@ def main(args):
         print('BN momentum updated to: %f' % momentum)
         classifier = classifier.apply(lambda x: bn_momentum_adjust(x, momentum))
 
-        print('before train', type(classifier))
         classifier.train()
-        print('after train', type(classifier))
 
         '''learning one epoch'''
         for i, (points, label, target) in tqdm(enumerate(trainDataLoader), total=len(trainDataLoader), smoothing=0.9):
@@ -208,12 +187,7 @@ def main(args):
             points, label, target = points.float().cuda(), label.long().cuda(), target.long().cuda()
             points = points.transpose(2, 1)
 
-            print('label.shape', label.shape)
-
-            label_as_cat = to_categorical(label, num_classes)
-            print('label_as_cat.shape', label_as_cat.shape)
-
-            seg_pred, trans_feat = classifier(points, label_as_cat)
+            seg_pred, trans_feat = classifier(points, to_categorical(label, num_classes))
             seg_pred = seg_pred.contiguous().view(-1, num_part)
             target = target.view(-1, 1)[:, 0]
             pred_choice = seg_pred.data.max(1)[1]
@@ -234,11 +208,11 @@ def main(args):
             total_seen_class = [0 for _ in range(num_part)]
             total_correct_class = [0 for _ in range(num_part)]
             shape_ious = {cat: [] for cat in seg_classes.keys()}
-            seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
+            # seg_label_to_cat = {}  # {0:Airplane, 1:Airplane, ...49:Table}
 
-            for cat in seg_classes.keys():
-                for label in seg_classes[cat]:
-                    seg_label_to_cat[label] = cat
+            # for cat in seg_classes.keys():
+            #     for label in seg_classes[cat]:
+            #         seg_label_to_cat[label] = cat
 
             classifier.eval()
 
@@ -270,11 +244,15 @@ def main(args):
                     segl = target[i, :]
                     cat = seg_label_to_cat[segl[0]]
                     part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
+                    # part_ious = [0.0 for _ in range(len(num_part))] # Feks?
+                    # for l in seg_classes.values()
                     for l in seg_classes[cat]:
                         if (np.sum(segl == l) == 0) and (
                                 np.sum(segp == l) == 0):  # part is not present, no prediction as well
+                            # part_ious[l] = 1.0
                             part_ious[l - seg_classes[cat][0]] = 1.0
                         else:
+                            # part_ious[l] = ...... (same a below)
                             part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                                 np.sum((segl == l) | (segp == l)))
                     shape_ious[cat].append(np.mean(part_ious))
@@ -305,7 +283,7 @@ def main(args):
                 'test_acc': test_metrics['accuracy'],
                 'class_avg_iou': test_metrics['class_avg_iou'],
                 'inctance_avg_iou': test_metrics['inctance_avg_iou'],
-                'model_state_dict': original_model.state_dict(),
+                'model_state_dict': classifier.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
             }
             torch.save(state, savepath)
