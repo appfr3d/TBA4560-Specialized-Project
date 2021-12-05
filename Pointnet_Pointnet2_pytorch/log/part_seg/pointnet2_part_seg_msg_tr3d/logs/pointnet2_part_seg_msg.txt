@@ -1,0 +1,666 @@
+2021-12-03 14:16:59,272 - Model - INFO - PARAMETER ...
+2021-12-03 14:16:59,272 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='0,1', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-03 14:16:59,274 - Model - INFO - The number of training data is: 887
+2021-12-03 14:16:59,274 - Model - INFO - The number of test data is: 99
+2021-12-03 14:17:00,469 - Model - INFO - No existing model, starting training from scratch...
+2021-12-03 14:17:00,470 - Model - INFO - Epoch 1 (1/251):
+2021-12-03 14:17:00,470 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:34:43,422 - Model - INFO - PARAMETER ...
+2021-12-03 14:34:43,422 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='0,1', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-03 14:34:43,425 - Model - INFO - The number of training data is: 887
+2021-12-03 14:34:43,425 - Model - INFO - The number of test data is: 99
+2021-12-03 14:34:44,642 - Model - INFO - No existing model, starting training from scratch...
+2021-12-03 14:34:44,643 - Model - INFO - Epoch 1 (1/251):
+2021-12-03 14:34:44,643 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:35:55,766 - Model - INFO - PARAMETER ...
+2021-12-03 14:35:55,766 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='0,1', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-03 14:35:55,768 - Model - INFO - The number of training data is: 887
+2021-12-03 14:35:55,769 - Model - INFO - The number of test data is: 99
+2021-12-03 14:35:56,977 - Model - INFO - No existing model, starting training from scratch...
+2021-12-03 14:35:56,977 - Model - INFO - Epoch 1 (1/251):
+2021-12-03 14:35:56,978 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:36:50,277 - Model - INFO - PARAMETER ...
+2021-12-03 14:36:50,277 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='0,1', learning_rate=0.001, log_dir='pointnet2_part_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-03 14:36:50,280 - Model - INFO - The number of training data is: 887
+2021-12-03 14:36:50,281 - Model - INFO - The number of test data is: 99
+2021-12-03 14:36:51,489 - Model - INFO - No existing model, starting training from scratch...
+2021-12-03 14:36:51,490 - Model - INFO - Epoch 1 (1/251):
+2021-12-03 14:36:51,490 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:37:49,168 - Model - INFO - Train accuracy is: 0.67848
+2021-12-03 14:37:53,839 - Model - INFO - eval mIoU of Roof           0.859688
+2021-12-03 14:37:53,839 - Model - INFO - Epoch 1 test Accuracy: 0.822034  Class avg mIOU: 0.859688   Inctance avg mIOU: 0.859688
+2021-12-03 14:37:53,839 - Model - INFO - Save model...
+2021-12-03 14:37:53,839 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:37:53,877 - Model - INFO - Saving model....
+2021-12-03 14:37:53,877 - Model - INFO - Best accuracy is: 0.82203
+2021-12-03 14:37:53,877 - Model - INFO - Best class avg mIOU is: 0.85969
+2021-12-03 14:37:53,877 - Model - INFO - Best inctance avg mIOU is: 0.85969
+2021-12-03 14:37:53,877 - Model - INFO - Epoch 2 (2/251):
+2021-12-03 14:37:53,877 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:38:53,331 - Model - INFO - Train accuracy is: 0.74031
+2021-12-03 14:38:58,116 - Model - INFO - eval mIoU of Roof           0.824643
+2021-12-03 14:38:58,116 - Model - INFO - Epoch 2 test Accuracy: 0.787568  Class avg mIOU: 0.824643   Inctance avg mIOU: 0.824643
+2021-12-03 14:38:58,117 - Model - INFO - Best accuracy is: 0.82203
+2021-12-03 14:38:58,117 - Model - INFO - Best class avg mIOU is: 0.85969
+2021-12-03 14:38:58,117 - Model - INFO - Best inctance avg mIOU is: 0.85969
+2021-12-03 14:38:58,117 - Model - INFO - Epoch 3 (3/251):
+2021-12-03 14:38:58,117 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:39:57,354 - Model - INFO - Train accuracy is: 0.76326
+2021-12-03 14:40:02,252 - Model - INFO - eval mIoU of Roof           0.862565
+2021-12-03 14:40:02,252 - Model - INFO - Epoch 3 test Accuracy: 0.836026  Class avg mIOU: 0.862565   Inctance avg mIOU: 0.862565
+2021-12-03 14:40:02,252 - Model - INFO - Save model...
+2021-12-03 14:40:02,252 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:40:02,307 - Model - INFO - Saving model....
+2021-12-03 14:40:02,307 - Model - INFO - Best accuracy is: 0.83603
+2021-12-03 14:40:02,307 - Model - INFO - Best class avg mIOU is: 0.86257
+2021-12-03 14:40:02,307 - Model - INFO - Best inctance avg mIOU is: 0.86257
+2021-12-03 14:40:02,307 - Model - INFO - Epoch 4 (4/251):
+2021-12-03 14:40:02,307 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:41:00,376 - Model - INFO - Train accuracy is: 0.79865
+2021-12-03 14:41:05,057 - Model - INFO - eval mIoU of Roof           0.874106
+2021-12-03 14:41:05,057 - Model - INFO - Epoch 4 test Accuracy: 0.848953  Class avg mIOU: 0.874106   Inctance avg mIOU: 0.874106
+2021-12-03 14:41:05,057 - Model - INFO - Save model...
+2021-12-03 14:41:05,057 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:41:05,115 - Model - INFO - Saving model....
+2021-12-03 14:41:05,115 - Model - INFO - Best accuracy is: 0.84895
+2021-12-03 14:41:05,115 - Model - INFO - Best class avg mIOU is: 0.87411
+2021-12-03 14:41:05,115 - Model - INFO - Best inctance avg mIOU is: 0.87411
+2021-12-03 14:41:05,115 - Model - INFO - Epoch 5 (5/251):
+2021-12-03 14:41:05,115 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:42:04,235 - Model - INFO - Train accuracy is: 0.78024
+2021-12-03 14:42:08,946 - Model - INFO - eval mIoU of Roof           0.841430
+2021-12-03 14:42:08,946 - Model - INFO - Epoch 5 test Accuracy: 0.822330  Class avg mIOU: 0.841430   Inctance avg mIOU: 0.841430
+2021-12-03 14:42:08,946 - Model - INFO - Best accuracy is: 0.84895
+2021-12-03 14:42:08,946 - Model - INFO - Best class avg mIOU is: 0.87411
+2021-12-03 14:42:08,946 - Model - INFO - Best inctance avg mIOU is: 0.87411
+2021-12-03 14:42:08,947 - Model - INFO - Epoch 6 (6/251):
+2021-12-03 14:42:08,947 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:43:08,408 - Model - INFO - Train accuracy is: 0.82094
+2021-12-03 14:43:13,052 - Model - INFO - eval mIoU of Roof           0.879614
+2021-12-03 14:43:13,052 - Model - INFO - Epoch 6 test Accuracy: 0.849348  Class avg mIOU: 0.879614   Inctance avg mIOU: 0.879614
+2021-12-03 14:43:13,052 - Model - INFO - Save model...
+2021-12-03 14:43:13,052 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:43:13,106 - Model - INFO - Saving model....
+2021-12-03 14:43:13,107 - Model - INFO - Best accuracy is: 0.84935
+2021-12-03 14:43:13,107 - Model - INFO - Best class avg mIOU is: 0.87961
+2021-12-03 14:43:13,107 - Model - INFO - Best inctance avg mIOU is: 0.87961
+2021-12-03 14:43:13,107 - Model - INFO - Epoch 7 (7/251):
+2021-12-03 14:43:13,107 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:44:11,586 - Model - INFO - Train accuracy is: 0.81098
+2021-12-03 14:44:16,249 - Model - INFO - eval mIoU of Roof           0.887157
+2021-12-03 14:44:16,250 - Model - INFO - Epoch 7 test Accuracy: 0.870694  Class avg mIOU: 0.887157   Inctance avg mIOU: 0.887157
+2021-12-03 14:44:16,250 - Model - INFO - Save model...
+2021-12-03 14:44:16,250 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:44:16,305 - Model - INFO - Saving model....
+2021-12-03 14:44:16,305 - Model - INFO - Best accuracy is: 0.87069
+2021-12-03 14:44:16,305 - Model - INFO - Best class avg mIOU is: 0.88716
+2021-12-03 14:44:16,305 - Model - INFO - Best inctance avg mIOU is: 0.88716
+2021-12-03 14:44:16,305 - Model - INFO - Epoch 8 (8/251):
+2021-12-03 14:44:16,305 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:45:14,343 - Model - INFO - Train accuracy is: 0.85199
+2021-12-03 14:45:18,995 - Model - INFO - eval mIoU of Roof           0.899359
+2021-12-03 14:45:18,995 - Model - INFO - Epoch 8 test Accuracy: 0.886660  Class avg mIOU: 0.899359   Inctance avg mIOU: 0.899359
+2021-12-03 14:45:18,995 - Model - INFO - Save model...
+2021-12-03 14:45:18,995 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:45:19,050 - Model - INFO - Saving model....
+2021-12-03 14:45:19,050 - Model - INFO - Best accuracy is: 0.88666
+2021-12-03 14:45:19,050 - Model - INFO - Best class avg mIOU is: 0.89936
+2021-12-03 14:45:19,050 - Model - INFO - Best inctance avg mIOU is: 0.89936
+2021-12-03 14:45:19,050 - Model - INFO - Epoch 9 (9/251):
+2021-12-03 14:45:19,050 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:46:17,129 - Model - INFO - Train accuracy is: 0.84817
+2021-12-03 14:46:21,863 - Model - INFO - eval mIoU of Roof           0.878449
+2021-12-03 14:46:21,864 - Model - INFO - Epoch 9 test Accuracy: 0.870699  Class avg mIOU: 0.878449   Inctance avg mIOU: 0.878449
+2021-12-03 14:46:21,864 - Model - INFO - Best accuracy is: 0.88666
+2021-12-03 14:46:21,864 - Model - INFO - Best class avg mIOU is: 0.89936
+2021-12-03 14:46:21,864 - Model - INFO - Best inctance avg mIOU is: 0.89936
+2021-12-03 14:46:21,864 - Model - INFO - Epoch 10 (10/251):
+2021-12-03 14:46:21,864 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:47:19,904 - Model - INFO - Train accuracy is: 0.85808
+2021-12-03 14:47:24,600 - Model - INFO - eval mIoU of Roof           0.911775
+2021-12-03 14:47:24,601 - Model - INFO - Epoch 10 test Accuracy: 0.904662  Class avg mIOU: 0.911775   Inctance avg mIOU: 0.911775
+2021-12-03 14:47:24,601 - Model - INFO - Save model...
+2021-12-03 14:47:24,601 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:47:24,658 - Model - INFO - Saving model....
+2021-12-03 14:47:24,658 - Model - INFO - Best accuracy is: 0.90466
+2021-12-03 14:47:24,658 - Model - INFO - Best class avg mIOU is: 0.91178
+2021-12-03 14:47:24,658 - Model - INFO - Best inctance avg mIOU is: 0.91178
+2021-12-03 14:47:24,658 - Model - INFO - Epoch 11 (11/251):
+2021-12-03 14:47:24,658 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:48:22,619 - Model - INFO - Train accuracy is: 0.86396
+2021-12-03 14:48:27,361 - Model - INFO - eval mIoU of Roof           0.894011
+2021-12-03 14:48:27,361 - Model - INFO - Epoch 11 test Accuracy: 0.890738  Class avg mIOU: 0.894011   Inctance avg mIOU: 0.894011
+2021-12-03 14:48:27,361 - Model - INFO - Best accuracy is: 0.90466
+2021-12-03 14:48:27,361 - Model - INFO - Best class avg mIOU is: 0.91178
+2021-12-03 14:48:27,361 - Model - INFO - Best inctance avg mIOU is: 0.91178
+2021-12-03 14:48:27,361 - Model - INFO - Epoch 12 (12/251):
+2021-12-03 14:48:27,361 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:49:25,045 - Model - INFO - Train accuracy is: 0.88081
+2021-12-03 14:49:29,642 - Model - INFO - eval mIoU of Roof           0.836671
+2021-12-03 14:49:29,642 - Model - INFO - Epoch 12 test Accuracy: 0.782774  Class avg mIOU: 0.836671   Inctance avg mIOU: 0.836671
+2021-12-03 14:49:29,643 - Model - INFO - Best accuracy is: 0.90466
+2021-12-03 14:49:29,643 - Model - INFO - Best class avg mIOU is: 0.91178
+2021-12-03 14:49:29,643 - Model - INFO - Best inctance avg mIOU is: 0.91178
+2021-12-03 14:49:29,643 - Model - INFO - Epoch 13 (13/251):
+2021-12-03 14:49:29,643 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:50:26,981 - Model - INFO - Train accuracy is: 0.87080
+2021-12-03 14:50:31,553 - Model - INFO - eval mIoU of Roof           0.894591
+2021-12-03 14:50:31,554 - Model - INFO - Epoch 13 test Accuracy: 0.889254  Class avg mIOU: 0.894591   Inctance avg mIOU: 0.894591
+2021-12-03 14:50:31,554 - Model - INFO - Best accuracy is: 0.90466
+2021-12-03 14:50:31,554 - Model - INFO - Best class avg mIOU is: 0.91178
+2021-12-03 14:50:31,554 - Model - INFO - Best inctance avg mIOU is: 0.91178
+2021-12-03 14:50:31,554 - Model - INFO - Epoch 14 (14/251):
+2021-12-03 14:50:31,554 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:51:28,814 - Model - INFO - Train accuracy is: 0.88429
+2021-12-03 14:51:33,457 - Model - INFO - eval mIoU of Roof           0.918229
+2021-12-03 14:51:33,457 - Model - INFO - Epoch 14 test Accuracy: 0.909742  Class avg mIOU: 0.918229   Inctance avg mIOU: 0.918229
+2021-12-03 14:51:33,458 - Model - INFO - Save model...
+2021-12-03 14:51:33,458 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:51:33,504 - Model - INFO - Saving model....
+2021-12-03 14:51:33,504 - Model - INFO - Best accuracy is: 0.90974
+2021-12-03 14:51:33,504 - Model - INFO - Best class avg mIOU is: 0.91823
+2021-12-03 14:51:33,504 - Model - INFO - Best inctance avg mIOU is: 0.91823
+2021-12-03 14:51:33,504 - Model - INFO - Epoch 15 (15/251):
+2021-12-03 14:51:33,504 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:52:31,301 - Model - INFO - Train accuracy is: 0.89416
+2021-12-03 14:52:35,976 - Model - INFO - eval mIoU of Roof           0.911382
+2021-12-03 14:52:35,976 - Model - INFO - Epoch 15 test Accuracy: 0.909268  Class avg mIOU: 0.911382   Inctance avg mIOU: 0.911382
+2021-12-03 14:52:35,976 - Model - INFO - Best accuracy is: 0.90974
+2021-12-03 14:52:35,976 - Model - INFO - Best class avg mIOU is: 0.91823
+2021-12-03 14:52:35,976 - Model - INFO - Best inctance avg mIOU is: 0.91823
+2021-12-03 14:52:35,976 - Model - INFO - Epoch 16 (16/251):
+2021-12-03 14:52:35,976 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:53:33,737 - Model - INFO - Train accuracy is: 0.89770
+2021-12-03 14:53:38,377 - Model - INFO - eval mIoU of Roof           0.922886
+2021-12-03 14:53:38,377 - Model - INFO - Epoch 16 test Accuracy: 0.914132  Class avg mIOU: 0.922886   Inctance avg mIOU: 0.922886
+2021-12-03 14:53:38,377 - Model - INFO - Save model...
+2021-12-03 14:53:38,377 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:53:38,430 - Model - INFO - Saving model....
+2021-12-03 14:53:38,431 - Model - INFO - Best accuracy is: 0.91413
+2021-12-03 14:53:38,431 - Model - INFO - Best class avg mIOU is: 0.92289
+2021-12-03 14:53:38,431 - Model - INFO - Best inctance avg mIOU is: 0.92289
+2021-12-03 14:53:38,431 - Model - INFO - Epoch 17 (17/251):
+2021-12-03 14:53:38,431 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:54:36,163 - Model - INFO - Train accuracy is: 0.89928
+2021-12-03 14:54:40,864 - Model - INFO - eval mIoU of Roof           0.915579
+2021-12-03 14:54:40,864 - Model - INFO - Epoch 17 test Accuracy: 0.910773  Class avg mIOU: 0.915579   Inctance avg mIOU: 0.915579
+2021-12-03 14:54:40,864 - Model - INFO - Best accuracy is: 0.91413
+2021-12-03 14:54:40,864 - Model - INFO - Best class avg mIOU is: 0.92289
+2021-12-03 14:54:40,864 - Model - INFO - Best inctance avg mIOU is: 0.92289
+2021-12-03 14:54:40,864 - Model - INFO - Epoch 18 (18/251):
+2021-12-03 14:54:40,864 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:55:38,786 - Model - INFO - Train accuracy is: 0.90082
+2021-12-03 14:55:43,429 - Model - INFO - eval mIoU of Roof           0.928070
+2021-12-03 14:55:43,429 - Model - INFO - Epoch 18 test Accuracy: 0.924977  Class avg mIOU: 0.928070   Inctance avg mIOU: 0.928070
+2021-12-03 14:55:43,429 - Model - INFO - Save model...
+2021-12-03 14:55:43,429 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:55:43,482 - Model - INFO - Saving model....
+2021-12-03 14:55:43,482 - Model - INFO - Best accuracy is: 0.92498
+2021-12-03 14:55:43,482 - Model - INFO - Best class avg mIOU is: 0.92807
+2021-12-03 14:55:43,482 - Model - INFO - Best inctance avg mIOU is: 0.92807
+2021-12-03 14:55:43,483 - Model - INFO - Epoch 19 (19/251):
+2021-12-03 14:55:43,483 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:56:41,309 - Model - INFO - Train accuracy is: 0.89970
+2021-12-03 14:56:45,951 - Model - INFO - eval mIoU of Roof           0.898224
+2021-12-03 14:56:45,951 - Model - INFO - Epoch 19 test Accuracy: 0.901298  Class avg mIOU: 0.898224   Inctance avg mIOU: 0.898224
+2021-12-03 14:56:45,951 - Model - INFO - Best accuracy is: 0.92498
+2021-12-03 14:56:45,951 - Model - INFO - Best class avg mIOU is: 0.92807
+2021-12-03 14:56:45,951 - Model - INFO - Best inctance avg mIOU is: 0.92807
+2021-12-03 14:56:45,951 - Model - INFO - Epoch 20 (20/251):
+2021-12-03 14:56:45,951 - Model - INFO - Learning rate:0.001000
+2021-12-03 14:57:44,940 - Model - INFO - Train accuracy is: 0.91176
+2021-12-03 14:57:49,688 - Model - INFO - eval mIoU of Roof           0.925339
+2021-12-03 14:57:49,688 - Model - INFO - Epoch 20 test Accuracy: 0.912119  Class avg mIOU: 0.925339   Inctance avg mIOU: 0.925339
+2021-12-03 14:57:49,688 - Model - INFO - Best accuracy is: 0.92498
+2021-12-03 14:57:49,688 - Model - INFO - Best class avg mIOU is: 0.92807
+2021-12-03 14:57:49,688 - Model - INFO - Best inctance avg mIOU is: 0.92807
+2021-12-03 14:57:49,688 - Model - INFO - Epoch 21 (21/251):
+2021-12-03 14:57:49,688 - Model - INFO - Learning rate:0.000500
+2021-12-03 14:58:48,582 - Model - INFO - Train accuracy is: 0.91730
+2021-12-03 14:58:53,299 - Model - INFO - eval mIoU of Roof           0.942712
+2021-12-03 14:58:53,300 - Model - INFO - Epoch 21 test Accuracy: 0.929831  Class avg mIOU: 0.942712   Inctance avg mIOU: 0.942712
+2021-12-03 14:58:53,300 - Model - INFO - Save model...
+2021-12-03 14:58:53,300 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 14:58:53,348 - Model - INFO - Saving model....
+2021-12-03 14:58:53,349 - Model - INFO - Best accuracy is: 0.92983
+2021-12-03 14:58:53,349 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 14:58:53,349 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 14:58:53,349 - Model - INFO - Epoch 22 (22/251):
+2021-12-03 14:58:53,349 - Model - INFO - Learning rate:0.000500
+2021-12-03 14:59:52,071 - Model - INFO - Train accuracy is: 0.92733
+2021-12-03 14:59:57,044 - Model - INFO - eval mIoU of Roof           0.940988
+2021-12-03 14:59:57,044 - Model - INFO - Epoch 22 test Accuracy: 0.931207  Class avg mIOU: 0.940988   Inctance avg mIOU: 0.940988
+2021-12-03 14:59:57,044 - Model - INFO - Best accuracy is: 0.93121
+2021-12-03 14:59:57,044 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 14:59:57,044 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 14:59:57,044 - Model - INFO - Epoch 23 (23/251):
+2021-12-03 14:59:57,044 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:00:56,936 - Model - INFO - Train accuracy is: 0.92819
+2021-12-03 15:01:01,650 - Model - INFO - eval mIoU of Roof           0.924630
+2021-12-03 15:01:01,650 - Model - INFO - Epoch 23 test Accuracy: 0.915153  Class avg mIOU: 0.924630   Inctance avg mIOU: 0.924630
+2021-12-03 15:01:01,650 - Model - INFO - Best accuracy is: 0.93121
+2021-12-03 15:01:01,650 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:01:01,650 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:01:01,650 - Model - INFO - Epoch 24 (24/251):
+2021-12-03 15:01:01,650 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:02:01,771 - Model - INFO - Train accuracy is: 0.93419
+2021-12-03 15:02:06,474 - Model - INFO - eval mIoU of Roof           0.936835
+2021-12-03 15:02:06,474 - Model - INFO - Epoch 24 test Accuracy: 0.927438  Class avg mIOU: 0.936835   Inctance avg mIOU: 0.936835
+2021-12-03 15:02:06,474 - Model - INFO - Best accuracy is: 0.93121
+2021-12-03 15:02:06,474 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:02:06,474 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:02:06,474 - Model - INFO - Epoch 25 (25/251):
+2021-12-03 15:02:06,474 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:03:05,587 - Model - INFO - Train accuracy is: 0.93583
+2021-12-03 15:03:10,295 - Model - INFO - eval mIoU of Roof           0.938424
+2021-12-03 15:03:10,296 - Model - INFO - Epoch 25 test Accuracy: 0.923951  Class avg mIOU: 0.938424   Inctance avg mIOU: 0.938424
+2021-12-03 15:03:10,296 - Model - INFO - Best accuracy is: 0.93121
+2021-12-03 15:03:10,296 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:03:10,296 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:03:10,296 - Model - INFO - Epoch 26 (26/251):
+2021-12-03 15:03:10,296 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:04:09,486 - Model - INFO - Train accuracy is: 0.92948
+2021-12-03 15:04:14,304 - Model - INFO - eval mIoU of Roof           0.939730
+2021-12-03 15:04:14,305 - Model - INFO - Epoch 26 test Accuracy: 0.932740  Class avg mIOU: 0.939730   Inctance avg mIOU: 0.939730
+2021-12-03 15:04:14,305 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:04:14,305 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:04:14,305 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:04:14,305 - Model - INFO - Epoch 27 (27/251):
+2021-12-03 15:04:14,305 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:05:12,706 - Model - INFO - Train accuracy is: 0.93637
+2021-12-03 15:05:17,342 - Model - INFO - eval mIoU of Roof           0.881888
+2021-12-03 15:05:17,343 - Model - INFO - Epoch 27 test Accuracy: 0.894433  Class avg mIOU: 0.881888   Inctance avg mIOU: 0.881888
+2021-12-03 15:05:17,343 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:05:17,343 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:05:17,343 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:05:17,343 - Model - INFO - Epoch 28 (28/251):
+2021-12-03 15:05:17,343 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:06:15,618 - Model - INFO - Train accuracy is: 0.93765
+2021-12-03 15:06:20,327 - Model - INFO - eval mIoU of Roof           0.936827
+2021-12-03 15:06:20,327 - Model - INFO - Epoch 28 test Accuracy: 0.928578  Class avg mIOU: 0.936827   Inctance avg mIOU: 0.936827
+2021-12-03 15:06:20,327 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:06:20,327 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:06:20,327 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:06:20,327 - Model - INFO - Epoch 29 (29/251):
+2021-12-03 15:06:20,327 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:07:18,527 - Model - INFO - Train accuracy is: 0.94226
+2021-12-03 15:07:23,462 - Model - INFO - eval mIoU of Roof           0.907401
+2021-12-03 15:07:23,462 - Model - INFO - Epoch 29 test Accuracy: 0.919774  Class avg mIOU: 0.907401   Inctance avg mIOU: 0.907401
+2021-12-03 15:07:23,462 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:07:23,463 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:07:23,463 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:07:23,463 - Model - INFO - Epoch 30 (30/251):
+2021-12-03 15:07:23,463 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:08:22,683 - Model - INFO - Train accuracy is: 0.93734
+2021-12-03 15:08:27,434 - Model - INFO - eval mIoU of Roof           0.927896
+2021-12-03 15:08:27,434 - Model - INFO - Epoch 30 test Accuracy: 0.918911  Class avg mIOU: 0.927896   Inctance avg mIOU: 0.927896
+2021-12-03 15:08:27,434 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:08:27,434 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:08:27,434 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:08:27,434 - Model - INFO - Epoch 31 (31/251):
+2021-12-03 15:08:27,434 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:09:27,192 - Model - INFO - Train accuracy is: 0.93689
+2021-12-03 15:09:31,920 - Model - INFO - eval mIoU of Roof           0.838709
+2021-12-03 15:09:31,920 - Model - INFO - Epoch 31 test Accuracy: 0.851636  Class avg mIOU: 0.838709   Inctance avg mIOU: 0.838709
+2021-12-03 15:09:31,920 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:09:31,920 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:09:31,921 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:09:31,921 - Model - INFO - Epoch 32 (32/251):
+2021-12-03 15:09:31,921 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:10:30,586 - Model - INFO - Train accuracy is: 0.93218
+2021-12-03 15:10:35,309 - Model - INFO - eval mIoU of Roof           0.937825
+2021-12-03 15:10:35,309 - Model - INFO - Epoch 32 test Accuracy: 0.929012  Class avg mIOU: 0.937825   Inctance avg mIOU: 0.937825
+2021-12-03 15:10:35,309 - Model - INFO - Best accuracy is: 0.93274
+2021-12-03 15:10:35,309 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:10:35,309 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:10:35,309 - Model - INFO - Epoch 33 (33/251):
+2021-12-03 15:10:35,309 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:11:33,692 - Model - INFO - Train accuracy is: 0.94239
+2021-12-03 15:11:38,419 - Model - INFO - eval mIoU of Roof           0.938858
+2021-12-03 15:11:38,419 - Model - INFO - Epoch 33 test Accuracy: 0.944232  Class avg mIOU: 0.938858   Inctance avg mIOU: 0.938858
+2021-12-03 15:11:38,419 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:11:38,419 - Model - INFO - Best class avg mIOU is: 0.94271
+2021-12-03 15:11:38,419 - Model - INFO - Best inctance avg mIOU is: 0.94271
+2021-12-03 15:11:38,419 - Model - INFO - Epoch 34 (34/251):
+2021-12-03 15:11:38,419 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:12:37,064 - Model - INFO - Train accuracy is: 0.94596
+2021-12-03 15:12:41,849 - Model - INFO - eval mIoU of Roof           0.948005
+2021-12-03 15:12:41,849 - Model - INFO - Epoch 34 test Accuracy: 0.932637  Class avg mIOU: 0.948005   Inctance avg mIOU: 0.948005
+2021-12-03 15:12:41,849 - Model - INFO - Save model...
+2021-12-03 15:12:41,849 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:12:41,902 - Model - INFO - Saving model....
+2021-12-03 15:12:41,903 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:12:41,903 - Model - INFO - Best class avg mIOU is: 0.94800
+2021-12-03 15:12:41,903 - Model - INFO - Best inctance avg mIOU is: 0.94800
+2021-12-03 15:12:41,903 - Model - INFO - Epoch 35 (35/251):
+2021-12-03 15:12:41,903 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:13:40,029 - Model - INFO - Train accuracy is: 0.94356
+2021-12-03 15:13:44,678 - Model - INFO - eval mIoU of Roof           0.948475
+2021-12-03 15:13:44,678 - Model - INFO - Epoch 35 test Accuracy: 0.943182  Class avg mIOU: 0.948475   Inctance avg mIOU: 0.948475
+2021-12-03 15:13:44,678 - Model - INFO - Save model...
+2021-12-03 15:13:44,678 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:13:44,731 - Model - INFO - Saving model....
+2021-12-03 15:13:44,731 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:13:44,732 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:13:44,732 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:13:44,732 - Model - INFO - Epoch 36 (36/251):
+2021-12-03 15:13:44,732 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:14:43,338 - Model - INFO - Train accuracy is: 0.94493
+2021-12-03 15:14:48,091 - Model - INFO - eval mIoU of Roof           0.943111
+2021-12-03 15:14:48,092 - Model - INFO - Epoch 36 test Accuracy: 0.937717  Class avg mIOU: 0.943111   Inctance avg mIOU: 0.943111
+2021-12-03 15:14:48,092 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:14:48,092 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:14:48,092 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:14:48,092 - Model - INFO - Epoch 37 (37/251):
+2021-12-03 15:14:48,092 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:15:47,283 - Model - INFO - Train accuracy is: 0.94487
+2021-12-03 15:15:52,270 - Model - INFO - eval mIoU of Roof           0.909919
+2021-12-03 15:15:52,270 - Model - INFO - Epoch 37 test Accuracy: 0.920065  Class avg mIOU: 0.909919   Inctance avg mIOU: 0.909919
+2021-12-03 15:15:52,270 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:15:52,270 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:15:52,270 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:15:52,271 - Model - INFO - Epoch 38 (38/251):
+2021-12-03 15:15:52,271 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:16:53,206 - Model - INFO - Train accuracy is: 0.94805
+2021-12-03 15:16:58,183 - Model - INFO - eval mIoU of Roof           0.919119
+2021-12-03 15:16:58,183 - Model - INFO - Epoch 38 test Accuracy: 0.922654  Class avg mIOU: 0.919119   Inctance avg mIOU: 0.919119
+2021-12-03 15:16:58,183 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:16:58,183 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:16:58,183 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:16:58,183 - Model - INFO - Epoch 39 (39/251):
+2021-12-03 15:16:58,183 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:17:59,307 - Model - INFO - Train accuracy is: 0.94416
+2021-12-03 15:18:04,415 - Model - INFO - eval mIoU of Roof           0.925808
+2021-12-03 15:18:04,415 - Model - INFO - Epoch 39 test Accuracy: 0.929470  Class avg mIOU: 0.925808   Inctance avg mIOU: 0.925808
+2021-12-03 15:18:04,415 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:18:04,415 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:18:04,415 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:18:04,415 - Model - INFO - Epoch 40 (40/251):
+2021-12-03 15:18:04,415 - Model - INFO - Learning rate:0.000500
+2021-12-03 15:19:03,742 - Model - INFO - Train accuracy is: 0.94302
+2021-12-03 15:19:08,522 - Model - INFO - eval mIoU of Roof           0.941716
+2021-12-03 15:19:08,523 - Model - INFO - Epoch 40 test Accuracy: 0.931547  Class avg mIOU: 0.941716   Inctance avg mIOU: 0.941716
+2021-12-03 15:19:08,523 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:19:08,523 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:19:08,523 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:19:08,523 - Model - INFO - Epoch 41 (41/251):
+2021-12-03 15:19:08,523 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:20:08,866 - Model - INFO - Train accuracy is: 0.95536
+2021-12-03 15:20:13,580 - Model - INFO - eval mIoU of Roof           0.944802
+2021-12-03 15:20:13,581 - Model - INFO - Epoch 41 test Accuracy: 0.931912  Class avg mIOU: 0.944802   Inctance avg mIOU: 0.944802
+2021-12-03 15:20:13,581 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:20:13,581 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:20:13,581 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:20:13,581 - Model - INFO - Epoch 42 (42/251):
+2021-12-03 15:20:13,581 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:21:12,535 - Model - INFO - Train accuracy is: 0.96123
+2021-12-03 15:21:17,341 - Model - INFO - eval mIoU of Roof           0.947230
+2021-12-03 15:21:17,342 - Model - INFO - Epoch 42 test Accuracy: 0.935729  Class avg mIOU: 0.947230   Inctance avg mIOU: 0.947230
+2021-12-03 15:21:17,342 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:21:17,342 - Model - INFO - Best class avg mIOU is: 0.94848
+2021-12-03 15:21:17,342 - Model - INFO - Best inctance avg mIOU is: 0.94848
+2021-12-03 15:21:17,342 - Model - INFO - Epoch 43 (43/251):
+2021-12-03 15:21:17,342 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:22:16,443 - Model - INFO - Train accuracy is: 0.95562
+2021-12-03 15:22:21,256 - Model - INFO - eval mIoU of Roof           0.950855
+2021-12-03 15:22:21,256 - Model - INFO - Epoch 43 test Accuracy: 0.933594  Class avg mIOU: 0.950855   Inctance avg mIOU: 0.950855
+2021-12-03 15:22:21,256 - Model - INFO - Save model...
+2021-12-03 15:22:21,256 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:22:21,310 - Model - INFO - Saving model....
+2021-12-03 15:22:21,311 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:22:21,311 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:22:21,311 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:22:21,311 - Model - INFO - Epoch 44 (44/251):
+2021-12-03 15:22:21,311 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:23:20,576 - Model - INFO - Train accuracy is: 0.96117
+2021-12-03 15:23:25,273 - Model - INFO - eval mIoU of Roof           0.948635
+2021-12-03 15:23:25,273 - Model - INFO - Epoch 44 test Accuracy: 0.936440  Class avg mIOU: 0.948635   Inctance avg mIOU: 0.948635
+2021-12-03 15:23:25,274 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:23:25,274 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:23:25,274 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:23:25,274 - Model - INFO - Epoch 45 (45/251):
+2021-12-03 15:23:25,274 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:24:23,606 - Model - INFO - Train accuracy is: 0.96372
+2021-12-03 15:24:28,333 - Model - INFO - eval mIoU of Roof           0.945826
+2021-12-03 15:24:28,333 - Model - INFO - Epoch 45 test Accuracy: 0.935646  Class avg mIOU: 0.945826   Inctance avg mIOU: 0.945826
+2021-12-03 15:24:28,333 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:24:28,333 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:24:28,333 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:24:28,333 - Model - INFO - Epoch 46 (46/251):
+2021-12-03 15:24:28,333 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:25:26,936 - Model - INFO - Train accuracy is: 0.96393
+2021-12-03 15:25:31,698 - Model - INFO - eval mIoU of Roof           0.947801
+2021-12-03 15:25:31,698 - Model - INFO - Epoch 46 test Accuracy: 0.935695  Class avg mIOU: 0.947801   Inctance avg mIOU: 0.947801
+2021-12-03 15:25:31,698 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:25:31,698 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:25:31,698 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:25:31,699 - Model - INFO - Epoch 47 (47/251):
+2021-12-03 15:25:31,699 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:26:30,358 - Model - INFO - Train accuracy is: 0.96702
+2021-12-03 15:26:35,055 - Model - INFO - eval mIoU of Roof           0.949735
+2021-12-03 15:26:35,055 - Model - INFO - Epoch 47 test Accuracy: 0.938018  Class avg mIOU: 0.949735   Inctance avg mIOU: 0.949735
+2021-12-03 15:26:35,055 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:26:35,055 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:26:35,055 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:26:35,055 - Model - INFO - Epoch 48 (48/251):
+2021-12-03 15:26:35,055 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:27:33,880 - Model - INFO - Train accuracy is: 0.96997
+2021-12-03 15:27:38,600 - Model - INFO - eval mIoU of Roof           0.945257
+2021-12-03 15:27:38,600 - Model - INFO - Epoch 48 test Accuracy: 0.942506  Class avg mIOU: 0.945257   Inctance avg mIOU: 0.945257
+2021-12-03 15:27:38,600 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:27:38,600 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:27:38,600 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:27:38,600 - Model - INFO - Epoch 49 (49/251):
+2021-12-03 15:27:38,600 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:28:36,976 - Model - INFO - Train accuracy is: 0.96887
+2021-12-03 15:28:41,768 - Model - INFO - eval mIoU of Roof           0.941744
+2021-12-03 15:28:41,768 - Model - INFO - Epoch 49 test Accuracy: 0.936834  Class avg mIOU: 0.941744   Inctance avg mIOU: 0.941744
+2021-12-03 15:28:41,768 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:28:41,768 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:28:41,768 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:28:41,768 - Model - INFO - Epoch 50 (50/251):
+2021-12-03 15:28:41,768 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:29:40,439 - Model - INFO - Train accuracy is: 0.96693
+2021-12-03 15:29:45,146 - Model - INFO - eval mIoU of Roof           0.918547
+2021-12-03 15:29:45,146 - Model - INFO - Epoch 50 test Accuracy: 0.930516  Class avg mIOU: 0.918547   Inctance avg mIOU: 0.918547
+2021-12-03 15:29:45,146 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:29:45,146 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:29:45,146 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:29:45,146 - Model - INFO - Epoch 51 (51/251):
+2021-12-03 15:29:45,146 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:30:43,622 - Model - INFO - Train accuracy is: 0.96472
+2021-12-03 15:30:48,447 - Model - INFO - eval mIoU of Roof           0.937502
+2021-12-03 15:30:48,447 - Model - INFO - Epoch 51 test Accuracy: 0.930447  Class avg mIOU: 0.937502   Inctance avg mIOU: 0.937502
+2021-12-03 15:30:48,447 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:30:48,447 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:30:48,447 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:30:48,447 - Model - INFO - Epoch 52 (52/251):
+2021-12-03 15:30:48,447 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:31:47,925 - Model - INFO - Train accuracy is: 0.96817
+2021-12-03 15:31:52,692 - Model - INFO - eval mIoU of Roof           0.940293
+2021-12-03 15:31:52,692 - Model - INFO - Epoch 52 test Accuracy: 0.936622  Class avg mIOU: 0.940293   Inctance avg mIOU: 0.940293
+2021-12-03 15:31:52,692 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:31:52,692 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:31:52,692 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:31:52,692 - Model - INFO - Epoch 53 (53/251):
+2021-12-03 15:31:52,692 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:32:52,044 - Model - INFO - Train accuracy is: 0.96379
+2021-12-03 15:32:56,790 - Model - INFO - eval mIoU of Roof           0.937606
+2021-12-03 15:32:56,790 - Model - INFO - Epoch 53 test Accuracy: 0.934279  Class avg mIOU: 0.937606   Inctance avg mIOU: 0.937606
+2021-12-03 15:32:56,790 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:32:56,790 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:32:56,790 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:32:56,790 - Model - INFO - Epoch 54 (54/251):
+2021-12-03 15:32:56,790 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:33:57,475 - Model - INFO - Train accuracy is: 0.96709
+2021-12-03 15:34:02,483 - Model - INFO - eval mIoU of Roof           0.949117
+2021-12-03 15:34:02,483 - Model - INFO - Epoch 54 test Accuracy: 0.939197  Class avg mIOU: 0.949117   Inctance avg mIOU: 0.949117
+2021-12-03 15:34:02,483 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:34:02,483 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:34:02,483 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:34:02,483 - Model - INFO - Epoch 55 (55/251):
+2021-12-03 15:34:02,483 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:35:02,682 - Model - INFO - Train accuracy is: 0.97048
+2021-12-03 15:35:07,622 - Model - INFO - eval mIoU of Roof           0.942435
+2021-12-03 15:35:07,622 - Model - INFO - Epoch 55 test Accuracy: 0.936854  Class avg mIOU: 0.942435   Inctance avg mIOU: 0.942435
+2021-12-03 15:35:07,622 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:35:07,622 - Model - INFO - Best class avg mIOU is: 0.95086
+2021-12-03 15:35:07,622 - Model - INFO - Best inctance avg mIOU is: 0.95086
+2021-12-03 15:35:07,622 - Model - INFO - Epoch 56 (56/251):
+2021-12-03 15:35:07,622 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:36:07,210 - Model - INFO - Train accuracy is: 0.97003
+2021-12-03 15:36:11,984 - Model - INFO - eval mIoU of Roof           0.951423
+2021-12-03 15:36:11,984 - Model - INFO - Epoch 56 test Accuracy: 0.944045  Class avg mIOU: 0.951423   Inctance avg mIOU: 0.951423
+2021-12-03 15:36:11,984 - Model - INFO - Save model...
+2021-12-03 15:36:11,985 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:36:12,034 - Model - INFO - Saving model....
+2021-12-03 15:36:12,034 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:36:12,034 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:36:12,034 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:36:12,034 - Model - INFO - Epoch 57 (57/251):
+2021-12-03 15:36:12,034 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:37:11,601 - Model - INFO - Train accuracy is: 0.96994
+2021-12-03 15:37:16,252 - Model - INFO - eval mIoU of Roof           0.940611
+2021-12-03 15:37:16,252 - Model - INFO - Epoch 57 test Accuracy: 0.939680  Class avg mIOU: 0.940611   Inctance avg mIOU: 0.940611
+2021-12-03 15:37:16,253 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:37:16,253 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:37:16,253 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:37:16,253 - Model - INFO - Epoch 58 (58/251):
+2021-12-03 15:37:16,253 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:38:15,683 - Model - INFO - Train accuracy is: 0.97127
+2021-12-03 15:38:20,368 - Model - INFO - eval mIoU of Roof           0.948174
+2021-12-03 15:38:20,369 - Model - INFO - Epoch 58 test Accuracy: 0.940864  Class avg mIOU: 0.948174   Inctance avg mIOU: 0.948174
+2021-12-03 15:38:20,369 - Model - INFO - Best accuracy is: 0.94423
+2021-12-03 15:38:20,369 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:38:20,369 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:38:20,369 - Model - INFO - Epoch 59 (59/251):
+2021-12-03 15:38:20,369 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:39:19,839 - Model - INFO - Train accuracy is: 0.97083
+2021-12-03 15:39:24,669 - Model - INFO - eval mIoU of Roof           0.950819
+2021-12-03 15:39:24,669 - Model - INFO - Epoch 59 test Accuracy: 0.945569  Class avg mIOU: 0.950819   Inctance avg mIOU: 0.950819
+2021-12-03 15:39:24,669 - Model - INFO - Best accuracy is: 0.94557
+2021-12-03 15:39:24,669 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:39:24,669 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:39:24,669 - Model - INFO - Epoch 60 (60/251):
+2021-12-03 15:39:24,669 - Model - INFO - Learning rate:0.000250
+2021-12-03 15:40:23,525 - Model - INFO - Train accuracy is: 0.97266
+2021-12-03 15:40:28,563 - Model - INFO - eval mIoU of Roof           0.941609
+2021-12-03 15:40:28,563 - Model - INFO - Epoch 60 test Accuracy: 0.929209  Class avg mIOU: 0.941609   Inctance avg mIOU: 0.941609
+2021-12-03 15:40:28,563 - Model - INFO - Best accuracy is: 0.94557
+2021-12-03 15:40:28,563 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:40:28,563 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:40:28,563 - Model - INFO - Epoch 61 (61/251):
+2021-12-03 15:40:28,563 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:41:27,918 - Model - INFO - Train accuracy is: 0.97305
+2021-12-03 15:41:32,744 - Model - INFO - eval mIoU of Roof           0.948003
+2021-12-03 15:41:32,744 - Model - INFO - Epoch 61 test Accuracy: 0.943808  Class avg mIOU: 0.948003   Inctance avg mIOU: 0.948003
+2021-12-03 15:41:32,744 - Model - INFO - Best accuracy is: 0.94557
+2021-12-03 15:41:32,744 - Model - INFO - Best class avg mIOU is: 0.95142
+2021-12-03 15:41:32,744 - Model - INFO - Best inctance avg mIOU is: 0.95142
+2021-12-03 15:41:32,744 - Model - INFO - Epoch 62 (62/251):
+2021-12-03 15:41:32,744 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:42:31,809 - Model - INFO - Train accuracy is: 0.97678
+2021-12-03 15:42:36,598 - Model - INFO - eval mIoU of Roof           0.951670
+2021-12-03 15:42:36,598 - Model - INFO - Epoch 62 test Accuracy: 0.946200  Class avg mIOU: 0.951670   Inctance avg mIOU: 0.951670
+2021-12-03 15:42:36,598 - Model - INFO - Save model...
+2021-12-03 15:42:36,598 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:42:36,659 - Model - INFO - Saving model....
+2021-12-03 15:42:36,660 - Model - INFO - Best accuracy is: 0.94620
+2021-12-03 15:42:36,660 - Model - INFO - Best class avg mIOU is: 0.95167
+2021-12-03 15:42:36,660 - Model - INFO - Best inctance avg mIOU is: 0.95167
+2021-12-03 15:42:36,661 - Model - INFO - Epoch 63 (63/251):
+2021-12-03 15:42:36,661 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:43:35,658 - Model - INFO - Train accuracy is: 0.97912
+2021-12-03 15:43:40,342 - Model - INFO - eval mIoU of Roof           0.949765
+2021-12-03 15:43:40,342 - Model - INFO - Epoch 63 test Accuracy: 0.943497  Class avg mIOU: 0.949765   Inctance avg mIOU: 0.949765
+2021-12-03 15:43:40,342 - Model - INFO - Best accuracy is: 0.94620
+2021-12-03 15:43:40,342 - Model - INFO - Best class avg mIOU is: 0.95167
+2021-12-03 15:43:40,342 - Model - INFO - Best inctance avg mIOU is: 0.95167
+2021-12-03 15:43:40,342 - Model - INFO - Epoch 64 (64/251):
+2021-12-03 15:43:40,342 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:44:38,530 - Model - INFO - Train accuracy is: 0.97877
+2021-12-03 15:44:43,267 - Model - INFO - eval mIoU of Roof           0.954221
+2021-12-03 15:44:43,268 - Model - INFO - Epoch 64 test Accuracy: 0.943853  Class avg mIOU: 0.954221   Inctance avg mIOU: 0.954221
+2021-12-03 15:44:43,268 - Model - INFO - Save model...
+2021-12-03 15:44:43,268 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:44:43,322 - Model - INFO - Saving model....
+2021-12-03 15:44:43,323 - Model - INFO - Best accuracy is: 0.94620
+2021-12-03 15:44:43,323 - Model - INFO - Best class avg mIOU is: 0.95422
+2021-12-03 15:44:43,323 - Model - INFO - Best inctance avg mIOU is: 0.95422
+2021-12-03 15:44:43,323 - Model - INFO - Epoch 65 (65/251):
+2021-12-03 15:44:43,323 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:45:41,491 - Model - INFO - Train accuracy is: 0.97536
+2021-12-03 15:45:46,152 - Model - INFO - eval mIoU of Roof           0.955957
+2021-12-03 15:45:46,152 - Model - INFO - Epoch 65 test Accuracy: 0.945401  Class avg mIOU: 0.955957   Inctance avg mIOU: 0.955957
+2021-12-03 15:45:46,152 - Model - INFO - Save model...
+2021-12-03 15:45:46,152 - Model - INFO - Saving at log/part_seg/pointnet2_part_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-03 15:45:46,201 - Model - INFO - Saving model....
+2021-12-03 15:45:46,201 - Model - INFO - Best accuracy is: 0.94620
+2021-12-03 15:45:46,201 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:45:46,201 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:45:46,201 - Model - INFO - Epoch 66 (66/251):
+2021-12-03 15:45:46,202 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:46:44,243 - Model - INFO - Train accuracy is: 0.97818
+2021-12-03 15:46:48,921 - Model - INFO - eval mIoU of Roof           0.948528
+2021-12-03 15:46:48,921 - Model - INFO - Epoch 66 test Accuracy: 0.946669  Class avg mIOU: 0.948528   Inctance avg mIOU: 0.948528
+2021-12-03 15:46:48,921 - Model - INFO - Best accuracy is: 0.94667
+2021-12-03 15:46:48,921 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:46:48,921 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:46:48,921 - Model - INFO - Epoch 67 (67/251):
+2021-12-03 15:46:48,921 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:47:51,518 - Model - INFO - Train accuracy is: 0.98050
+2021-12-03 15:47:56,197 - Model - INFO - eval mIoU of Roof           0.951765
+2021-12-03 15:47:56,197 - Model - INFO - Epoch 67 test Accuracy: 0.947596  Class avg mIOU: 0.951765   Inctance avg mIOU: 0.951765
+2021-12-03 15:47:56,197 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:47:56,197 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:47:56,197 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:47:56,197 - Model - INFO - Epoch 68 (68/251):
+2021-12-03 15:47:56,197 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:48:54,442 - Model - INFO - Train accuracy is: 0.97870
+2021-12-03 15:48:59,201 - Model - INFO - eval mIoU of Roof           0.947179
+2021-12-03 15:48:59,201 - Model - INFO - Epoch 68 test Accuracy: 0.943414  Class avg mIOU: 0.947179   Inctance avg mIOU: 0.947179
+2021-12-03 15:48:59,202 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:48:59,202 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:48:59,202 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:48:59,202 - Model - INFO - Epoch 69 (69/251):
+2021-12-03 15:48:59,202 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:49:57,854 - Model - INFO - Train accuracy is: 0.97874
+2021-12-03 15:50:02,720 - Model - INFO - eval mIoU of Roof           0.951217
+2021-12-03 15:50:02,720 - Model - INFO - Epoch 69 test Accuracy: 0.942003  Class avg mIOU: 0.951217   Inctance avg mIOU: 0.951217
+2021-12-03 15:50:02,720 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:50:02,720 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:50:02,720 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:50:02,720 - Model - INFO - Epoch 70 (70/251):
+2021-12-03 15:50:02,720 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:51:01,859 - Model - INFO - Train accuracy is: 0.97780
+2021-12-03 15:51:06,709 - Model - INFO - eval mIoU of Roof           0.944286
+2021-12-03 15:51:06,709 - Model - INFO - Epoch 70 test Accuracy: 0.943527  Class avg mIOU: 0.944286   Inctance avg mIOU: 0.944286
+2021-12-03 15:51:06,709 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:51:06,709 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:51:06,709 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:51:06,709 - Model - INFO - Epoch 71 (71/251):
+2021-12-03 15:51:06,709 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:52:05,998 - Model - INFO - Train accuracy is: 0.97814
+2021-12-03 15:52:10,854 - Model - INFO - eval mIoU of Roof           0.950432
+2021-12-03 15:52:10,854 - Model - INFO - Epoch 71 test Accuracy: 0.940099  Class avg mIOU: 0.950432   Inctance avg mIOU: 0.950432
+2021-12-03 15:52:10,854 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:52:10,854 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:52:10,854 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:52:10,854 - Model - INFO - Epoch 72 (72/251):
+2021-12-03 15:52:10,854 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:53:10,205 - Model - INFO - Train accuracy is: 0.97966
+2021-12-03 15:53:15,034 - Model - INFO - eval mIoU of Roof           0.947919
+2021-12-03 15:53:15,034 - Model - INFO - Epoch 72 test Accuracy: 0.943507  Class avg mIOU: 0.947919   Inctance avg mIOU: 0.947919
+2021-12-03 15:53:15,034 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:53:15,034 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:53:15,034 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:53:15,034 - Model - INFO - Epoch 73 (73/251):
+2021-12-03 15:53:15,034 - Model - INFO - Learning rate:0.000125
+2021-12-03 15:54:13,830 - Model - INFO - Train accuracy is: 0.97978
+2021-12-03 15:54:18,544 - Model - INFO - eval mIoU of Roof           0.948720
+2021-12-03 15:54:18,544 - Model - INFO - Epoch 73 test Accuracy: 0.940114  Class avg mIOU: 0.948720   Inctance avg mIOU: 0.948720
+2021-12-03 15:54:18,544 - Model - INFO - Best accuracy is: 0.94760
+2021-12-03 15:54:18,544 - Model - INFO - Best class avg mIOU is: 0.95596
+2021-12-03 15:54:18,544 - Model - INFO - Best inctance avg mIOU is: 0.95596
+2021-12-03 15:54:18,544 - Model - INFO - Epoch 74 (74/251):
+2021-12-03 15:54:18,544 - Model - INFO - Learning rate:0.000125

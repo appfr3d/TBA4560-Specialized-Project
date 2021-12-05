@@ -2978,3 +2978,10 @@
 2021-11-23 15:30:23,546 - Model - INFO - The number of training data is: 13998
 2021-11-23 15:30:23,546 - Model - INFO - The number of test data is: 2874
 2021-11-23 15:30:24,780 - Model - INFO - Use pretrain model
+2021-12-01 18:59:26,421 - Model - INFO - PARAMETER ...
+2021-12-01 18:59:26,421 - Model - INFO - Namespace(batch_size=12, decay_rate=0.0001, epoch=251, gpu='0,1', learning_rate=0.001, log_dir='pointnet2_part_seg_msg', lr_decay=0.5, model='pointnet2_part_seg_msg', multi_gpu=False, normal=True, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-01 18:59:26,496 - Model - INFO - The number of training data is: 13998
+2021-12-01 18:59:26,496 - Model - INFO - The number of test data is: 2874
+2021-12-01 18:59:27,733 - Model - INFO - Use pretrain model
+2021-12-01 18:59:27,733 - Model - INFO - Epoch 1 (107/251):
+2021-12-01 18:59:27,733 - Model - INFO - Learning rate:0.000031

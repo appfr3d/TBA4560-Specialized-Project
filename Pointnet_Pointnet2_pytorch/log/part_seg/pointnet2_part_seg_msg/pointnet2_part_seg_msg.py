@@ -26,6 +26,10 @@ class get_model(nn.Module):
     def forward(self, xyz, cls_label):
         # Set Abstraction layers
         B,C,N = xyz.shape
+        print('xyz.shape', xyz.shape)
+        # [4, 3, 2048]
+        print('cls_label', cls_label.shape)
+        # [4, 2048, 7]
         if self.normal_channel:
             l0_points = xyz
             l0_xyz = xyz[:,:3,:]
@@ -38,7 +42,15 @@ class get_model(nn.Module):
         # Feature Propagation layers
         l2_points = self.fp3(l2_xyz, l3_xyz, l2_points, l3_points)
         l1_points = self.fp2(l1_xyz, l2_xyz, l1_points, l2_points)
-        cls_label_one_hot = cls_label.view(B,16,1).repeat(1,1,N)
+        
+        # Error here. Cannot find right conversion to flat 
+        cls_label_one = cls_label.view(B,16,1) #         cls_label_one = cls_label.view(B,16,1)
+        print('cls_label_one.shape', cls_label_one.shape)
+
+        
+        cls_label_one_hot = cls_label_one.repeat(1,1,N)
+        print('cls_label_one_hot', cls_label_one_hot.shape)
+
         l0_points = self.fp1(l0_xyz, l1_xyz, torch.cat([cls_label_one_hot,l0_xyz,l0_points],1), l1_points)
         # FC layers
         feat = F.relu(self.bn1(self.conv1(l0_points)), inplace=True)
