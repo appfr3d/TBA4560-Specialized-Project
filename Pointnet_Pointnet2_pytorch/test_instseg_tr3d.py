@@ -81,7 +81,7 @@ def main(args):
     log_string("The number of test data is: %d" % len(TEST_DATASET))
     num_classes = 1
     num_sem = 5
-    num_inst = 11
+    num_inst = 12
 
     '''MODEL LOADING'''
     model_name = os.listdir(experiment_dir + '/logs')[0].split('.')[0]
