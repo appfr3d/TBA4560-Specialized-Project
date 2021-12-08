@@ -289,6 +289,9 @@ def main(args):
                     pred_inst = cur_pred_val[i, :]  # segmentation predictions
                     print('pred_inst.shape', pred_inst.shape)
                     pred_sem  = np.vectorize(inst_label_to_sem.get)(pred_inst) # map pred_inst to pred_sem
+                    print('is inst mapped to sem?1:', pred_inst[20], 'and', pred_sem[20])
+                    print('is inst mapped to sem?2:', pred_inst[200], 'and', pred_sem[200])
+                    print('is inst mapped to sem?3:', pred_inst[2000], 'and', pred_sem[2000])
                     gt_inst = target[i, :]       # segmentation ground truth labels
                     gt_sem  = np.vectorize(inst_label_to_sem.get)(gt_inst) # map label_inst to label_sem
                     # cat = seg_label_to_cat[label_inst[0]]
