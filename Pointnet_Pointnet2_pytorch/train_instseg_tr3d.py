@@ -12,6 +12,7 @@ import importlib
 import shutil
 import provider
 import numpy as np
+from scipy import stats
 
 from pathlib import Path
 from tqdm import tqdm
@@ -26,6 +27,14 @@ seg_label_to_cat = {}  # {0:Roof, 1:Roof, ...11:Roof}
 for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
+
+seg_label_to_sem = { 0:0, 1: 0, 2:1, 3:1, 4:2, 5:2, 6:3, 7:3, 8:4, 9:4, 10:4, 11:4 }
+
+plane_classes = { 'Rectangular': [0,1], 'Isosceles trapezoid': [2,3], 'Triangular': [4,5], 'Parallelogram': [6,7], 'Ladder shaped': [8,9,10,11]}
+plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
+for cat in plane_classes.keys():
+    for label in plane_classes[cat]:
+        plane_label_to_cat[label] = cat
 
 def inplace_relu(m):
     classname = m.__class__.__name__
@@ -216,7 +225,6 @@ def main(args):
             total_correct_class = [0 for _ in range(num_inst)]
             shape_ious = {cat: [] for cat in seg_classes.keys()}
 
-            inst_cov = {cat: [] for cat in seg_classes.keys()}
             all_mean_cov = [[] for _ in range(num_inst)]
             all_mean_weighted_cov = [[] for _ in range(num_inst)]
 
@@ -255,16 +263,34 @@ def main(args):
                     total_seen_class[l] += np.sum(target == l)
                     total_correct_class[l] += (np.sum((cur_pred_val == l) & (target == l)))
 
+
+                # G = list of ground truth regions
+                # P = list of predicted regions
+                
+                # Flow:
+                # Find groups of predictions, gther them based on the same semantic label
+                # Do the same for ground truth
+
+                # Go through the semantic labels
+                # for each ground_truth group in that label
+                # 
+
+
                 # instance mucov & mwcov
-
-                # TODO: Mace this a correct cov calculation
+                # TODO: Make this a correct cov calculation
                 for i in range(cur_batch_size):
-                    segp = cur_pred_val[i, :]
-                    segl = target[i, :]
+                    segp = cur_pred_val[i, :]   # segmentation predictions
+                    segl = target[i, :]         # segmentation ground truth labels
                     cat = seg_label_to_cat[segl[0]]
-                    inst_covs = [0.0 for _ in range(len(seg_classes[cat]))]
 
-                    for l in seg_classes[cat]:
+                    for l in seg_classes[cat]: # only one seg_class...
+
+                        sem_l = seg_label_to_sem[l]
+                        inst_covs = [0.0 for _ in range(len(seg_classes[cat]))]
+
+                        un = np.unique(segp)
+                        pts_in_pred = []
+
                         sum_cov = 0
                         mean_cov = 0
                         mean_weighted_cov = 0
