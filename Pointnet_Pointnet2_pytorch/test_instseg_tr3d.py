@@ -60,7 +60,7 @@ def main(args):
 
     '''HYPER PARAMETER'''
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
-    experiment_dir = 'log/part_seg/' + args.log_dir
+    experiment_dir = 'log/inst_seg/' + args.log_dir
 
     '''LOG'''
     args = parse_args()
