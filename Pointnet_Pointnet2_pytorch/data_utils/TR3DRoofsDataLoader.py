@@ -9,7 +9,7 @@ warnings.filterwarnings('ignore')
 
 # Colors made with: https://mokole.com/palette.html
 # A tool to generate any number of visually distinct colors
-roof_plane_to_color = { 0: '#0000ff', 1: '#00ffff', 2: '#ff0000', 3: '#ff69b4', 4: '#00ff00', 5: '#008000', 6: '#4b0082', 7: '#ffd700', 8: '#ffe4c4', 9: '#4682b4', 10: '#8b4513' }
+roof_plane_to_color = { 0: '#0000ff', 1: '#00ffff', 2: '#ff0000', 3: '#ff69b4', 4: '#00ff00', 5: '#008000', 6: '#4b0082', 7: '#ffd700', 8: '#ffe4c4', 9: '#4682b4', 10: '#8b4513', 11: '#dfdfdf' }
 hex_to_rgb = lambda hex: tuple(int(hex[i:i+2], 16) for i in (1, 3, 5))
 
 class TR3DRoofsDataset(Dataset):
