@@ -461,7 +461,7 @@ def main(args):
                 'epoch': epoch,
                 'train_acc': train_instance_acc,
                 'test_acc': test_metrics['accuracy'],
-                'class_avg_iou': test_metrics['class_avg_iou'],
+                # 'class_avg_iou': test_metrics['class_avg_iou'],
                 'cov': test_metrics['cov'],
                 'wcov': test_metrics['wcov'],
                 'model_state_dict': classifier.state_dict(),
