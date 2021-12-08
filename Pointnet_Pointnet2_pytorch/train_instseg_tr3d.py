@@ -28,13 +28,14 @@ for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
 
-seg_label_to_sem = { 0:0, 1: 0, 2:1, 3:1, 4:2, 5:2, 6:3, 7:3, 8:4, 9:4, 10:4, 11:4 }
+inst_label_to_sem = { 0:0, 1: 0, 2:1, 3:1, 4:2, 5:2, 6:3, 7:3, 8:4, 9:4, 10:4, 11:4 }
+sem_label_to_inst = { 0: [0,1], 1: [2,3], 2: [4,5], 3: [6,7], 4: [8,9,10,11]}
 
-plane_classes = { 'Rectangular': [0,1], 'Isosceles trapezoid': [2,3], 'Triangular': [4,5], 'Parallelogram': [6,7], 'Ladder shaped': [8,9,10,11]}
-plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
-for cat in plane_classes.keys():
-    for label in plane_classes[cat]:
-        plane_label_to_cat[label] = cat
+# plane_classes = { 'Rectangular': [0,1], 'Isosceles trapezoid': [2,3], 'Triangular': [4,5], 'Parallelogram': [6,7], 'Ladder shaped': [8,9,10,11]}
+# plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
+# for cat in plane_classes.keys():
+#     for label in plane_classes[cat]:
+#         plane_label_to_cat[label] = cat
 
 def inplace_relu(m):
     classname = m.__class__.__name__
@@ -112,7 +113,8 @@ def main(args):
     log_string("The number of test data is: %d" % len(TEST_DATASET))
 
     # TODO: check if num classes is correct, because what about combinations of roof types...
-    num_classes = 1 # roof types
+    num_classes = 1 # classes, only roofs
+    num_sem = 5     # roof types
     num_inst = 12   # roof plane shapes
 
     '''MODEL LOADING'''
@@ -204,6 +206,8 @@ def main(args):
             target = target.view(-1, 1)[:, 0]
             pred_choice = seg_pred.data.max(1)[1]
 
+            # TODO: This should also be based on samantic label, not instance label...
+            # But how should it be able to differentiate between label 0 and 1... it could be all 0 and all 1 and get full score...
             correct = pred_choice.eq(target.data).cpu().sum()
             mean_correct.append(correct.item() / (args.batch_size * args.npoint))
             loss = criterion(seg_pred, target, trans_feat)
@@ -216,7 +220,7 @@ def main(args):
 
         # TODO: Start to change here!
         # Everything in the with-block below should be placed in a test_instseg.py file as well.
-        # only exeption is that test_instseg.py should also have a voting_pool (see line 108 in test_partseg.py)
+        # only exception is that test_instseg.py should also have a voting_pool (see line 108 in test_partseg.py)
         with torch.no_grad():
             test_metrics = {} # keep
             total_correct = 0 
@@ -260,15 +264,17 @@ def main(args):
                 total_seen += (cur_batch_size * NUM_POINT)
 
                 for l in range(num_inst):
+                    # This will be total correct instance label 
                     total_seen_class[l] += np.sum(target == l)
                     total_correct_class[l] += (np.sum((cur_pred_val == l) & (target == l)))
+
 
 
                 # G = list of ground truth regions
                 # P = list of predicted regions
                 
                 # Flow:
-                # Find groups of predictions, gther them based on the same semantic label
+                # Find groups of predictions, gather them based on the same semantic label
                 # Do the same for ground truth
 
                 # Go through the semantic labels
@@ -278,32 +284,53 @@ def main(args):
 
                 # instance mucov & mwcov
                 # TODO: Make this a correct cov calculation
+                # NB: I wirte this as if there is only one class. Not generally for several parts.
                 for i in range(cur_batch_size):
-                    segp = cur_pred_val[i, :]   # segmentation predictions
-                    segl = target[i, :]         # segmentation ground truth labels
-                    cat = seg_label_to_cat[segl[0]]
+                    pred_inst = cur_pred_val[i, :]  # segmentation predictions
+                    print('pred_inst.shape', pred_inst.shape)
+                    pred_sem  = np.vectorize(inst_label_to_sem.get)(pred_inst) # map pred_inst to pred_sem
+                    gt_inst = target[i, :]       # segmentation ground truth labels
+                    gt_sem  = np.vectorize(inst_label_to_sem.get)(gt_inst) # map label_inst to label_sem
+                    # cat = seg_label_to_cat[label_inst[0]]
 
+                    un = np.unique(pred_inst)
+                    pts_in_pred = [[] for _ in range(num_sem)]
+                    for ig, g in enumerate(un): # each object in prediction
+                        if g == -1:
+                            continue
+                        tmp = (pred_inst == g)
+                        sem_seg_i = int(stats.mode(pred_sem[tmp])[0])
+                        pts_in_pred[sem_seg_i] += [tmp]
+                    
+                    un = np.unique(gt_inst)
+                    pts_in_gt = [[] for _ in range(num_sem)]
+                    for ig, g in enumerate(un):
+                        tmp = (gt_inst == g)
+                        sem_seg_i = int(stats.mode(gt_sem[tmp])[0])
+                        pts_in_gt[sem_seg_i] += [tmp]
+                    '''
+                    # no need...
                     for l in seg_classes[cat]: # only one seg_class...
 
-                        sem_l = seg_label_to_sem[l]
+                        sem_l = inst_label_to_sem[l]
                         inst_covs = [0.0 for _ in range(len(seg_classes[cat]))]
 
-                        un = np.unique(segp)
-                        pts_in_pred = []
+                        
 
                         sum_cov = 0
                         mean_cov = 0
                         mean_weighted_cov = 0
                         num_gt_points = 0
                         
-                        if (np.sum(segl == l) == 0) and (
-                                np.sum(segp == l) == 0):  # inst is not present, no prediction as well
+                        if (np.sum(seg_label == l) == 0) and (
+                                np.sum(seg_pred == l) == 0):  # inst is not present, no prediction as well
                             inst_covs[l - seg_classes[cat][0]] = 1.0
                         else:
                             # This mus be corrected.
                             inst_covs[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                                 np.sum((segl == l) | (segp == l)))
-
+                    '''
+                
                 for i in range(cur_batch_size):
                     segp = cur_pred_val[i, :]
                     segl = target[i, :]
