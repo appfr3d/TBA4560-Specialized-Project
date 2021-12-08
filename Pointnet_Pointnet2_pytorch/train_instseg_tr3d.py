@@ -31,11 +31,11 @@ for cat in seg_classes.keys():
 inst_label_to_sem = { 0:0, 1: 0, 2:1, 3:1, 4:2, 5:2, 6:3, 7:3, 8:4, 9:4, 10:4, 11:4 }
 sem_label_to_inst = { 0: [0,1], 1: [2,3], 2: [4,5], 3: [6,7], 4: [8,9,10,11]}
 
-# plane_classes = { 'Rectangular': [0,1], 'Isosceles trapezoid': [2,3], 'Triangular': [4,5], 'Parallelogram': [6,7], 'Ladder shaped': [8,9,10,11]}
-# plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
-# for cat in plane_classes.keys():
-#     for label in plane_classes[cat]:
-#         plane_label_to_cat[label] = cat
+plane_classes = { 'Rectangular': [0,1], 'Isosceles trapezoid': [2,3], 'Triangular': [4,5], 'Parallelogram': [6,7], 'Ladder shaped': [8,9,10,11]}
+plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
+for cat in plane_classes.keys():
+    for label in plane_classes[cat]:
+        plane_label_to_cat[label] = cat
 
 def inplace_relu(m):
     classname = m.__class__.__name__
@@ -169,8 +169,10 @@ def main(args):
 
     best_acc = 0
     global_epoch = 0
-    best_class_avg_iou = 0
-    best_inctance_avg_iou = 0
+    # best_class_avg_iou = 0
+    # best_inctance_avg_iou = 0
+    best_cov = 0
+    best_wcov = 0
 
     for epoch in range(start_epoch, args.epoch):
         mean_correct = []
@@ -225,12 +227,18 @@ def main(args):
             test_metrics = {} # keep
             total_correct = 0 
             total_seen = 0
-            total_seen_class = [0 for _ in range(num_inst)]
-            total_correct_class = [0 for _ in range(num_inst)]
+            total_seen_inst = [0 for _ in range(num_inst)]
+            total_correct_inst = [0 for _ in range(num_inst)]
             shape_ious = {cat: [] for cat in seg_classes.keys()}
 
-            all_mean_cov = [[] for _ in range(num_inst)]
-            all_mean_weighted_cov = [[] for _ in range(num_inst)]
+            # precision & recall
+            total_gt_ins = np.zeros(num_sem)
+            at = 0.5
+            tpsins = [[] for _ in range(num_sem)]
+            fpsins = [[] for _ in range(num_sem)]
+            # mucov and mwcov
+            all_mean_cov = [[] for _ in range(num_sem)]
+            all_mean_weighted_cov = [[] for _ in range(num_sem)]
 
             classifier = classifier.eval()
 
@@ -264,36 +272,21 @@ def main(args):
                 total_seen += (cur_batch_size * NUM_POINT)
 
                 for l in range(num_inst):
-                    # This will be total correct instance label 
-                    total_seen_class[l] += np.sum(target == l)
-                    total_correct_class[l] += (np.sum((cur_pred_val == l) & (target == l)))
-
-
-
-                # G = list of ground truth regions
-                # P = list of predicted regions
-                
-                # Flow:
-                # Find groups of predictions, gather them based on the same semantic label
-                # Do the same for ground truth
-
-                # Go through the semantic labels
-                # for each ground_truth group in that label
-                # 
-
+                    # This will be total correct based on instance label 
+                    total_seen_inst[l] += np.sum(target == l)
+                    total_correct_inst[l] += (np.sum((cur_pred_val == l) & (target == l)))
 
                 # instance mucov & mwcov
                 # TODO: Make this a correct cov calculation
-                # NB: I wirte this as if there is only one class. Not generally for several parts.
+                # NB: I write this as if there is only one class. Not generally for several object classes as we only have roofs.
+                # Must combine all the cov's at the end to get a mCov
+
+                # OR should we measure mCov based on only the roof class, and not the different semantic labels??
                 for i in range(cur_batch_size):
-                    pred_inst = cur_pred_val[i, :]  # segmentation predictions
-                    print('pred_inst.shape', pred_inst.shape)
-                    pred_sem  = np.vectorize(inst_label_to_sem.get)(pred_inst) # map pred_inst to pred_sem
-                    print('is inst mapped to sem?1:', pred_inst[20], 'and', pred_sem[20])
-                    print('is inst mapped to sem?2:', pred_inst[200], 'and', pred_sem[200])
-                    print('is inst mapped to sem?3:', pred_inst[2000], 'and', pred_sem[2000])
-                    gt_inst = target[i, :]       # segmentation ground truth labels
-                    gt_sem  = np.vectorize(inst_label_to_sem.get)(gt_inst) # map label_inst to label_sem
+                    pred_inst = cur_pred_val[i, :]                              # segmentation predictions
+                    pred_sem  = np.vectorize(inst_label_to_sem.get)(pred_inst)  # map pred_inst to pred_sem
+                    gt_inst = target[i, :]                                      # segmentation ground truth labels
+                    gt_sem  = np.vectorize(inst_label_to_sem.get)(gt_inst)      # map label_inst to label_sem
                     # cat = seg_label_to_cat[label_inst[0]]
 
                     un = np.unique(pred_inst)
@@ -301,16 +294,73 @@ def main(args):
                     for ig, g in enumerate(un): # each object in prediction
                         if g == -1:
                             continue
-                        tmp = (pred_inst == g)
+                        tmp = (pred_inst == g) # the predicted group of points in this instance
                         sem_seg_i = int(stats.mode(pred_sem[tmp])[0])
                         pts_in_pred[sem_seg_i] += [tmp]
                     
                     un = np.unique(gt_inst)
                     pts_in_gt = [[] for _ in range(num_sem)]
                     for ig, g in enumerate(un):
-                        tmp = (gt_inst == g)
+                        tmp = (gt_inst == g) # the true group of points in this instance
                         sem_seg_i = int(stats.mode(gt_sem[tmp])[0])
                         pts_in_gt[sem_seg_i] += [tmp]
+
+                    # instance mucov & mwcov
+                    for i_sem in range(num_sem):
+                        sum_cov = 0
+                        mean_cov = 0
+                        mean_weighted_cov = 0
+                        num_gt_point = 0
+                        for ig, ins_gt in enumerate(pts_in_gt[i_sem]):
+                            ovmax = 0.
+                            num_ins_gt_point = np.sum(ins_gt)
+                            num_gt_point += num_ins_gt_point
+                            for ip, ins_pred in enumerate(pts_in_pred[i_sem]):
+                                union = (ins_pred | ins_gt)
+                                intersect = (ins_pred & ins_gt)
+                                iou = float(np.sum(intersect)) / np.sum(union)
+
+                                if iou > ovmax:
+                                    ovmax = iou
+                                    ipmax = ip
+
+                            sum_cov += ovmax
+                            mean_weighted_cov += ovmax * num_ins_gt_point
+
+                        if len(pts_in_gt[i_sem]) != 0:
+                            mean_cov = sum_cov / len(pts_in_gt[i_sem])
+                            all_mean_cov[i_sem].append(mean_cov)
+
+                            mean_weighted_cov /= num_gt_point
+                            all_mean_weighted_cov[i_sem].append(mean_weighted_cov)
+
+                    
+                    # instance precision & recall
+                    for i_sem in range(num_sem):
+                        tp = [0.] * len(pts_in_pred[i_sem])
+                        fp = [0.] * len(pts_in_pred[i_sem])
+                        gtflag = np.zeros(len(pts_in_gt[i_sem]))
+                        total_gt_ins[i_sem] += len(pts_in_gt[i_sem])
+
+                        for ip, ins_pred in enumerate(pts_in_pred[i_sem]):
+                            ovmax = -1.
+
+                            for ig, ins_gt in enumerate(pts_in_gt[i_sem]):
+                                union = (ins_pred | ins_gt)
+                                intersect = (ins_pred & ins_gt)
+                                iou = float(np.sum(intersect)) / np.sum(union)
+
+                                if iou > ovmax:
+                                    ovmax = iou
+                                    igmax = ig
+
+                            if ovmax >= at:
+                                tp[ip] = 1  # true
+                            else:
+                                fp[ip] = 1  # false positive
+
+                        tpsins[i_sem] += tp
+                        fpsins[i_sem] += fp
                     '''
                     # no need...
                     for l in seg_classes[cat]: # only one seg_class...
@@ -333,7 +383,7 @@ def main(args):
                             inst_covs[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                                 np.sum((segl == l) | (segp == l)))
                     '''
-                
+                '''
                 for i in range(cur_batch_size):
                     segp = cur_pred_val[i, :]
                     segl = target[i, :]
@@ -347,30 +397,63 @@ def main(args):
                             part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                                 np.sum((segl == l) | (segp == l)))
                     shape_ious[cat].append(np.mean(part_ious))
+                '''
 
-            all_inst_cov = []
+            # Should be done for all classes, but we only have Roof so don't bother
+            Cov_sem = np.zeros(num_sem)
+            WCov_sem = np.zeros(num_sem) 
+            for i_sem in range(num_sem):
+                Cov_sem[i_sem] = np.mean(all_mean_cov[i_sem])
+                WCov_sem[i_sem] = np.mean(all_mean_weighted_cov[i_sem])
+            
+            # Mean for all the instances of Roof, so not mCov as mCov is over all classes and we only have one class Roof
+            Cov = np.mean(Cov_sem)
+            WCov = np.mean(WCov_sem)
+            
 
-
+            '''
             all_shape_ious = []
             for cat in shape_ious.keys():
                 for iou in shape_ious[cat]:
                     all_shape_ious.append(iou)
                 shape_ious[cat] = np.mean(shape_ious[cat])
             mean_shape_ious = np.mean(list(shape_ious.values()))
+            '''
             test_metrics['accuracy'] = total_correct / float(total_seen)
-            test_metrics['class_avg_accuracy'] = np.mean(
-                np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+            test_metrics['inst_avg_accuracy'] = np.mean(
+                np.array(total_correct_inst) / np.array(total_seen_inst, dtype=np.float))
+            
+            '''
             for cat in sorted(shape_ious.keys()):
                 log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
             test_metrics['class_avg_iou'] = mean_shape_ious
             test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
+            '''
 
-        log_string('Epoch %d test Accuracy: %f  Class avg mIOU: %f   Inctance avg mIOU: %f' % (
-            epoch + 1, test_metrics['accuracy'], test_metrics['class_avg_iou'], test_metrics['inctance_avg_iou']))
+            # Log Cov for each semantic label
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem  Cov of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Cov_sem[i_sem]))
+
+            # Log WCov for each semantic class
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem WCov of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), WCov_sem[i_sem]))
+            
+            # Log Cov and WCov for the roof class
+            log_string('eval  Cov of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Cov))
+            log_string('eval WCov of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), WCov))
+            test_metrics['cov'] = Cov
+            test_metrics['wcov'] = WCov
+
+        log_string('Epoch %d test Accuracy: %f  Cov: %f   WCov: %f' % (
+            epoch + 1, test_metrics['accuracy'], test_metrics['cov'], test_metrics['wcov']))
         
         
-        # TODO: in instance case, save when mCov has new best
-        if (test_metrics['inctance_avg_iou'] >= best_inctance_avg_iou):
+        # TODO: Check if shit is appropriate...
+        if (test_metrics['cov'] >= best_cov):
             logger.info('Save model...')
             savepath = str(checkpoints_dir) + '/best_model.pth'
             log_string('Saving at %s' % savepath)
@@ -379,7 +462,8 @@ def main(args):
                 'train_acc': train_instance_acc,
                 'test_acc': test_metrics['accuracy'],
                 'class_avg_iou': test_metrics['class_avg_iou'],
-                'inctance_avg_iou': test_metrics['inctance_avg_iou'],
+                'cov': test_metrics['cov'],
+                'wcov': test_metrics['wcov'],
                 'model_state_dict': classifier.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
             }
@@ -388,13 +472,14 @@ def main(args):
 
         if test_metrics['accuracy'] > best_acc:
             best_acc = test_metrics['accuracy']
-        if test_metrics['class_avg_iou'] > best_class_avg_iou:
-            best_class_avg_iou = test_metrics['class_avg_iou']
-        if test_metrics['inctance_avg_iou'] > best_inctance_avg_iou:
-            best_inctance_avg_iou = test_metrics['inctance_avg_iou']
+        if test_metrics['cov'] > best_cov:
+            best_cov = test_metrics['cov']
+        if test_metrics['wcov'] > best_wcov:
+            best_wcov = test_metrics['wcov']
+
         log_string('Best accuracy is: %.5f' % best_acc)
-        log_string('Best class avg mIOU is: %.5f' % best_class_avg_iou)
-        log_string('Best inctance avg mIOU is: %.5f' % best_inctance_avg_iou)
+        log_string('Best Cov is: %.5f' % best_cov)
+        log_string('Best WCov is: %.5f' % WCov)
         global_epoch += 1
 
 
