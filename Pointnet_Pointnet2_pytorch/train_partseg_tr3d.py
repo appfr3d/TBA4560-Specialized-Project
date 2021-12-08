@@ -242,8 +242,10 @@ def main(args):
                 for i in range(cur_batch_size):
                     segp = cur_pred_val[i, :]
                     segl = target[i, :]
-                    cat = seg_label_to_cat[segl[0]]
-                    part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
+                    # just pick one of the segmentation labels, and get the class for this instance with sec_classes[cat]
+                    cat = seg_label_to_cat[segl[0]] 
+                    part_ious = [0.0 for _ in range(len(seg_classes[cat]))] # will be 5 zeros
+
                     # part_ious = [0.0 for _ in range(len(num_part))] # Feks?
                     # for l in seg_classes.values()
                     for l in seg_classes[cat]:

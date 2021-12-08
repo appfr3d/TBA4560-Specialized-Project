@@ -13,7 +13,7 @@ roof_plane_to_color = { 0: '#0000ff', 1: '#00ffff', 2: '#ff0000', 3: '#ff69b4', 
 hex_to_rgb = lambda hex: tuple(int(hex[i:i+2], 16) for i in (1, 3, 5))
 
 class TR3DRoofsDataset(Dataset):
-    def __init__(self, root='./data/TR3DRoofs', npoints=1024, split='train', seg_type='inst'): # inst_type: 'sem' | 'isnt'
+    def __init__(self, root='./data/TR3DRoofs', npoints=1024, split='train', seg_type='inst'): # inst_type: 'sem' | 'inst'
         self.npoints = npoints
         self.root = root
         self.seg_type = seg_type

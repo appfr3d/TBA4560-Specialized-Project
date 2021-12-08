@@ -6,12 +6,12 @@ numpy==1.19.5
 opencv-python==4.5.4.58
 packaging==21.3
 Pillow==8.4.0
-pkg_resources==0.0.0
 pycodestyle==2.8.0
 pyparsing==3.0.6
 scikit-build==0.12.0
 scipy==1.5.4
 toml==0.10.2
-torch==1.6.0+cu101
-torchvision==0.7.0+cu101
+torch==1.6.0
+torchvision==0.7.0
 tqdm==4.62.3
+pkg_resources==0.0.0

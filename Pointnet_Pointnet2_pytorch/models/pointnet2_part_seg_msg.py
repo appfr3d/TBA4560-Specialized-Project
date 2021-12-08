@@ -59,6 +59,7 @@ class get_loss(nn.Module):
         super(get_loss, self).__init__()
 
     def forward(self, pred, target, trans_feat):
+        # Change this if it is inst-seg?
         total_loss = F.nll_loss(pred, target)
 
         return total_loss

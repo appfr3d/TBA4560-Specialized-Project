@@ -206,13 +206,36 @@ def main(args):
             seg_pred, trans_feat = classifier(points, to_categorical(label, num_classes))
             seg_pred = seg_pred.contiguous().view(-1, num_inst)
             target = target.view(-1, 1)[:, 0]
-            pred_choice = seg_pred.data.max(1)[1]
+
 
             # TODO: This should also be based on samantic label, not instance label...
             # But how should it be able to differentiate between label 0 and 1... it could be all 0 and all 1 and get full score...
+            pred_choice = seg_pred.data.max(1)[1]
             correct = pred_choice.eq(target.data).cpu().sum()
             mean_correct.append(correct.item() / (args.batch_size * args.npoint))
-            loss = criterion(seg_pred, target, trans_feat)
+
+
+            # Map instance seg to semantic
+            pred_inst = seg_pred.data.numpy()
+            pred_sem = np.vectorize(inst_label_to_sem.get)(pred_inst)
+
+            gt_inst = target.data.numpy()
+            gt_sem = np.vectorize(inst_label_to_sem.get)(gt_inst)
+            
+            # Find which pred_inst group is covering the most of each corresponding instance label.
+            # Say we have two groups for one samantic label
+            # look at each group with the corresponding gt_inst labels and choose instance label based on which covers most of each...
+
+            # Say two groups have inst label 0 and 1. 
+            # But the group with instance label 1 covers most of the points for inst label 0, and vice versa
+            # Then we want to swap the instance labels of the two groups.
+            
+            pred_sem = torch.Tensor(pred_sem).float().cuda()
+            gt_sem = torch.Tensor(gt_sem).float().cuda()
+
+
+            # loss = criterion(seg_pred, target, trans_feat)
+            loss = criterion(pred_sem, gt_sem, trans_feat)
             loss.backward()
             optimizer.step()
 
