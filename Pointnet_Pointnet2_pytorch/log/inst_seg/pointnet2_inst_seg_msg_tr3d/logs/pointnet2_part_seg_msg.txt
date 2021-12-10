@@ -1,0 +1,1439 @@
+2021-12-08 10:44:27,351 - Model - INFO - PARAMETER ...
+2021-12-08 10:44:27,351 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-08 10:44:27,354 - Model - INFO - The number of training data is: 887
+2021-12-08 10:44:27,354 - Model - INFO - The number of test data is: 99
+2021-12-08 10:44:29,600 - Model - INFO - No existing model, starting training from scratch...
+2021-12-08 10:44:29,602 - Model - INFO - Epoch 1 (1/251):
+2021-12-08 10:44:29,602 - Model - INFO - Learning rate:0.001000
+2021-12-08 10:45:26,415 - Model - INFO - Train accuracy is: 0.36426
+2021-12-08 10:53:44,615 - Model - INFO - PARAMETER ...
+2021-12-08 10:53:44,615 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-08 10:53:44,618 - Model - INFO - The number of training data is: 887
+2021-12-08 10:53:44,618 - Model - INFO - The number of test data is: 99
+2021-12-08 10:53:45,830 - Model - INFO - No existing model, starting training from scratch...
+2021-12-08 10:53:45,831 - Model - INFO - Epoch 1 (1/251):
+2021-12-08 10:53:45,831 - Model - INFO - Learning rate:0.001000
+2021-12-08 10:54:42,593 - Model - INFO - Train accuracy is: 0.37123
+2021-12-08 12:00:45,088 - Model - INFO - PARAMETER ...
+2021-12-08 12:00:45,088 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-08 12:00:45,091 - Model - INFO - The number of training data is: 887
+2021-12-08 12:00:45,091 - Model - INFO - The number of test data is: 99
+2021-12-08 12:00:46,427 - Model - INFO - No existing model, starting training from scratch...
+2021-12-08 12:00:46,428 - Model - INFO - Epoch 1 (1/251):
+2021-12-08 12:00:46,428 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:01:43,690 - Model - INFO - Train accuracy is: 0.36761
+2021-12-08 12:01:48,400 - Model - INFO - eval sem  Cov of Rectangular    0.542567
+2021-12-08 12:01:48,400 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.011136
+2021-12-08 12:01:48,400 - Model - INFO - eval sem  Cov of Triangular     0.031174
+2021-12-08 12:01:48,400 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:01:48,400 - Model - INFO - eval sem  Cov of Ladder shaped  0.000000
+2021-12-08 12:01:48,400 - Model - INFO - eval sem WCov of Rectangular    0.553997
+2021-12-08 12:01:48,401 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.011176
+2021-12-08 12:01:48,401 - Model - INFO - eval sem WCov of Triangular     0.029959
+2021-12-08 12:01:48,401 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:01:48,401 - Model - INFO - eval sem WCov of Ladder shaped  0.000000
+2021-12-08 12:01:48,401 - Model - INFO - eval  Cov of Roof           0.116975
+2021-12-08 12:01:48,401 - Model - INFO - eval WCov of Roof           0.119026
+2021-12-08 12:01:48,401 - Model - INFO - Epoch 1 test Accuracy: 0.432528  Cov: 0.116975   WCov: 0.119026
+2021-12-08 12:01:48,401 - Model - INFO - Save model...
+2021-12-08 12:01:48,401 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:06:22,555 - Model - INFO - PARAMETER ...
+2021-12-08 12:06:22,555 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-08 12:06:22,558 - Model - INFO - The number of training data is: 887
+2021-12-08 12:06:22,558 - Model - INFO - The number of test data is: 99
+2021-12-08 12:06:23,784 - Model - INFO - No existing model, starting training from scratch...
+2021-12-08 12:06:23,785 - Model - INFO - Epoch 1 (1/251):
+2021-12-08 12:06:23,785 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:07:20,571 - Model - INFO - Train accuracy is: 0.36613
+2021-12-08 12:07:25,315 - Model - INFO - eval sem  Cov of Rectangular    0.525597
+2021-12-08 12:07:25,315 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.342969
+2021-12-08 12:07:25,315 - Model - INFO - eval sem  Cov of Triangular     0.092390
+2021-12-08 12:07:25,315 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:07:25,315 - Model - INFO - eval sem  Cov of Ladder shaped  0.000000
+2021-12-08 12:07:25,315 - Model - INFO - eval sem WCov of Rectangular    0.535879
+2021-12-08 12:07:25,315 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.343616
+2021-12-08 12:07:25,315 - Model - INFO - eval sem WCov of Triangular     0.092149
+2021-12-08 12:07:25,315 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:07:25,315 - Model - INFO - eval sem WCov of Ladder shaped  0.000000
+2021-12-08 12:07:25,315 - Model - INFO - eval  Cov of Roof           0.192191
+2021-12-08 12:07:25,315 - Model - INFO - eval WCov of Roof           0.194329
+2021-12-08 12:07:25,315 - Model - INFO - Epoch 1 test Accuracy: 0.459433  Cov: 0.192191   WCov: 0.194329
+2021-12-08 12:07:25,315 - Model - INFO - Save model...
+2021-12-08 12:07:25,315 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:07:25,351 - Model - INFO - Saving model....
+2021-12-08 12:07:25,351 - Model - INFO - Best accuracy is: 0.45943
+2021-12-08 12:07:25,351 - Model - INFO - Best Cov is: 0.19219
+2021-12-08 12:07:25,351 - Model - INFO - Best WCov is: 0.19433
+2021-12-08 12:07:25,351 - Model - INFO - Epoch 2 (2/251):
+2021-12-08 12:07:25,351 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:08:22,312 - Model - INFO - Train accuracy is: 0.43255
+2021-12-08 12:08:27,121 - Model - INFO - eval sem  Cov of Rectangular    0.537780
+2021-12-08 12:08:27,121 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.375131
+2021-12-08 12:08:27,121 - Model - INFO - eval sem  Cov of Triangular     0.265367
+2021-12-08 12:08:27,121 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:08:27,121 - Model - INFO - eval sem  Cov of Ladder shaped  0.000000
+2021-12-08 12:08:27,121 - Model - INFO - eval sem WCov of Rectangular    0.548130
+2021-12-08 12:08:27,121 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.377678
+2021-12-08 12:08:27,121 - Model - INFO - eval sem WCov of Triangular     0.265839
+2021-12-08 12:08:27,121 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:08:27,121 - Model - INFO - eval sem WCov of Ladder shaped  0.000000
+2021-12-08 12:08:27,121 - Model - INFO - eval  Cov of Roof           0.235656
+2021-12-08 12:08:27,121 - Model - INFO - eval WCov of Roof           0.238329
+2021-12-08 12:08:27,121 - Model - INFO - Epoch 2 test Accuracy: 0.470106  Cov: 0.235656   WCov: 0.238329
+2021-12-08 12:08:27,121 - Model - INFO - Save model...
+2021-12-08 12:08:27,121 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:08:27,175 - Model - INFO - Saving model....
+2021-12-08 12:08:27,175 - Model - INFO - Best accuracy is: 0.47011
+2021-12-08 12:08:27,175 - Model - INFO - Best Cov is: 0.23566
+2021-12-08 12:08:27,175 - Model - INFO - Best WCov is: 0.23833
+2021-12-08 12:08:27,175 - Model - INFO - Epoch 3 (3/251):
+2021-12-08 12:08:27,175 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:09:24,469 - Model - INFO - Train accuracy is: 0.45086
+2021-12-08 12:09:29,249 - Model - INFO - eval sem  Cov of Rectangular    0.621952
+2021-12-08 12:09:29,249 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.406184
+2021-12-08 12:09:29,249 - Model - INFO - eval sem  Cov of Triangular     0.339910
+2021-12-08 12:09:29,250 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:09:29,250 - Model - INFO - eval sem  Cov of Ladder shaped  0.000000
+2021-12-08 12:09:29,250 - Model - INFO - eval sem WCov of Rectangular    0.632322
+2021-12-08 12:09:29,250 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.406620
+2021-12-08 12:09:29,250 - Model - INFO - eval sem WCov of Triangular     0.342838
+2021-12-08 12:09:29,250 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:09:29,250 - Model - INFO - eval sem WCov of Ladder shaped  0.000000
+2021-12-08 12:09:29,250 - Model - INFO - eval  Cov of Roof           0.273609
+2021-12-08 12:09:29,250 - Model - INFO - eval WCov of Roof           0.276356
+2021-12-08 12:09:29,250 - Model - INFO - Epoch 3 test Accuracy: 0.503255  Cov: 0.273609   WCov: 0.276356
+2021-12-08 12:09:29,250 - Model - INFO - Save model...
+2021-12-08 12:09:29,250 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:09:29,303 - Model - INFO - Saving model....
+2021-12-08 12:09:29,303 - Model - INFO - Best accuracy is: 0.50326
+2021-12-08 12:09:29,303 - Model - INFO - Best Cov is: 0.27361
+2021-12-08 12:09:29,303 - Model - INFO - Best WCov is: 0.27636
+2021-12-08 12:09:29,303 - Model - INFO - Epoch 4 (4/251):
+2021-12-08 12:09:29,303 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:10:26,319 - Model - INFO - Train accuracy is: 0.47272
+2021-12-08 12:10:31,103 - Model - INFO - eval sem  Cov of Rectangular    0.563769
+2021-12-08 12:10:31,103 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.360106
+2021-12-08 12:10:31,103 - Model - INFO - eval sem  Cov of Triangular     0.405706
+2021-12-08 12:10:31,103 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:10:31,103 - Model - INFO - eval sem  Cov of Ladder shaped  0.142082
+2021-12-08 12:10:31,103 - Model - INFO - eval sem WCov of Rectangular    0.574196
+2021-12-08 12:10:31,103 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.359024
+2021-12-08 12:10:31,103 - Model - INFO - eval sem WCov of Triangular     0.408335
+2021-12-08 12:10:31,103 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:10:31,103 - Model - INFO - eval sem WCov of Ladder shaped  0.142139
+2021-12-08 12:10:31,103 - Model - INFO - eval  Cov of Roof           0.294332
+2021-12-08 12:10:31,103 - Model - INFO - eval WCov of Roof           0.296739
+2021-12-08 12:10:31,103 - Model - INFO - Epoch 4 test Accuracy: 0.517356  Cov: 0.294332   WCov: 0.296739
+2021-12-08 12:10:31,103 - Model - INFO - Save model...
+2021-12-08 12:10:31,103 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:10:31,156 - Model - INFO - Saving model....
+2021-12-08 12:10:31,156 - Model - INFO - Best accuracy is: 0.51736
+2021-12-08 12:10:31,157 - Model - INFO - Best Cov is: 0.29433
+2021-12-08 12:10:31,157 - Model - INFO - Best WCov is: 0.29674
+2021-12-08 12:10:31,157 - Model - INFO - Epoch 5 (5/251):
+2021-12-08 12:10:31,157 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:11:28,197 - Model - INFO - Train accuracy is: 0.48936
+2021-12-08 12:11:32,992 - Model - INFO - eval sem  Cov of Rectangular    0.667888
+2021-12-08 12:11:32,992 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.417696
+2021-12-08 12:11:32,992 - Model - INFO - eval sem  Cov of Triangular     0.299970
+2021-12-08 12:11:32,992 - Model - INFO - eval sem  Cov of Parallelogram  0.213306
+2021-12-08 12:11:32,992 - Model - INFO - eval sem  Cov of Ladder shaped  0.184780
+2021-12-08 12:11:32,992 - Model - INFO - eval sem WCov of Rectangular    0.678258
+2021-12-08 12:11:32,992 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.422244
+2021-12-08 12:11:32,992 - Model - INFO - eval sem WCov of Triangular     0.298524
+2021-12-08 12:11:32,992 - Model - INFO - eval sem WCov of Parallelogram  0.199940
+2021-12-08 12:11:32,992 - Model - INFO - eval sem WCov of Ladder shaped  0.187934
+2021-12-08 12:11:32,992 - Model - INFO - eval  Cov of Roof           0.356728
+2021-12-08 12:11:32,992 - Model - INFO - eval WCov of Roof           0.357380
+2021-12-08 12:11:32,992 - Model - INFO - Epoch 5 test Accuracy: 0.545376  Cov: 0.356728   WCov: 0.357380
+2021-12-08 12:11:32,992 - Model - INFO - Save model...
+2021-12-08 12:11:32,992 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:11:33,045 - Model - INFO - Saving model....
+2021-12-08 12:11:33,046 - Model - INFO - Best accuracy is: 0.54538
+2021-12-08 12:11:33,046 - Model - INFO - Best Cov is: 0.35673
+2021-12-08 12:11:33,046 - Model - INFO - Best WCov is: 0.35738
+2021-12-08 12:11:33,046 - Model - INFO - Epoch 6 (6/251):
+2021-12-08 12:11:33,046 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:12:30,075 - Model - INFO - Train accuracy is: 0.49578
+2021-12-08 12:12:34,885 - Model - INFO - eval sem  Cov of Rectangular    0.696197
+2021-12-08 12:12:34,885 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.401442
+2021-12-08 12:12:34,885 - Model - INFO - eval sem  Cov of Triangular     0.434128
+2021-12-08 12:12:34,885 - Model - INFO - eval sem  Cov of Parallelogram  0.006459
+2021-12-08 12:12:34,885 - Model - INFO - eval sem  Cov of Ladder shaped  0.232237
+2021-12-08 12:12:34,885 - Model - INFO - eval sem WCov of Rectangular    0.706160
+2021-12-08 12:12:34,885 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.406050
+2021-12-08 12:12:34,885 - Model - INFO - eval sem WCov of Triangular     0.432960
+2021-12-08 12:12:34,885 - Model - INFO - eval sem WCov of Parallelogram  0.007189
+2021-12-08 12:12:34,885 - Model - INFO - eval sem WCov of Ladder shaped  0.232152
+2021-12-08 12:12:34,885 - Model - INFO - eval  Cov of Roof           0.354093
+2021-12-08 12:12:34,885 - Model - INFO - eval WCov of Roof           0.356902
+2021-12-08 12:12:34,885 - Model - INFO - Epoch 6 test Accuracy: 0.545509  Cov: 0.354093   WCov: 0.356902
+2021-12-08 12:12:34,885 - Model - INFO - Best accuracy is: 0.54551
+2021-12-08 12:12:34,885 - Model - INFO - Best Cov is: 0.35673
+2021-12-08 12:12:34,885 - Model - INFO - Best WCov is: 0.35690
+2021-12-08 12:12:34,885 - Model - INFO - Epoch 7 (7/251):
+2021-12-08 12:12:34,885 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:13:31,941 - Model - INFO - Train accuracy is: 0.51070
+2021-12-08 12:13:36,724 - Model - INFO - eval sem  Cov of Rectangular    0.606896
+2021-12-08 12:13:36,724 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.424449
+2021-12-08 12:13:36,724 - Model - INFO - eval sem  Cov of Triangular     0.407919
+2021-12-08 12:13:36,724 - Model - INFO - eval sem  Cov of Parallelogram  0.000000
+2021-12-08 12:13:36,724 - Model - INFO - eval sem  Cov of Ladder shaped  0.088136
+2021-12-08 12:13:36,724 - Model - INFO - eval sem WCov of Rectangular    0.618399
+2021-12-08 12:13:36,724 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.426971
+2021-12-08 12:13:36,724 - Model - INFO - eval sem WCov of Triangular     0.412841
+2021-12-08 12:13:36,724 - Model - INFO - eval sem WCov of Parallelogram  0.000000
+2021-12-08 12:13:36,724 - Model - INFO - eval sem WCov of Ladder shaped  0.090312
+2021-12-08 12:13:36,724 - Model - INFO - eval  Cov of Roof           0.305480
+2021-12-08 12:13:36,724 - Model - INFO - eval WCov of Roof           0.309705
+2021-12-08 12:13:36,724 - Model - INFO - Epoch 7 test Accuracy: 0.539122  Cov: 0.305480   WCov: 0.309705
+2021-12-08 12:13:36,724 - Model - INFO - Best accuracy is: 0.54551
+2021-12-08 12:13:36,725 - Model - INFO - Best Cov is: 0.35673
+2021-12-08 12:13:36,725 - Model - INFO - Best WCov is: 0.30970
+2021-12-08 12:13:36,725 - Model - INFO - Epoch 8 (8/251):
+2021-12-08 12:13:36,725 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:14:33,703 - Model - INFO - Train accuracy is: 0.52259
+2021-12-08 12:14:38,442 - Model - INFO - eval sem  Cov of Rectangular    0.612701
+2021-12-08 12:14:38,442 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.411939
+2021-12-08 12:14:38,442 - Model - INFO - eval sem  Cov of Triangular     0.224030
+2021-12-08 12:14:38,442 - Model - INFO - eval sem  Cov of Parallelogram  0.178974
+2021-12-08 12:14:38,442 - Model - INFO - eval sem  Cov of Ladder shaped  0.243415
+2021-12-08 12:14:38,442 - Model - INFO - eval sem WCov of Rectangular    0.622349
+2021-12-08 12:14:38,442 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.413490
+2021-12-08 12:14:38,442 - Model - INFO - eval sem WCov of Triangular     0.223748
+2021-12-08 12:14:38,442 - Model - INFO - eval sem WCov of Parallelogram  0.183381
+2021-12-08 12:14:38,442 - Model - INFO - eval sem WCov of Ladder shaped  0.244716
+2021-12-08 12:14:38,442 - Model - INFO - eval  Cov of Roof           0.334212
+2021-12-08 12:14:38,442 - Model - INFO - eval WCov of Roof           0.337537
+2021-12-08 12:14:38,442 - Model - INFO - Epoch 8 test Accuracy: 0.520774  Cov: 0.334212   WCov: 0.337537
+2021-12-08 12:14:38,442 - Model - INFO - Best accuracy is: 0.54551
+2021-12-08 12:14:38,442 - Model - INFO - Best Cov is: 0.35673
+2021-12-08 12:14:38,442 - Model - INFO - Best WCov is: 0.33754
+2021-12-08 12:14:38,442 - Model - INFO - Epoch 9 (9/251):
+2021-12-08 12:14:38,442 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:15:35,569 - Model - INFO - Train accuracy is: 0.52789
+2021-12-08 12:15:40,282 - Model - INFO - eval sem  Cov of Rectangular    0.665781
+2021-12-08 12:15:40,282 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.568387
+2021-12-08 12:15:40,282 - Model - INFO - eval sem  Cov of Triangular     0.310343
+2021-12-08 12:15:40,282 - Model - INFO - eval sem  Cov of Parallelogram  0.239272
+2021-12-08 12:15:40,282 - Model - INFO - eval sem  Cov of Ladder shaped  0.137659
+2021-12-08 12:15:40,282 - Model - INFO - eval sem WCov of Rectangular    0.676541
+2021-12-08 12:15:40,282 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.572378
+2021-12-08 12:15:40,282 - Model - INFO - eval sem WCov of Triangular     0.312512
+2021-12-08 12:15:40,282 - Model - INFO - eval sem WCov of Parallelogram  0.251534
+2021-12-08 12:15:40,282 - Model - INFO - eval sem WCov of Ladder shaped  0.139571
+2021-12-08 12:15:40,282 - Model - INFO - eval  Cov of Roof           0.384288
+2021-12-08 12:15:40,282 - Model - INFO - eval WCov of Roof           0.390507
+2021-12-08 12:15:40,282 - Model - INFO - Epoch 9 test Accuracy: 0.569962  Cov: 0.384288   WCov: 0.390507
+2021-12-08 12:15:40,282 - Model - INFO - Save model...
+2021-12-08 12:15:40,282 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:15:40,334 - Model - INFO - Saving model....
+2021-12-08 12:15:40,335 - Model - INFO - Best accuracy is: 0.56996
+2021-12-08 12:15:40,335 - Model - INFO - Best Cov is: 0.38429
+2021-12-08 12:15:40,335 - Model - INFO - Best WCov is: 0.39051
+2021-12-08 12:15:40,336 - Model - INFO - Epoch 10 (10/251):
+2021-12-08 12:15:40,336 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:16:37,595 - Model - INFO - Train accuracy is: 0.53444
+2021-12-08 12:16:42,444 - Model - INFO - eval sem  Cov of Rectangular    0.725743
+2021-12-08 12:16:42,444 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.480239
+2021-12-08 12:16:42,444 - Model - INFO - eval sem  Cov of Triangular     0.396066
+2021-12-08 12:16:42,444 - Model - INFO - eval sem  Cov of Parallelogram  0.239827
+2021-12-08 12:16:42,444 - Model - INFO - eval sem  Cov of Ladder shaped  0.276069
+2021-12-08 12:16:42,444 - Model - INFO - eval sem WCov of Rectangular    0.733958
+2021-12-08 12:16:42,444 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.484644
+2021-12-08 12:16:42,444 - Model - INFO - eval sem WCov of Triangular     0.397566
+2021-12-08 12:16:42,445 - Model - INFO - eval sem WCov of Parallelogram  0.252198
+2021-12-08 12:16:42,445 - Model - INFO - eval sem WCov of Ladder shaped  0.280278
+2021-12-08 12:16:42,445 - Model - INFO - eval  Cov of Roof           0.423589
+2021-12-08 12:16:42,445 - Model - INFO - eval WCov of Roof           0.429729
+2021-12-08 12:16:42,445 - Model - INFO - Epoch 10 test Accuracy: 0.582993  Cov: 0.423589   WCov: 0.429729
+2021-12-08 12:16:42,445 - Model - INFO - Save model...
+2021-12-08 12:16:42,445 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:16:42,496 - Model - INFO - Saving model....
+2021-12-08 12:16:42,496 - Model - INFO - Best accuracy is: 0.58299
+2021-12-08 12:16:42,496 - Model - INFO - Best Cov is: 0.42359
+2021-12-08 12:16:42,496 - Model - INFO - Best WCov is: 0.42973
+2021-12-08 12:16:42,496 - Model - INFO - Epoch 11 (11/251):
+2021-12-08 12:16:42,496 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:17:39,471 - Model - INFO - Train accuracy is: 0.54808
+2021-12-08 12:17:44,259 - Model - INFO - eval sem  Cov of Rectangular    0.666018
+2021-12-08 12:17:44,259 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.547115
+2021-12-08 12:17:44,259 - Model - INFO - eval sem  Cov of Triangular     0.355813
+2021-12-08 12:17:44,259 - Model - INFO - eval sem  Cov of Parallelogram  0.237389
+2021-12-08 12:17:44,259 - Model - INFO - eval sem  Cov of Ladder shaped  0.316248
+2021-12-08 12:17:44,259 - Model - INFO - eval sem WCov of Rectangular    0.674634
+2021-12-08 12:17:44,259 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.545869
+2021-12-08 12:17:44,259 - Model - INFO - eval sem WCov of Triangular     0.357240
+2021-12-08 12:17:44,259 - Model - INFO - eval sem WCov of Parallelogram  0.243547
+2021-12-08 12:17:44,259 - Model - INFO - eval sem WCov of Ladder shaped  0.320226
+2021-12-08 12:17:44,259 - Model - INFO - eval  Cov of Roof           0.424517
+2021-12-08 12:17:44,259 - Model - INFO - eval WCov of Roof           0.428303
+2021-12-08 12:17:44,259 - Model - INFO - Epoch 11 test Accuracy: 0.588704  Cov: 0.424517   WCov: 0.428303
+2021-12-08 12:17:44,259 - Model - INFO - Save model...
+2021-12-08 12:17:44,259 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:17:44,306 - Model - INFO - Saving model....
+2021-12-08 12:17:44,306 - Model - INFO - Best accuracy is: 0.58870
+2021-12-08 12:17:44,306 - Model - INFO - Best Cov is: 0.42452
+2021-12-08 12:17:44,306 - Model - INFO - Best WCov is: 0.42830
+2021-12-08 12:17:44,307 - Model - INFO - Epoch 12 (12/251):
+2021-12-08 12:17:44,307 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:18:41,594 - Model - INFO - Train accuracy is: 0.55818
+2021-12-08 12:18:46,458 - Model - INFO - eval sem  Cov of Rectangular    0.712801
+2021-12-08 12:18:46,458 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.420141
+2021-12-08 12:18:46,458 - Model - INFO - eval sem  Cov of Triangular     0.374145
+2021-12-08 12:18:46,458 - Model - INFO - eval sem  Cov of Parallelogram  0.186353
+2021-12-08 12:18:46,458 - Model - INFO - eval sem  Cov of Ladder shaped  0.327572
+2021-12-08 12:18:46,458 - Model - INFO - eval sem WCov of Rectangular    0.719589
+2021-12-08 12:18:46,458 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.425323
+2021-12-08 12:18:46,458 - Model - INFO - eval sem WCov of Triangular     0.376508
+2021-12-08 12:18:46,458 - Model - INFO - eval sem WCov of Parallelogram  0.179140
+2021-12-08 12:18:46,458 - Model - INFO - eval sem WCov of Ladder shaped  0.333192
+2021-12-08 12:18:46,458 - Model - INFO - eval  Cov of Roof           0.404202
+2021-12-08 12:18:46,458 - Model - INFO - eval WCov of Roof           0.406750
+2021-12-08 12:18:46,458 - Model - INFO - Epoch 12 test Accuracy: 0.583141  Cov: 0.404202   WCov: 0.406750
+2021-12-08 12:18:46,458 - Model - INFO - Best accuracy is: 0.58870
+2021-12-08 12:18:46,458 - Model - INFO - Best Cov is: 0.42452
+2021-12-08 12:18:46,458 - Model - INFO - Best WCov is: 0.40675
+2021-12-08 12:18:46,458 - Model - INFO - Epoch 13 (13/251):
+2021-12-08 12:18:46,458 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:19:43,629 - Model - INFO - Train accuracy is: 0.55341
+2021-12-08 12:19:48,480 - Model - INFO - eval sem  Cov of Rectangular    0.715550
+2021-12-08 12:19:48,480 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.458096
+2021-12-08 12:19:48,480 - Model - INFO - eval sem  Cov of Triangular     0.359550
+2021-12-08 12:19:48,480 - Model - INFO - eval sem  Cov of Parallelogram  0.235369
+2021-12-08 12:19:48,480 - Model - INFO - eval sem  Cov of Ladder shaped  0.243421
+2021-12-08 12:19:48,480 - Model - INFO - eval sem WCov of Rectangular    0.723496
+2021-12-08 12:19:48,480 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.461632
+2021-12-08 12:19:48,480 - Model - INFO - eval sem WCov of Triangular     0.358926
+2021-12-08 12:19:48,480 - Model - INFO - eval sem WCov of Parallelogram  0.235878
+2021-12-08 12:19:48,480 - Model - INFO - eval sem WCov of Ladder shaped  0.248491
+2021-12-08 12:19:48,480 - Model - INFO - eval  Cov of Roof           0.402397
+2021-12-08 12:19:48,480 - Model - INFO - eval WCov of Roof           0.405685
+2021-12-08 12:19:48,480 - Model - INFO - Epoch 13 test Accuracy: 0.596709  Cov: 0.402397   WCov: 0.405685
+2021-12-08 12:19:48,480 - Model - INFO - Best accuracy is: 0.59671
+2021-12-08 12:19:48,480 - Model - INFO - Best Cov is: 0.42452
+2021-12-08 12:19:48,480 - Model - INFO - Best WCov is: 0.40568
+2021-12-08 12:19:48,480 - Model - INFO - Epoch 14 (14/251):
+2021-12-08 12:19:48,480 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:20:45,614 - Model - INFO - Train accuracy is: 0.56024
+2021-12-08 12:20:50,424 - Model - INFO - eval sem  Cov of Rectangular    0.690143
+2021-12-08 12:20:50,424 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.461176
+2021-12-08 12:20:50,424 - Model - INFO - eval sem  Cov of Triangular     0.407096
+2021-12-08 12:20:50,424 - Model - INFO - eval sem  Cov of Parallelogram  0.239981
+2021-12-08 12:20:50,424 - Model - INFO - eval sem  Cov of Ladder shaped  0.288276
+2021-12-08 12:20:50,424 - Model - INFO - eval sem WCov of Rectangular    0.698208
+2021-12-08 12:20:50,424 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.461948
+2021-12-08 12:20:50,424 - Model - INFO - eval sem WCov of Triangular     0.406552
+2021-12-08 12:20:50,425 - Model - INFO - eval sem WCov of Parallelogram  0.239714
+2021-12-08 12:20:50,425 - Model - INFO - eval sem WCov of Ladder shaped  0.293948
+2021-12-08 12:20:50,425 - Model - INFO - eval  Cov of Roof           0.417334
+2021-12-08 12:20:50,425 - Model - INFO - eval WCov of Roof           0.420074
+2021-12-08 12:20:50,425 - Model - INFO - Epoch 14 test Accuracy: 0.608837  Cov: 0.417334   WCov: 0.420074
+2021-12-08 12:20:50,425 - Model - INFO - Best accuracy is: 0.60884
+2021-12-08 12:20:50,425 - Model - INFO - Best Cov is: 0.42452
+2021-12-08 12:20:50,425 - Model - INFO - Best WCov is: 0.42007
+2021-12-08 12:20:50,425 - Model - INFO - Epoch 15 (15/251):
+2021-12-08 12:20:50,425 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:21:47,578 - Model - INFO - Train accuracy is: 0.56829
+2021-12-08 12:21:52,461 - Model - INFO - eval sem  Cov of Rectangular    0.756432
+2021-12-08 12:21:52,462 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.449496
+2021-12-08 12:21:52,462 - Model - INFO - eval sem  Cov of Triangular     0.375873
+2021-12-08 12:21:52,462 - Model - INFO - eval sem  Cov of Parallelogram  0.206598
+2021-12-08 12:21:52,462 - Model - INFO - eval sem  Cov of Ladder shaped  0.304100
+2021-12-08 12:21:52,462 - Model - INFO - eval sem WCov of Rectangular    0.765552
+2021-12-08 12:21:52,462 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.454074
+2021-12-08 12:21:52,462 - Model - INFO - eval sem WCov of Triangular     0.375676
+2021-12-08 12:21:52,462 - Model - INFO - eval sem WCov of Parallelogram  0.212700
+2021-12-08 12:21:52,462 - Model - INFO - eval sem WCov of Ladder shaped  0.308704
+2021-12-08 12:21:52,462 - Model - INFO - eval  Cov of Roof           0.418500
+2021-12-08 12:21:52,462 - Model - INFO - eval WCov of Roof           0.423341
+2021-12-08 12:21:52,462 - Model - INFO - Epoch 15 test Accuracy: 0.585400  Cov: 0.418500   WCov: 0.423341
+2021-12-08 12:21:52,462 - Model - INFO - Best accuracy is: 0.60884
+2021-12-08 12:21:52,462 - Model - INFO - Best Cov is: 0.42452
+2021-12-08 12:21:52,462 - Model - INFO - Best WCov is: 0.42334
+2021-12-08 12:21:52,462 - Model - INFO - Epoch 16 (16/251):
+2021-12-08 12:21:52,462 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:22:50,116 - Model - INFO - Train accuracy is: 0.57206
+2021-12-08 12:22:55,017 - Model - INFO - eval sem  Cov of Rectangular    0.752603
+2021-12-08 12:22:55,017 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.415341
+2021-12-08 12:22:55,017 - Model - INFO - eval sem  Cov of Triangular     0.600669
+2021-12-08 12:22:55,017 - Model - INFO - eval sem  Cov of Parallelogram  0.260395
+2021-12-08 12:22:55,017 - Model - INFO - eval sem  Cov of Ladder shaped  0.332661
+2021-12-08 12:22:55,017 - Model - INFO - eval sem WCov of Rectangular    0.760582
+2021-12-08 12:22:55,017 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.415893
+2021-12-08 12:22:55,017 - Model - INFO - eval sem WCov of Triangular     0.597141
+2021-12-08 12:22:55,017 - Model - INFO - eval sem WCov of Parallelogram  0.276489
+2021-12-08 12:22:55,017 - Model - INFO - eval sem WCov of Ladder shaped  0.336510
+2021-12-08 12:22:55,017 - Model - INFO - eval  Cov of Roof           0.472334
+2021-12-08 12:22:55,017 - Model - INFO - eval WCov of Roof           0.477323
+2021-12-08 12:22:55,017 - Model - INFO - Epoch 16 test Accuracy: 0.615807  Cov: 0.472334   WCov: 0.477323
+2021-12-08 12:22:55,017 - Model - INFO - Save model...
+2021-12-08 12:22:55,017 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:22:55,067 - Model - INFO - Saving model....
+2021-12-08 12:22:55,067 - Model - INFO - Best accuracy is: 0.61581
+2021-12-08 12:22:55,067 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:22:55,067 - Model - INFO - Best WCov is: 0.47732
+2021-12-08 12:22:55,067 - Model - INFO - Epoch 17 (17/251):
+2021-12-08 12:22:55,067 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:23:52,109 - Model - INFO - Train accuracy is: 0.57644
+2021-12-08 12:23:56,943 - Model - INFO - eval sem  Cov of Rectangular    0.765931
+2021-12-08 12:23:56,944 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.471747
+2021-12-08 12:23:56,944 - Model - INFO - eval sem  Cov of Triangular     0.385852
+2021-12-08 12:23:56,944 - Model - INFO - eval sem  Cov of Parallelogram  0.255874
+2021-12-08 12:23:56,944 - Model - INFO - eval sem  Cov of Ladder shaped  0.365494
+2021-12-08 12:23:56,944 - Model - INFO - eval sem WCov of Rectangular    0.771716
+2021-12-08 12:23:56,944 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.476624
+2021-12-08 12:23:56,944 - Model - INFO - eval sem WCov of Triangular     0.385754
+2021-12-08 12:23:56,944 - Model - INFO - eval sem WCov of Parallelogram  0.257673
+2021-12-08 12:23:56,944 - Model - INFO - eval sem WCov of Ladder shaped  0.373455
+2021-12-08 12:23:56,944 - Model - INFO - eval  Cov of Roof           0.448979
+2021-12-08 12:23:56,944 - Model - INFO - eval WCov of Roof           0.453044
+2021-12-08 12:23:56,944 - Model - INFO - Epoch 17 test Accuracy: 0.601997  Cov: 0.448979   WCov: 0.453044
+2021-12-08 12:23:56,944 - Model - INFO - Best accuracy is: 0.61581
+2021-12-08 12:23:56,944 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:23:56,944 - Model - INFO - Best WCov is: 0.45304
+2021-12-08 12:23:56,944 - Model - INFO - Epoch 18 (18/251):
+2021-12-08 12:23:56,944 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:24:54,103 - Model - INFO - Train accuracy is: 0.58045
+2021-12-08 12:24:58,893 - Model - INFO - eval sem  Cov of Rectangular    0.669265
+2021-12-08 12:24:58,894 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.454869
+2021-12-08 12:24:58,894 - Model - INFO - eval sem  Cov of Triangular     0.377103
+2021-12-08 12:24:58,894 - Model - INFO - eval sem  Cov of Parallelogram  0.220972
+2021-12-08 12:24:58,894 - Model - INFO - eval sem  Cov of Ladder shaped  0.345372
+2021-12-08 12:24:58,894 - Model - INFO - eval sem WCov of Rectangular    0.677418
+2021-12-08 12:24:58,894 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.458617
+2021-12-08 12:24:58,894 - Model - INFO - eval sem WCov of Triangular     0.376761
+2021-12-08 12:24:58,894 - Model - INFO - eval sem WCov of Parallelogram  0.230191
+2021-12-08 12:24:58,894 - Model - INFO - eval sem WCov of Ladder shaped  0.349808
+2021-12-08 12:24:58,894 - Model - INFO - eval  Cov of Roof           0.413516
+2021-12-08 12:24:58,894 - Model - INFO - eval WCov of Roof           0.418559
+2021-12-08 12:24:58,894 - Model - INFO - Epoch 18 test Accuracy: 0.584655  Cov: 0.413516   WCov: 0.418559
+2021-12-08 12:24:58,894 - Model - INFO - Best accuracy is: 0.61581
+2021-12-08 12:24:58,894 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:24:58,894 - Model - INFO - Best WCov is: 0.41856
+2021-12-08 12:24:58,894 - Model - INFO - Epoch 19 (19/251):
+2021-12-08 12:24:58,894 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:25:56,110 - Model - INFO - Train accuracy is: 0.57125
+2021-12-08 12:26:00,937 - Model - INFO - eval sem  Cov of Rectangular    0.739377
+2021-12-08 12:26:00,938 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.494744
+2021-12-08 12:26:00,938 - Model - INFO - eval sem  Cov of Triangular     0.375698
+2021-12-08 12:26:00,938 - Model - INFO - eval sem  Cov of Parallelogram  0.198933
+2021-12-08 12:26:00,938 - Model - INFO - eval sem  Cov of Ladder shaped  0.330280
+2021-12-08 12:26:00,938 - Model - INFO - eval sem WCov of Rectangular    0.746657
+2021-12-08 12:26:00,938 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.497215
+2021-12-08 12:26:00,938 - Model - INFO - eval sem WCov of Triangular     0.375113
+2021-12-08 12:26:00,938 - Model - INFO - eval sem WCov of Parallelogram  0.198169
+2021-12-08 12:26:00,938 - Model - INFO - eval sem WCov of Ladder shaped  0.337433
+2021-12-08 12:26:00,938 - Model - INFO - eval  Cov of Roof           0.427806
+2021-12-08 12:26:00,938 - Model - INFO - eval WCov of Roof           0.430917
+2021-12-08 12:26:00,938 - Model - INFO - Epoch 19 test Accuracy: 0.609745  Cov: 0.427806   WCov: 0.430917
+2021-12-08 12:26:00,938 - Model - INFO - Best accuracy is: 0.61581
+2021-12-08 12:26:00,938 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:26:00,938 - Model - INFO - Best WCov is: 0.43092
+2021-12-08 12:26:00,938 - Model - INFO - Epoch 20 (20/251):
+2021-12-08 12:26:00,938 - Model - INFO - Learning rate:0.001000
+2021-12-08 12:26:57,881 - Model - INFO - Train accuracy is: 0.58715
+2021-12-08 12:27:02,620 - Model - INFO - eval sem  Cov of Rectangular    0.777732
+2021-12-08 12:27:02,620 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.438419
+2021-12-08 12:27:02,620 - Model - INFO - eval sem  Cov of Triangular     0.301269
+2021-12-08 12:27:02,620 - Model - INFO - eval sem  Cov of Parallelogram  0.237765
+2021-12-08 12:27:02,620 - Model - INFO - eval sem  Cov of Ladder shaped  0.346689
+2021-12-08 12:27:02,620 - Model - INFO - eval sem WCov of Rectangular    0.784505
+2021-12-08 12:27:02,620 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.441074
+2021-12-08 12:27:02,620 - Model - INFO - eval sem WCov of Triangular     0.299126
+2021-12-08 12:27:02,620 - Model - INFO - eval sem WCov of Parallelogram  0.239549
+2021-12-08 12:27:02,620 - Model - INFO - eval sem WCov of Ladder shaped  0.352683
+2021-12-08 12:27:02,620 - Model - INFO - eval  Cov of Roof           0.420375
+2021-12-08 12:27:02,620 - Model - INFO - eval WCov of Roof           0.423387
+2021-12-08 12:27:02,620 - Model - INFO - Epoch 20 test Accuracy: 0.618662  Cov: 0.420375   WCov: 0.423387
+2021-12-08 12:27:02,620 - Model - INFO - Best accuracy is: 0.61866
+2021-12-08 12:27:02,620 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:27:02,620 - Model - INFO - Best WCov is: 0.42339
+2021-12-08 12:27:02,620 - Model - INFO - Epoch 21 (21/251):
+2021-12-08 12:27:02,620 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:27:59,721 - Model - INFO - Train accuracy is: 0.59950
+2021-12-08 12:28:04,519 - Model - INFO - eval sem  Cov of Rectangular    0.777670
+2021-12-08 12:28:04,519 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.562272
+2021-12-08 12:28:04,520 - Model - INFO - eval sem  Cov of Triangular     0.393085
+2021-12-08 12:28:04,520 - Model - INFO - eval sem  Cov of Parallelogram  0.251452
+2021-12-08 12:28:04,520 - Model - INFO - eval sem  Cov of Ladder shaped  0.324102
+2021-12-08 12:28:04,520 - Model - INFO - eval sem WCov of Rectangular    0.785982
+2021-12-08 12:28:04,520 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.563199
+2021-12-08 12:28:04,520 - Model - INFO - eval sem WCov of Triangular     0.392257
+2021-12-08 12:28:04,520 - Model - INFO - eval sem WCov of Parallelogram  0.255387
+2021-12-08 12:28:04,520 - Model - INFO - eval sem WCov of Ladder shaped  0.329894
+2021-12-08 12:28:04,520 - Model - INFO - eval  Cov of Roof           0.461716
+2021-12-08 12:28:04,520 - Model - INFO - eval WCov of Roof           0.465344
+2021-12-08 12:28:04,520 - Model - INFO - Epoch 21 test Accuracy: 0.639915  Cov: 0.461716   WCov: 0.465344
+2021-12-08 12:28:04,520 - Model - INFO - Best accuracy is: 0.63991
+2021-12-08 12:28:04,520 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:28:04,520 - Model - INFO - Best WCov is: 0.46534
+2021-12-08 12:28:04,520 - Model - INFO - Epoch 22 (22/251):
+2021-12-08 12:28:04,520 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:29:01,835 - Model - INFO - Train accuracy is: 0.61077
+2021-12-08 12:29:06,650 - Model - INFO - eval sem  Cov of Rectangular    0.779186
+2021-12-08 12:29:06,651 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.469812
+2021-12-08 12:29:06,651 - Model - INFO - eval sem  Cov of Triangular     0.456927
+2021-12-08 12:29:06,651 - Model - INFO - eval sem  Cov of Parallelogram  0.249287
+2021-12-08 12:29:06,651 - Model - INFO - eval sem  Cov of Ladder shaped  0.331705
+2021-12-08 12:29:06,651 - Model - INFO - eval sem WCov of Rectangular    0.787610
+2021-12-08 12:29:06,651 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.472017
+2021-12-08 12:29:06,651 - Model - INFO - eval sem WCov of Triangular     0.457568
+2021-12-08 12:29:06,651 - Model - INFO - eval sem WCov of Parallelogram  0.256600
+2021-12-08 12:29:06,651 - Model - INFO - eval sem WCov of Ladder shaped  0.335406
+2021-12-08 12:29:06,651 - Model - INFO - eval  Cov of Roof           0.457383
+2021-12-08 12:29:06,651 - Model - INFO - eval WCov of Roof           0.461840
+2021-12-08 12:29:06,651 - Model - INFO - Epoch 22 test Accuracy: 0.626785  Cov: 0.457383   WCov: 0.461840
+2021-12-08 12:29:06,651 - Model - INFO - Best accuracy is: 0.63991
+2021-12-08 12:29:06,651 - Model - INFO - Best Cov is: 0.47233
+2021-12-08 12:29:06,651 - Model - INFO - Best WCov is: 0.46184
+2021-12-08 12:29:06,651 - Model - INFO - Epoch 23 (23/251):
+2021-12-08 12:29:06,651 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:30:04,193 - Model - INFO - Train accuracy is: 0.61094
+2021-12-08 12:30:08,974 - Model - INFO - eval sem  Cov of Rectangular    0.817865
+2021-12-08 12:30:08,974 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.693697
+2021-12-08 12:30:08,974 - Model - INFO - eval sem  Cov of Triangular     0.390914
+2021-12-08 12:30:08,974 - Model - INFO - eval sem  Cov of Parallelogram  0.199336
+2021-12-08 12:30:08,974 - Model - INFO - eval sem  Cov of Ladder shaped  0.318416
+2021-12-08 12:30:08,974 - Model - INFO - eval sem WCov of Rectangular    0.823388
+2021-12-08 12:30:08,974 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.693065
+2021-12-08 12:30:08,974 - Model - INFO - eval sem WCov of Triangular     0.390732
+2021-12-08 12:30:08,974 - Model - INFO - eval sem WCov of Parallelogram  0.196287
+2021-12-08 12:30:08,974 - Model - INFO - eval sem WCov of Ladder shaped  0.321860
+2021-12-08 12:30:08,974 - Model - INFO - eval  Cov of Roof           0.484046
+2021-12-08 12:30:08,974 - Model - INFO - eval WCov of Roof           0.485066
+2021-12-08 12:30:08,974 - Model - INFO - Epoch 23 test Accuracy: 0.623496  Cov: 0.484046   WCov: 0.485066
+2021-12-08 12:30:08,974 - Model - INFO - Save model...
+2021-12-08 12:30:08,974 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:30:09,027 - Model - INFO - Saving model....
+2021-12-08 12:30:09,028 - Model - INFO - Best accuracy is: 0.63991
+2021-12-08 12:30:09,028 - Model - INFO - Best Cov is: 0.48405
+2021-12-08 12:30:09,028 - Model - INFO - Best WCov is: 0.48507
+2021-12-08 12:30:09,028 - Model - INFO - Epoch 24 (24/251):
+2021-12-08 12:30:09,028 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:31:06,012 - Model - INFO - Train accuracy is: 0.61190
+2021-12-08 12:31:10,867 - Model - INFO - eval sem  Cov of Rectangular    0.794175
+2021-12-08 12:31:10,868 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.620200
+2021-12-08 12:31:10,868 - Model - INFO - eval sem  Cov of Triangular     0.406092
+2021-12-08 12:31:10,868 - Model - INFO - eval sem  Cov of Parallelogram  0.244673
+2021-12-08 12:31:10,868 - Model - INFO - eval sem  Cov of Ladder shaped  0.302676
+2021-12-08 12:31:10,868 - Model - INFO - eval sem WCov of Rectangular    0.800747
+2021-12-08 12:31:10,868 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.621628
+2021-12-08 12:31:10,868 - Model - INFO - eval sem WCov of Triangular     0.406088
+2021-12-08 12:31:10,868 - Model - INFO - eval sem WCov of Parallelogram  0.245724
+2021-12-08 12:31:10,868 - Model - INFO - eval sem WCov of Ladder shaped  0.307762
+2021-12-08 12:31:10,868 - Model - INFO - eval  Cov of Roof           0.473563
+2021-12-08 12:31:10,868 - Model - INFO - eval WCov of Roof           0.476390
+2021-12-08 12:31:10,868 - Model - INFO - Epoch 24 test Accuracy: 0.639269  Cov: 0.473563   WCov: 0.476390
+2021-12-08 12:31:10,868 - Model - INFO - Best accuracy is: 0.63991
+2021-12-08 12:31:10,868 - Model - INFO - Best Cov is: 0.48405
+2021-12-08 12:31:10,868 - Model - INFO - Best WCov is: 0.47639
+2021-12-08 12:31:10,868 - Model - INFO - Epoch 25 (25/251):
+2021-12-08 12:31:10,868 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:32:08,154 - Model - INFO - Train accuracy is: 0.60929
+2021-12-08 12:32:13,010 - Model - INFO - eval sem  Cov of Rectangular    0.800856
+2021-12-08 12:32:13,010 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.564580
+2021-12-08 12:32:13,010 - Model - INFO - eval sem  Cov of Triangular     0.465308
+2021-12-08 12:32:13,010 - Model - INFO - eval sem  Cov of Parallelogram  0.271494
+2021-12-08 12:32:13,010 - Model - INFO - eval sem  Cov of Ladder shaped  0.359748
+2021-12-08 12:32:13,010 - Model - INFO - eval sem WCov of Rectangular    0.807973
+2021-12-08 12:32:13,010 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.567435
+2021-12-08 12:32:13,010 - Model - INFO - eval sem WCov of Triangular     0.464358
+2021-12-08 12:32:13,010 - Model - INFO - eval sem WCov of Parallelogram  0.277447
+2021-12-08 12:32:13,010 - Model - INFO - eval sem WCov of Ladder shaped  0.364153
+2021-12-08 12:32:13,010 - Model - INFO - eval  Cov of Roof           0.492397
+2021-12-08 12:32:13,011 - Model - INFO - eval WCov of Roof           0.496273
+2021-12-08 12:32:13,011 - Model - INFO - Epoch 25 test Accuracy: 0.640872  Cov: 0.492397   WCov: 0.496273
+2021-12-08 12:32:13,011 - Model - INFO - Save model...
+2021-12-08 12:32:13,011 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:32:13,058 - Model - INFO - Saving model....
+2021-12-08 12:32:13,059 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:32:13,059 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:32:13,059 - Model - INFO - Best WCov is: 0.49627
+2021-12-08 12:32:13,059 - Model - INFO - Epoch 26 (26/251):
+2021-12-08 12:32:13,059 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:33:10,525 - Model - INFO - Train accuracy is: 0.61043
+2021-12-08 12:33:15,272 - Model - INFO - eval sem  Cov of Rectangular    0.802097
+2021-12-08 12:33:15,273 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.473928
+2021-12-08 12:33:15,273 - Model - INFO - eval sem  Cov of Triangular     0.439688
+2021-12-08 12:33:15,273 - Model - INFO - eval sem  Cov of Parallelogram  0.309053
+2021-12-08 12:33:15,273 - Model - INFO - eval sem  Cov of Ladder shaped  0.356768
+2021-12-08 12:33:15,273 - Model - INFO - eval sem WCov of Rectangular    0.807761
+2021-12-08 12:33:15,273 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.477350
+2021-12-08 12:33:15,273 - Model - INFO - eval sem WCov of Triangular     0.437287
+2021-12-08 12:33:15,273 - Model - INFO - eval sem WCov of Parallelogram  0.315136
+2021-12-08 12:33:15,273 - Model - INFO - eval sem WCov of Ladder shaped  0.363093
+2021-12-08 12:33:15,273 - Model - INFO - eval  Cov of Roof           0.476307
+2021-12-08 12:33:15,273 - Model - INFO - eval WCov of Roof           0.480125
+2021-12-08 12:33:15,273 - Model - INFO - Epoch 26 test Accuracy: 0.633784  Cov: 0.476307   WCov: 0.480125
+2021-12-08 12:33:15,273 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:33:15,273 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:33:15,273 - Model - INFO - Best WCov is: 0.48013
+2021-12-08 12:33:15,273 - Model - INFO - Epoch 27 (27/251):
+2021-12-08 12:33:15,273 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:34:12,244 - Model - INFO - Train accuracy is: 0.61793
+2021-12-08 12:34:17,068 - Model - INFO - eval sem  Cov of Rectangular    0.771020
+2021-12-08 12:34:17,068 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.655080
+2021-12-08 12:34:17,068 - Model - INFO - eval sem  Cov of Triangular     0.390107
+2021-12-08 12:34:17,068 - Model - INFO - eval sem  Cov of Parallelogram  0.256902
+2021-12-08 12:34:17,068 - Model - INFO - eval sem  Cov of Ladder shaped  0.324207
+2021-12-08 12:34:17,068 - Model - INFO - eval sem WCov of Rectangular    0.778200
+2021-12-08 12:34:17,068 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.655830
+2021-12-08 12:34:17,068 - Model - INFO - eval sem WCov of Triangular     0.388746
+2021-12-08 12:34:17,069 - Model - INFO - eval sem WCov of Parallelogram  0.264421
+2021-12-08 12:34:17,069 - Model - INFO - eval sem WCov of Ladder shaped  0.326881
+2021-12-08 12:34:17,069 - Model - INFO - eval  Cov of Roof           0.479463
+2021-12-08 12:34:17,069 - Model - INFO - eval WCov of Roof           0.482816
+2021-12-08 12:34:17,069 - Model - INFO - Epoch 27 test Accuracy: 0.623875  Cov: 0.479463   WCov: 0.482816
+2021-12-08 12:34:17,069 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:34:17,069 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:34:17,069 - Model - INFO - Best WCov is: 0.48282
+2021-12-08 12:34:17,069 - Model - INFO - Epoch 28 (28/251):
+2021-12-08 12:34:17,069 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:35:14,250 - Model - INFO - Train accuracy is: 0.61534
+2021-12-08 12:35:19,056 - Model - INFO - eval sem  Cov of Rectangular    0.803270
+2021-12-08 12:35:19,056 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.619580
+2021-12-08 12:35:19,056 - Model - INFO - eval sem  Cov of Triangular     0.407674
+2021-12-08 12:35:19,056 - Model - INFO - eval sem  Cov of Parallelogram  0.226310
+2021-12-08 12:35:19,056 - Model - INFO - eval sem  Cov of Ladder shaped  0.375091
+2021-12-08 12:35:19,056 - Model - INFO - eval sem WCov of Rectangular    0.810103
+2021-12-08 12:35:19,056 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.621456
+2021-12-08 12:35:19,056 - Model - INFO - eval sem WCov of Triangular     0.407320
+2021-12-08 12:35:19,056 - Model - INFO - eval sem WCov of Parallelogram  0.233597
+2021-12-08 12:35:19,057 - Model - INFO - eval sem WCov of Ladder shaped  0.380641
+2021-12-08 12:35:19,057 - Model - INFO - eval  Cov of Roof           0.486385
+2021-12-08 12:35:19,057 - Model - INFO - eval WCov of Roof           0.490623
+2021-12-08 12:35:19,057 - Model - INFO - Epoch 28 test Accuracy: 0.634667  Cov: 0.486385   WCov: 0.490623
+2021-12-08 12:35:19,057 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:35:19,057 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:35:19,057 - Model - INFO - Best WCov is: 0.49062
+2021-12-08 12:35:19,057 - Model - INFO - Epoch 29 (29/251):
+2021-12-08 12:35:19,057 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:36:16,201 - Model - INFO - Train accuracy is: 0.61485
+2021-12-08 12:36:20,949 - Model - INFO - eval sem  Cov of Rectangular    0.815305
+2021-12-08 12:36:20,949 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.458876
+2021-12-08 12:36:20,949 - Model - INFO - eval sem  Cov of Triangular     0.414663
+2021-12-08 12:36:20,949 - Model - INFO - eval sem  Cov of Parallelogram  0.348099
+2021-12-08 12:36:20,949 - Model - INFO - eval sem  Cov of Ladder shaped  0.327533
+2021-12-08 12:36:20,949 - Model - INFO - eval sem WCov of Rectangular    0.820993
+2021-12-08 12:36:20,949 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.462796
+2021-12-08 12:36:20,949 - Model - INFO - eval sem WCov of Triangular     0.416263
+2021-12-08 12:36:20,949 - Model - INFO - eval sem WCov of Parallelogram  0.347752
+2021-12-08 12:36:20,949 - Model - INFO - eval sem WCov of Ladder shaped  0.331054
+2021-12-08 12:36:20,949 - Model - INFO - eval  Cov of Roof           0.472895
+2021-12-08 12:36:20,949 - Model - INFO - eval WCov of Roof           0.475772
+2021-12-08 12:36:20,949 - Model - INFO - Epoch 29 test Accuracy: 0.617104  Cov: 0.472895   WCov: 0.475772
+2021-12-08 12:36:20,949 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:36:20,949 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:36:20,949 - Model - INFO - Best WCov is: 0.47577
+2021-12-08 12:36:20,949 - Model - INFO - Epoch 30 (30/251):
+2021-12-08 12:36:20,949 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:37:17,874 - Model - INFO - Train accuracy is: 0.61665
+2021-12-08 12:37:22,670 - Model - INFO - eval sem  Cov of Rectangular    0.770200
+2021-12-08 12:37:22,670 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.513196
+2021-12-08 12:37:22,670 - Model - INFO - eval sem  Cov of Triangular     0.451315
+2021-12-08 12:37:22,671 - Model - INFO - eval sem  Cov of Parallelogram  0.313789
+2021-12-08 12:37:22,671 - Model - INFO - eval sem  Cov of Ladder shaped  0.397248
+2021-12-08 12:37:22,671 - Model - INFO - eval sem WCov of Rectangular    0.779051
+2021-12-08 12:37:22,671 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.515566
+2021-12-08 12:37:22,671 - Model - INFO - eval sem WCov of Triangular     0.449829
+2021-12-08 12:37:22,671 - Model - INFO - eval sem WCov of Parallelogram  0.317981
+2021-12-08 12:37:22,671 - Model - INFO - eval sem WCov of Ladder shaped  0.402339
+2021-12-08 12:37:22,671 - Model - INFO - eval  Cov of Roof           0.489150
+2021-12-08 12:37:22,671 - Model - INFO - eval WCov of Roof           0.492953
+2021-12-08 12:37:22,671 - Model - INFO - Epoch 30 test Accuracy: 0.635377  Cov: 0.489150   WCov: 0.492953
+2021-12-08 12:37:22,671 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:37:22,671 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:37:22,671 - Model - INFO - Best WCov is: 0.49295
+2021-12-08 12:37:22,671 - Model - INFO - Epoch 31 (31/251):
+2021-12-08 12:37:22,671 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:38:19,698 - Model - INFO - Train accuracy is: 0.63105
+2021-12-08 12:38:24,439 - Model - INFO - eval sem  Cov of Rectangular    0.816019
+2021-12-08 12:38:24,439 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.488238
+2021-12-08 12:38:24,439 - Model - INFO - eval sem  Cov of Triangular     0.397886
+2021-12-08 12:38:24,439 - Model - INFO - eval sem  Cov of Parallelogram  0.268117
+2021-12-08 12:38:24,439 - Model - INFO - eval sem  Cov of Ladder shaped  0.375230
+2021-12-08 12:38:24,439 - Model - INFO - eval sem WCov of Rectangular    0.822617
+2021-12-08 12:38:24,439 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.490309
+2021-12-08 12:38:24,439 - Model - INFO - eval sem WCov of Triangular     0.397832
+2021-12-08 12:38:24,439 - Model - INFO - eval sem WCov of Parallelogram  0.279759
+2021-12-08 12:38:24,439 - Model - INFO - eval sem WCov of Ladder shaped  0.381380
+2021-12-08 12:38:24,439 - Model - INFO - eval  Cov of Roof           0.469098
+2021-12-08 12:38:24,439 - Model - INFO - eval WCov of Roof           0.474379
+2021-12-08 12:38:24,439 - Model - INFO - Epoch 31 test Accuracy: 0.622475  Cov: 0.469098   WCov: 0.474379
+2021-12-08 12:38:24,439 - Model - INFO - Best accuracy is: 0.64087
+2021-12-08 12:38:24,439 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:38:24,439 - Model - INFO - Best WCov is: 0.47438
+2021-12-08 12:38:24,439 - Model - INFO - Epoch 32 (32/251):
+2021-12-08 12:38:24,439 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:39:21,405 - Model - INFO - Train accuracy is: 0.63269
+2021-12-08 12:39:26,338 - Model - INFO - eval sem  Cov of Rectangular    0.745927
+2021-12-08 12:39:26,338 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.504031
+2021-12-08 12:39:26,338 - Model - INFO - eval sem  Cov of Triangular     0.406007
+2021-12-08 12:39:26,338 - Model - INFO - eval sem  Cov of Parallelogram  0.252220
+2021-12-08 12:39:26,338 - Model - INFO - eval sem  Cov of Ladder shaped  0.369256
+2021-12-08 12:39:26,338 - Model - INFO - eval sem WCov of Rectangular    0.754034
+2021-12-08 12:39:26,338 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.505873
+2021-12-08 12:39:26,338 - Model - INFO - eval sem WCov of Triangular     0.405736
+2021-12-08 12:39:26,338 - Model - INFO - eval sem WCov of Parallelogram  0.258782
+2021-12-08 12:39:26,338 - Model - INFO - eval sem WCov of Ladder shaped  0.374820
+2021-12-08 12:39:26,339 - Model - INFO - eval  Cov of Roof           0.455488
+2021-12-08 12:39:26,339 - Model - INFO - eval WCov of Roof           0.459849
+2021-12-08 12:39:26,339 - Model - INFO - Epoch 32 test Accuracy: 0.649148  Cov: 0.455488   WCov: 0.459849
+2021-12-08 12:39:26,339 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:39:26,339 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:39:26,339 - Model - INFO - Best WCov is: 0.45985
+2021-12-08 12:39:26,339 - Model - INFO - Epoch 33 (33/251):
+2021-12-08 12:39:26,339 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:40:24,509 - Model - INFO - Train accuracy is: 0.61528
+2021-12-08 12:40:29,375 - Model - INFO - eval sem  Cov of Rectangular    0.679996
+2021-12-08 12:40:29,375 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.656536
+2021-12-08 12:40:29,375 - Model - INFO - eval sem  Cov of Triangular     0.361901
+2021-12-08 12:40:29,375 - Model - INFO - eval sem  Cov of Parallelogram  0.259502
+2021-12-08 12:40:29,375 - Model - INFO - eval sem  Cov of Ladder shaped  0.286385
+2021-12-08 12:40:29,375 - Model - INFO - eval sem WCov of Rectangular    0.689848
+2021-12-08 12:40:29,375 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.658569
+2021-12-08 12:40:29,375 - Model - INFO - eval sem WCov of Triangular     0.361170
+2021-12-08 12:40:29,375 - Model - INFO - eval sem WCov of Parallelogram  0.265815
+2021-12-08 12:40:29,375 - Model - INFO - eval sem WCov of Ladder shaped  0.289078
+2021-12-08 12:40:29,375 - Model - INFO - eval  Cov of Roof           0.448864
+2021-12-08 12:40:29,375 - Model - INFO - eval WCov of Roof           0.452896
+2021-12-08 12:40:29,375 - Model - INFO - Epoch 33 test Accuracy: 0.601582  Cov: 0.448864   WCov: 0.452896
+2021-12-08 12:40:29,375 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:40:29,375 - Model - INFO - Best Cov is: 0.49240
+2021-12-08 12:40:29,375 - Model - INFO - Best WCov is: 0.45290
+2021-12-08 12:40:29,375 - Model - INFO - Epoch 34 (34/251):
+2021-12-08 12:40:29,375 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:41:27,592 - Model - INFO - Train accuracy is: 0.62251
+2021-12-08 12:41:32,317 - Model - INFO - eval sem  Cov of Rectangular    0.813265
+2021-12-08 12:41:32,317 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.630838
+2021-12-08 12:41:32,317 - Model - INFO - eval sem  Cov of Triangular     0.440867
+2021-12-08 12:41:32,317 - Model - INFO - eval sem  Cov of Parallelogram  0.219328
+2021-12-08 12:41:32,317 - Model - INFO - eval sem  Cov of Ladder shaped  0.363783
+2021-12-08 12:41:32,317 - Model - INFO - eval sem WCov of Rectangular    0.820182
+2021-12-08 12:41:32,317 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.633610
+2021-12-08 12:41:32,317 - Model - INFO - eval sem WCov of Triangular     0.438757
+2021-12-08 12:41:32,317 - Model - INFO - eval sem WCov of Parallelogram  0.218525
+2021-12-08 12:41:32,317 - Model - INFO - eval sem WCov of Ladder shaped  0.369357
+2021-12-08 12:41:32,317 - Model - INFO - eval  Cov of Roof           0.493616
+2021-12-08 12:41:32,317 - Model - INFO - eval WCov of Roof           0.496086
+2021-12-08 12:41:32,317 - Model - INFO - Epoch 34 test Accuracy: 0.648117  Cov: 0.493616   WCov: 0.496086
+2021-12-08 12:41:32,317 - Model - INFO - Save model...
+2021-12-08 12:41:32,317 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:41:32,367 - Model - INFO - Saving model....
+2021-12-08 12:41:32,368 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:41:32,368 - Model - INFO - Best Cov is: 0.49362
+2021-12-08 12:41:32,368 - Model - INFO - Best WCov is: 0.49609
+2021-12-08 12:41:32,368 - Model - INFO - Epoch 35 (35/251):
+2021-12-08 12:41:32,368 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:42:29,408 - Model - INFO - Train accuracy is: 0.63387
+2021-12-08 12:42:34,178 - Model - INFO - eval sem  Cov of Rectangular    0.819441
+2021-12-08 12:42:34,178 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.627330
+2021-12-08 12:42:34,178 - Model - INFO - eval sem  Cov of Triangular     0.399325
+2021-12-08 12:42:34,179 - Model - INFO - eval sem  Cov of Parallelogram  0.254363
+2021-12-08 12:42:34,179 - Model - INFO - eval sem  Cov of Ladder shaped  0.368339
+2021-12-08 12:42:34,179 - Model - INFO - eval sem WCov of Rectangular    0.825743
+2021-12-08 12:42:34,179 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.629751
+2021-12-08 12:42:34,179 - Model - INFO - eval sem WCov of Triangular     0.398176
+2021-12-08 12:42:34,179 - Model - INFO - eval sem WCov of Parallelogram  0.259092
+2021-12-08 12:42:34,179 - Model - INFO - eval sem WCov of Ladder shaped  0.372552
+2021-12-08 12:42:34,179 - Model - INFO - eval  Cov of Roof           0.493759
+2021-12-08 12:42:34,179 - Model - INFO - eval WCov of Roof           0.497063
+2021-12-08 12:42:34,179 - Model - INFO - Epoch 35 test Accuracy: 0.640078  Cov: 0.493759   WCov: 0.497063
+2021-12-08 12:42:34,179 - Model - INFO - Save model...
+2021-12-08 12:42:34,179 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:42:34,233 - Model - INFO - Saving model....
+2021-12-08 12:42:34,233 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:42:34,233 - Model - INFO - Best Cov is: 0.49376
+2021-12-08 12:42:34,234 - Model - INFO - Best WCov is: 0.49706
+2021-12-08 12:42:34,234 - Model - INFO - Epoch 36 (36/251):
+2021-12-08 12:42:34,234 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:43:31,328 - Model - INFO - Train accuracy is: 0.63648
+2021-12-08 12:43:36,050 - Model - INFO - eval sem  Cov of Rectangular    0.699637
+2021-12-08 12:43:36,050 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.520821
+2021-12-08 12:43:36,050 - Model - INFO - eval sem  Cov of Triangular     0.492954
+2021-12-08 12:43:36,050 - Model - INFO - eval sem  Cov of Parallelogram  0.309264
+2021-12-08 12:43:36,050 - Model - INFO - eval sem  Cov of Ladder shaped  0.321371
+2021-12-08 12:43:36,050 - Model - INFO - eval sem WCov of Rectangular    0.709378
+2021-12-08 12:43:36,050 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.521355
+2021-12-08 12:43:36,050 - Model - INFO - eval sem WCov of Triangular     0.492512
+2021-12-08 12:43:36,050 - Model - INFO - eval sem WCov of Parallelogram  0.314505
+2021-12-08 12:43:36,050 - Model - INFO - eval sem WCov of Ladder shaped  0.326837
+2021-12-08 12:43:36,050 - Model - INFO - eval  Cov of Roof           0.468809
+2021-12-08 12:43:36,050 - Model - INFO - eval WCov of Roof           0.472918
+2021-12-08 12:43:36,050 - Model - INFO - Epoch 36 test Accuracy: 0.615096  Cov: 0.468809   WCov: 0.472918
+2021-12-08 12:43:36,050 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:43:36,050 - Model - INFO - Best Cov is: 0.49376
+2021-12-08 12:43:36,050 - Model - INFO - Best WCov is: 0.47292
+2021-12-08 12:43:36,050 - Model - INFO - Epoch 37 (37/251):
+2021-12-08 12:43:36,051 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:44:32,966 - Model - INFO - Train accuracy is: 0.63838
+2021-12-08 12:44:37,700 - Model - INFO - eval sem  Cov of Rectangular    0.806378
+2021-12-08 12:44:37,700 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.641169
+2021-12-08 12:44:37,701 - Model - INFO - eval sem  Cov of Triangular     0.421405
+2021-12-08 12:44:37,701 - Model - INFO - eval sem  Cov of Parallelogram  0.253629
+2021-12-08 12:44:37,701 - Model - INFO - eval sem  Cov of Ladder shaped  0.338740
+2021-12-08 12:44:37,701 - Model - INFO - eval sem WCov of Rectangular    0.812792
+2021-12-08 12:44:37,701 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.641437
+2021-12-08 12:44:37,701 - Model - INFO - eval sem WCov of Triangular     0.418626
+2021-12-08 12:44:37,701 - Model - INFO - eval sem WCov of Parallelogram  0.255793
+2021-12-08 12:44:37,701 - Model - INFO - eval sem WCov of Ladder shaped  0.343751
+2021-12-08 12:44:37,701 - Model - INFO - eval  Cov of Roof           0.492264
+2021-12-08 12:44:37,701 - Model - INFO - eval WCov of Roof           0.494480
+2021-12-08 12:44:37,701 - Model - INFO - Epoch 37 test Accuracy: 0.609429  Cov: 0.492264   WCov: 0.494480
+2021-12-08 12:44:37,701 - Model - INFO - Best accuracy is: 0.64915
+2021-12-08 12:44:37,701 - Model - INFO - Best Cov is: 0.49376
+2021-12-08 12:44:37,701 - Model - INFO - Best WCov is: 0.49448
+2021-12-08 12:44:37,701 - Model - INFO - Epoch 38 (38/251):
+2021-12-08 12:44:37,701 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:45:34,733 - Model - INFO - Train accuracy is: 0.63284
+2021-12-08 12:45:39,535 - Model - INFO - eval sem  Cov of Rectangular    0.782741
+2021-12-08 12:45:39,535 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.638919
+2021-12-08 12:45:39,536 - Model - INFO - eval sem  Cov of Triangular     0.411142
+2021-12-08 12:45:39,536 - Model - INFO - eval sem  Cov of Parallelogram  0.235877
+2021-12-08 12:45:39,536 - Model - INFO - eval sem  Cov of Ladder shaped  0.377514
+2021-12-08 12:45:39,536 - Model - INFO - eval sem WCov of Rectangular    0.790037
+2021-12-08 12:45:39,536 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.638534
+2021-12-08 12:45:39,536 - Model - INFO - eval sem WCov of Triangular     0.411702
+2021-12-08 12:45:39,536 - Model - INFO - eval sem WCov of Parallelogram  0.240089
+2021-12-08 12:45:39,536 - Model - INFO - eval sem WCov of Ladder shaped  0.381729
+2021-12-08 12:45:39,536 - Model - INFO - eval  Cov of Roof           0.489239
+2021-12-08 12:45:39,536 - Model - INFO - eval WCov of Roof           0.492418
+2021-12-08 12:45:39,536 - Model - INFO - Epoch 38 test Accuracy: 0.651027  Cov: 0.489239   WCov: 0.492418
+2021-12-08 12:45:39,536 - Model - INFO - Best accuracy is: 0.65103
+2021-12-08 12:45:39,536 - Model - INFO - Best Cov is: 0.49376
+2021-12-08 12:45:39,536 - Model - INFO - Best WCov is: 0.49242
+2021-12-08 12:45:39,536 - Model - INFO - Epoch 39 (39/251):
+2021-12-08 12:45:39,536 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:46:36,499 - Model - INFO - Train accuracy is: 0.63711
+2021-12-08 12:46:41,233 - Model - INFO - eval sem  Cov of Rectangular    0.839961
+2021-12-08 12:46:41,233 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.584727
+2021-12-08 12:46:41,233 - Model - INFO - eval sem  Cov of Triangular     0.418952
+2021-12-08 12:46:41,233 - Model - INFO - eval sem  Cov of Parallelogram  0.259284
+2021-12-08 12:46:41,233 - Model - INFO - eval sem  Cov of Ladder shaped  0.393489
+2021-12-08 12:46:41,233 - Model - INFO - eval sem WCov of Rectangular    0.846953
+2021-12-08 12:46:41,233 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.584923
+2021-12-08 12:46:41,233 - Model - INFO - eval sem WCov of Triangular     0.421082
+2021-12-08 12:46:41,233 - Model - INFO - eval sem WCov of Parallelogram  0.260306
+2021-12-08 12:46:41,233 - Model - INFO - eval sem WCov of Ladder shaped  0.398269
+2021-12-08 12:46:41,233 - Model - INFO - eval  Cov of Roof           0.499283
+2021-12-08 12:46:41,233 - Model - INFO - eval WCov of Roof           0.502307
+2021-12-08 12:46:41,233 - Model - INFO - Epoch 39 test Accuracy: 0.632270  Cov: 0.499283   WCov: 0.502307
+2021-12-08 12:46:41,233 - Model - INFO - Save model...
+2021-12-08 12:46:41,233 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:46:41,281 - Model - INFO - Saving model....
+2021-12-08 12:46:41,281 - Model - INFO - Best accuracy is: 0.65103
+2021-12-08 12:46:41,281 - Model - INFO - Best Cov is: 0.49928
+2021-12-08 12:46:41,281 - Model - INFO - Best WCov is: 0.50231
+2021-12-08 12:46:41,281 - Model - INFO - Epoch 40 (40/251):
+2021-12-08 12:46:41,281 - Model - INFO - Learning rate:0.000500
+2021-12-08 12:47:38,259 - Model - INFO - Train accuracy is: 0.63621
+2021-12-08 12:47:43,130 - Model - INFO - eval sem  Cov of Rectangular    0.758673
+2021-12-08 12:47:43,130 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.538885
+2021-12-08 12:47:43,130 - Model - INFO - eval sem  Cov of Triangular     0.462935
+2021-12-08 12:47:43,130 - Model - INFO - eval sem  Cov of Parallelogram  0.336802
+2021-12-08 12:47:43,130 - Model - INFO - eval sem  Cov of Ladder shaped  0.372424
+2021-12-08 12:47:43,130 - Model - INFO - eval sem WCov of Rectangular    0.768975
+2021-12-08 12:47:43,130 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.541907
+2021-12-08 12:47:43,130 - Model - INFO - eval sem WCov of Triangular     0.462446
+2021-12-08 12:47:43,130 - Model - INFO - eval sem WCov of Parallelogram  0.343909
+2021-12-08 12:47:43,130 - Model - INFO - eval sem WCov of Ladder shaped  0.377105
+2021-12-08 12:47:43,130 - Model - INFO - eval  Cov of Roof           0.493944
+2021-12-08 12:47:43,130 - Model - INFO - eval WCov of Roof           0.498868
+2021-12-08 12:47:43,130 - Model - INFO - Epoch 40 test Accuracy: 0.653537  Cov: 0.493944   WCov: 0.498868
+2021-12-08 12:47:43,130 - Model - INFO - Best accuracy is: 0.65354
+2021-12-08 12:47:43,131 - Model - INFO - Best Cov is: 0.49928
+2021-12-08 12:47:43,131 - Model - INFO - Best WCov is: 0.49887
+2021-12-08 12:47:43,131 - Model - INFO - Epoch 41 (41/251):
+2021-12-08 12:47:43,131 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:48:40,255 - Model - INFO - Train accuracy is: 0.64954
+2021-12-08 12:48:45,032 - Model - INFO - eval sem  Cov of Rectangular    0.816099
+2021-12-08 12:48:45,032 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.635765
+2021-12-08 12:48:45,032 - Model - INFO - eval sem  Cov of Triangular     0.408135
+2021-12-08 12:48:45,032 - Model - INFO - eval sem  Cov of Parallelogram  0.283039
+2021-12-08 12:48:45,032 - Model - INFO - eval sem  Cov of Ladder shaped  0.373543
+2021-12-08 12:48:45,032 - Model - INFO - eval sem WCov of Rectangular    0.822413
+2021-12-08 12:48:45,032 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.637194
+2021-12-08 12:48:45,032 - Model - INFO - eval sem WCov of Triangular     0.405947
+2021-12-08 12:48:45,032 - Model - INFO - eval sem WCov of Parallelogram  0.284302
+2021-12-08 12:48:45,032 - Model - INFO - eval sem WCov of Ladder shaped  0.377412
+2021-12-08 12:48:45,032 - Model - INFO - eval  Cov of Roof           0.503316
+2021-12-08 12:48:45,032 - Model - INFO - eval WCov of Roof           0.505454
+2021-12-08 12:48:45,032 - Model - INFO - Epoch 41 test Accuracy: 0.657809  Cov: 0.503316   WCov: 0.505454
+2021-12-08 12:48:45,032 - Model - INFO - Save model...
+2021-12-08 12:48:45,032 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:48:45,068 - Model - INFO - Saving model....
+2021-12-08 12:48:45,068 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:48:45,068 - Model - INFO - Best Cov is: 0.50332
+2021-12-08 12:48:45,068 - Model - INFO - Best WCov is: 0.50545
+2021-12-08 12:48:45,068 - Model - INFO - Epoch 42 (42/251):
+2021-12-08 12:48:45,068 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:49:42,076 - Model - INFO - Train accuracy is: 0.64763
+2021-12-08 12:49:46,890 - Model - INFO - eval sem  Cov of Rectangular    0.805901
+2021-12-08 12:49:46,891 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.657916
+2021-12-08 12:49:46,891 - Model - INFO - eval sem  Cov of Triangular     0.530421
+2021-12-08 12:49:46,891 - Model - INFO - eval sem  Cov of Parallelogram  0.341084
+2021-12-08 12:49:46,891 - Model - INFO - eval sem  Cov of Ladder shaped  0.401025
+2021-12-08 12:49:46,891 - Model - INFO - eval sem WCov of Rectangular    0.813449
+2021-12-08 12:49:46,891 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.662127
+2021-12-08 12:49:46,891 - Model - INFO - eval sem WCov of Triangular     0.526988
+2021-12-08 12:49:46,891 - Model - INFO - eval sem WCov of Parallelogram  0.344575
+2021-12-08 12:49:46,891 - Model - INFO - eval sem WCov of Ladder shaped  0.405670
+2021-12-08 12:49:46,891 - Model - INFO - eval  Cov of Roof           0.547270
+2021-12-08 12:49:46,891 - Model - INFO - eval WCov of Roof           0.550562
+2021-12-08 12:49:46,891 - Model - INFO - Epoch 42 test Accuracy: 0.653296  Cov: 0.547270   WCov: 0.550562
+2021-12-08 12:49:46,891 - Model - INFO - Save model...
+2021-12-08 12:49:46,891 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:49:46,944 - Model - INFO - Saving model....
+2021-12-08 12:49:46,944 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:49:46,944 - Model - INFO - Best Cov is: 0.54727
+2021-12-08 12:49:46,944 - Model - INFO - Best WCov is: 0.55056
+2021-12-08 12:49:46,944 - Model - INFO - Epoch 43 (43/251):
+2021-12-08 12:49:46,944 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:50:43,999 - Model - INFO - Train accuracy is: 0.65477
+2021-12-08 12:50:48,789 - Model - INFO - eval sem  Cov of Rectangular    0.820276
+2021-12-08 12:50:48,789 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.681360
+2021-12-08 12:50:48,789 - Model - INFO - eval sem  Cov of Triangular     0.429275
+2021-12-08 12:50:48,789 - Model - INFO - eval sem  Cov of Parallelogram  0.419786
+2021-12-08 12:50:48,789 - Model - INFO - eval sem  Cov of Ladder shaped  0.392375
+2021-12-08 12:50:48,789 - Model - INFO - eval sem WCov of Rectangular    0.826454
+2021-12-08 12:50:48,789 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.684101
+2021-12-08 12:50:48,789 - Model - INFO - eval sem WCov of Triangular     0.425395
+2021-12-08 12:50:48,789 - Model - INFO - eval sem WCov of Parallelogram  0.432855
+2021-12-08 12:50:48,789 - Model - INFO - eval sem WCov of Ladder shaped  0.395170
+2021-12-08 12:50:48,789 - Model - INFO - eval  Cov of Roof           0.548614
+2021-12-08 12:50:48,789 - Model - INFO - eval WCov of Roof           0.552795
+2021-12-08 12:50:48,789 - Model - INFO - Epoch 43 test Accuracy: 0.654095  Cov: 0.548614   WCov: 0.552795
+2021-12-08 12:50:48,789 - Model - INFO - Save model...
+2021-12-08 12:50:48,789 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:50:48,837 - Model - INFO - Saving model....
+2021-12-08 12:50:48,838 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:50:48,838 - Model - INFO - Best Cov is: 0.54861
+2021-12-08 12:50:48,838 - Model - INFO - Best WCov is: 0.55279
+2021-12-08 12:50:48,838 - Model - INFO - Epoch 44 (44/251):
+2021-12-08 12:50:48,838 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:51:45,786 - Model - INFO - Train accuracy is: 0.65685
+2021-12-08 12:51:50,529 - Model - INFO - eval sem  Cov of Rectangular    0.809543
+2021-12-08 12:51:50,529 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.661979
+2021-12-08 12:51:50,529 - Model - INFO - eval sem  Cov of Triangular     0.423836
+2021-12-08 12:51:50,529 - Model - INFO - eval sem  Cov of Parallelogram  0.316446
+2021-12-08 12:51:50,529 - Model - INFO - eval sem  Cov of Ladder shaped  0.379051
+2021-12-08 12:51:50,529 - Model - INFO - eval sem WCov of Rectangular    0.816431
+2021-12-08 12:51:50,529 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.664216
+2021-12-08 12:51:50,529 - Model - INFO - eval sem WCov of Triangular     0.422246
+2021-12-08 12:51:50,529 - Model - INFO - eval sem WCov of Parallelogram  0.321303
+2021-12-08 12:51:50,529 - Model - INFO - eval sem WCov of Ladder shaped  0.381942
+2021-12-08 12:51:50,529 - Model - INFO - eval  Cov of Roof           0.518171
+2021-12-08 12:51:50,529 - Model - INFO - eval WCov of Roof           0.521228
+2021-12-08 12:51:50,529 - Model - INFO - Epoch 44 test Accuracy: 0.645705  Cov: 0.518171   WCov: 0.521228
+2021-12-08 12:51:50,529 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:51:50,529 - Model - INFO - Best Cov is: 0.54861
+2021-12-08 12:51:50,529 - Model - INFO - Best WCov is: 0.52123
+2021-12-08 12:51:50,529 - Model - INFO - Epoch 45 (45/251):
+2021-12-08 12:51:50,529 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:52:47,415 - Model - INFO - Train accuracy is: 0.67062
+2021-12-08 12:52:52,179 - Model - INFO - eval sem  Cov of Rectangular    0.799727
+2021-12-08 12:52:52,179 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.664552
+2021-12-08 12:52:52,179 - Model - INFO - eval sem  Cov of Triangular     0.469851
+2021-12-08 12:52:52,179 - Model - INFO - eval sem  Cov of Parallelogram  0.359439
+2021-12-08 12:52:52,179 - Model - INFO - eval sem  Cov of Ladder shaped  0.402069
+2021-12-08 12:52:52,179 - Model - INFO - eval sem WCov of Rectangular    0.807772
+2021-12-08 12:52:52,179 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.666959
+2021-12-08 12:52:52,179 - Model - INFO - eval sem WCov of Triangular     0.468765
+2021-12-08 12:52:52,179 - Model - INFO - eval sem WCov of Parallelogram  0.370894
+2021-12-08 12:52:52,179 - Model - INFO - eval sem WCov of Ladder shaped  0.404126
+2021-12-08 12:52:52,179 - Model - INFO - eval  Cov of Roof           0.539128
+2021-12-08 12:52:52,179 - Model - INFO - eval WCov of Roof           0.543703
+2021-12-08 12:52:52,179 - Model - INFO - Epoch 45 test Accuracy: 0.644048  Cov: 0.539128   WCov: 0.543703
+2021-12-08 12:52:52,179 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:52:52,179 - Model - INFO - Best Cov is: 0.54861
+2021-12-08 12:52:52,179 - Model - INFO - Best WCov is: 0.54370
+2021-12-08 12:52:52,179 - Model - INFO - Epoch 46 (46/251):
+2021-12-08 12:52:52,179 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:53:48,998 - Model - INFO - Train accuracy is: 0.65892
+2021-12-08 12:53:53,758 - Model - INFO - eval sem  Cov of Rectangular    0.811420
+2021-12-08 12:53:53,758 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.678762
+2021-12-08 12:53:53,758 - Model - INFO - eval sem  Cov of Triangular     0.540159
+2021-12-08 12:53:53,758 - Model - INFO - eval sem  Cov of Parallelogram  0.377819
+2021-12-08 12:53:53,758 - Model - INFO - eval sem  Cov of Ladder shaped  0.395128
+2021-12-08 12:53:53,758 - Model - INFO - eval sem WCov of Rectangular    0.817618
+2021-12-08 12:53:53,758 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.680738
+2021-12-08 12:53:53,758 - Model - INFO - eval sem WCov of Triangular     0.539357
+2021-12-08 12:53:53,758 - Model - INFO - eval sem WCov of Parallelogram  0.383207
+2021-12-08 12:53:53,758 - Model - INFO - eval sem WCov of Ladder shaped  0.399426
+2021-12-08 12:53:53,758 - Model - INFO - eval  Cov of Roof           0.560657
+2021-12-08 12:53:53,758 - Model - INFO - eval WCov of Roof           0.564069
+2021-12-08 12:53:53,759 - Model - INFO - Epoch 46 test Accuracy: 0.650470  Cov: 0.560657   WCov: 0.564069
+2021-12-08 12:53:53,759 - Model - INFO - Save model...
+2021-12-08 12:53:53,759 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:53:53,812 - Model - INFO - Saving model....
+2021-12-08 12:53:53,812 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:53:53,812 - Model - INFO - Best Cov is: 0.56066
+2021-12-08 12:53:53,813 - Model - INFO - Best WCov is: 0.56407
+2021-12-08 12:53:53,813 - Model - INFO - Epoch 47 (47/251):
+2021-12-08 12:53:53,813 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:54:50,927 - Model - INFO - Train accuracy is: 0.66307
+2021-12-08 12:54:55,675 - Model - INFO - eval sem  Cov of Rectangular    0.846233
+2021-12-08 12:54:55,675 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.672304
+2021-12-08 12:54:55,675 - Model - INFO - eval sem  Cov of Triangular     0.518513
+2021-12-08 12:54:55,675 - Model - INFO - eval sem  Cov of Parallelogram  0.340993
+2021-12-08 12:54:55,675 - Model - INFO - eval sem  Cov of Ladder shaped  0.384279
+2021-12-08 12:54:55,675 - Model - INFO - eval sem WCov of Rectangular    0.851177
+2021-12-08 12:54:55,675 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.673626
+2021-12-08 12:54:55,675 - Model - INFO - eval sem WCov of Triangular     0.517987
+2021-12-08 12:54:55,675 - Model - INFO - eval sem WCov of Parallelogram  0.348209
+2021-12-08 12:54:55,675 - Model - INFO - eval sem WCov of Ladder shaped  0.389074
+2021-12-08 12:54:55,675 - Model - INFO - eval  Cov of Roof           0.552465
+2021-12-08 12:54:55,675 - Model - INFO - eval WCov of Roof           0.556015
+2021-12-08 12:54:55,675 - Model - INFO - Epoch 47 test Accuracy: 0.641888  Cov: 0.552465   WCov: 0.556015
+2021-12-08 12:54:55,675 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:54:55,675 - Model - INFO - Best Cov is: 0.56066
+2021-12-08 12:54:55,675 - Model - INFO - Best WCov is: 0.55601
+2021-12-08 12:54:55,675 - Model - INFO - Epoch 48 (48/251):
+2021-12-08 12:54:55,675 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:55:52,693 - Model - INFO - Train accuracy is: 0.66813
+2021-12-08 12:55:57,427 - Model - INFO - eval sem  Cov of Rectangular    0.827443
+2021-12-08 12:55:57,427 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.677172
+2021-12-08 12:55:57,427 - Model - INFO - eval sem  Cov of Triangular     0.529217
+2021-12-08 12:55:57,427 - Model - INFO - eval sem  Cov of Parallelogram  0.354913
+2021-12-08 12:55:57,427 - Model - INFO - eval sem  Cov of Ladder shaped  0.388070
+2021-12-08 12:55:57,427 - Model - INFO - eval sem WCov of Rectangular    0.833222
+2021-12-08 12:55:57,427 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.677970
+2021-12-08 12:55:57,427 - Model - INFO - eval sem WCov of Triangular     0.527117
+2021-12-08 12:55:57,427 - Model - INFO - eval sem WCov of Parallelogram  0.369114
+2021-12-08 12:55:57,427 - Model - INFO - eval sem WCov of Ladder shaped  0.392678
+2021-12-08 12:55:57,427 - Model - INFO - eval  Cov of Roof           0.555363
+2021-12-08 12:55:57,427 - Model - INFO - eval WCov of Roof           0.560020
+2021-12-08 12:55:57,427 - Model - INFO - Epoch 48 test Accuracy: 0.652008  Cov: 0.555363   WCov: 0.560020
+2021-12-08 12:55:57,427 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:55:57,427 - Model - INFO - Best Cov is: 0.56066
+2021-12-08 12:55:57,427 - Model - INFO - Best WCov is: 0.56002
+2021-12-08 12:55:57,427 - Model - INFO - Epoch 49 (49/251):
+2021-12-08 12:55:57,427 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:56:54,280 - Model - INFO - Train accuracy is: 0.66320
+2021-12-08 12:56:59,034 - Model - INFO - eval sem  Cov of Rectangular    0.804640
+2021-12-08 12:56:59,034 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.631236
+2021-12-08 12:56:59,034 - Model - INFO - eval sem  Cov of Triangular     0.430316
+2021-12-08 12:56:59,034 - Model - INFO - eval sem  Cov of Parallelogram  0.337449
+2021-12-08 12:56:59,034 - Model - INFO - eval sem  Cov of Ladder shaped  0.384252
+2021-12-08 12:56:59,034 - Model - INFO - eval sem WCov of Rectangular    0.811774
+2021-12-08 12:56:59,034 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.632564
+2021-12-08 12:56:59,034 - Model - INFO - eval sem WCov of Triangular     0.428542
+2021-12-08 12:56:59,034 - Model - INFO - eval sem WCov of Parallelogram  0.344818
+2021-12-08 12:56:59,034 - Model - INFO - eval sem WCov of Ladder shaped  0.386690
+2021-12-08 12:56:59,034 - Model - INFO - eval  Cov of Roof           0.517579
+2021-12-08 12:56:59,034 - Model - INFO - eval WCov of Roof           0.520877
+2021-12-08 12:56:59,035 - Model - INFO - Epoch 49 test Accuracy: 0.643663  Cov: 0.517579   WCov: 0.520877
+2021-12-08 12:56:59,035 - Model - INFO - Best accuracy is: 0.65781
+2021-12-08 12:56:59,035 - Model - INFO - Best Cov is: 0.56066
+2021-12-08 12:56:59,035 - Model - INFO - Best WCov is: 0.52088
+2021-12-08 12:56:59,035 - Model - INFO - Epoch 50 (50/251):
+2021-12-08 12:56:59,035 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:57:55,914 - Model - INFO - Train accuracy is: 0.66705
+2021-12-08 12:58:00,729 - Model - INFO - eval sem  Cov of Rectangular    0.826973
+2021-12-08 12:58:00,729 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.680386
+2021-12-08 12:58:00,729 - Model - INFO - eval sem  Cov of Triangular     0.435010
+2021-12-08 12:58:00,729 - Model - INFO - eval sem  Cov of Parallelogram  0.324714
+2021-12-08 12:58:00,729 - Model - INFO - eval sem  Cov of Ladder shaped  0.383429
+2021-12-08 12:58:00,729 - Model - INFO - eval sem WCov of Rectangular    0.833445
+2021-12-08 12:58:00,729 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.682532
+2021-12-08 12:58:00,729 - Model - INFO - eval sem WCov of Triangular     0.434655
+2021-12-08 12:58:00,729 - Model - INFO - eval sem WCov of Parallelogram  0.332390
+2021-12-08 12:58:00,729 - Model - INFO - eval sem WCov of Ladder shaped  0.388077
+2021-12-08 12:58:00,729 - Model - INFO - eval  Cov of Roof           0.530102
+2021-12-08 12:58:00,729 - Model - INFO - eval WCov of Roof           0.534220
+2021-12-08 12:58:00,729 - Model - INFO - Epoch 50 test Accuracy: 0.659594  Cov: 0.530102   WCov: 0.534220
+2021-12-08 12:58:00,729 - Model - INFO - Best accuracy is: 0.65959
+2021-12-08 12:58:00,729 - Model - INFO - Best Cov is: 0.56066
+2021-12-08 12:58:00,729 - Model - INFO - Best WCov is: 0.53422
+2021-12-08 12:58:00,729 - Model - INFO - Epoch 51 (51/251):
+2021-12-08 12:58:00,729 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:58:57,605 - Model - INFO - Train accuracy is: 0.66524
+2021-12-08 12:59:02,401 - Model - INFO - eval sem  Cov of Rectangular    0.813849
+2021-12-08 12:59:02,401 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.690225
+2021-12-08 12:59:02,401 - Model - INFO - eval sem  Cov of Triangular     0.559496
+2021-12-08 12:59:02,401 - Model - INFO - eval sem  Cov of Parallelogram  0.376795
+2021-12-08 12:59:02,401 - Model - INFO - eval sem  Cov of Ladder shaped  0.432717
+2021-12-08 12:59:02,401 - Model - INFO - eval sem WCov of Rectangular    0.821161
+2021-12-08 12:59:02,401 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.692584
+2021-12-08 12:59:02,401 - Model - INFO - eval sem WCov of Triangular     0.556834
+2021-12-08 12:59:02,401 - Model - INFO - eval sem WCov of Parallelogram  0.388142
+2021-12-08 12:59:02,401 - Model - INFO - eval sem WCov of Ladder shaped  0.437781
+2021-12-08 12:59:02,401 - Model - INFO - eval  Cov of Roof           0.574617
+2021-12-08 12:59:02,401 - Model - INFO - eval WCov of Roof           0.579300
+2021-12-08 12:59:02,401 - Model - INFO - Epoch 51 test Accuracy: 0.667520  Cov: 0.574617   WCov: 0.579300
+2021-12-08 12:59:02,401 - Model - INFO - Save model...
+2021-12-08 12:59:02,401 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 12:59:02,455 - Model - INFO - Saving model....
+2021-12-08 12:59:02,456 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 12:59:02,456 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 12:59:02,456 - Model - INFO - Best WCov is: 0.57930
+2021-12-08 12:59:02,456 - Model - INFO - Epoch 52 (52/251):
+2021-12-08 12:59:02,456 - Model - INFO - Learning rate:0.000250
+2021-12-08 12:59:59,485 - Model - INFO - Train accuracy is: 0.67008
+2021-12-08 13:00:04,254 - Model - INFO - eval sem  Cov of Rectangular    0.829137
+2021-12-08 13:00:04,254 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.675910
+2021-12-08 13:00:04,254 - Model - INFO - eval sem  Cov of Triangular     0.531586
+2021-12-08 13:00:04,254 - Model - INFO - eval sem  Cov of Parallelogram  0.350861
+2021-12-08 13:00:04,254 - Model - INFO - eval sem  Cov of Ladder shaped  0.383348
+2021-12-08 13:00:04,254 - Model - INFO - eval sem WCov of Rectangular    0.834942
+2021-12-08 13:00:04,254 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.679292
+2021-12-08 13:00:04,254 - Model - INFO - eval sem WCov of Triangular     0.530016
+2021-12-08 13:00:04,254 - Model - INFO - eval sem WCov of Parallelogram  0.357829
+2021-12-08 13:00:04,254 - Model - INFO - eval sem WCov of Ladder shaped  0.388768
+2021-12-08 13:00:04,254 - Model - INFO - eval  Cov of Roof           0.554168
+2021-12-08 13:00:04,254 - Model - INFO - eval WCov of Roof           0.558170
+2021-12-08 13:00:04,254 - Model - INFO - Epoch 52 test Accuracy: 0.636615  Cov: 0.554168   WCov: 0.558170
+2021-12-08 13:00:04,255 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:00:04,255 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:00:04,255 - Model - INFO - Best WCov is: 0.55817
+2021-12-08 13:00:04,255 - Model - INFO - Epoch 53 (53/251):
+2021-12-08 13:00:04,255 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:01:01,223 - Model - INFO - Train accuracy is: 0.67747
+2021-12-08 13:01:06,006 - Model - INFO - eval sem  Cov of Rectangular    0.794262
+2021-12-08 13:01:06,006 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.645413
+2021-12-08 13:01:06,006 - Model - INFO - eval sem  Cov of Triangular     0.421310
+2021-12-08 13:01:06,006 - Model - INFO - eval sem  Cov of Parallelogram  0.332076
+2021-12-08 13:01:06,006 - Model - INFO - eval sem  Cov of Ladder shaped  0.367425
+2021-12-08 13:01:06,006 - Model - INFO - eval sem WCov of Rectangular    0.802288
+2021-12-08 13:01:06,006 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.646049
+2021-12-08 13:01:06,006 - Model - INFO - eval sem WCov of Triangular     0.421623
+2021-12-08 13:01:06,006 - Model - INFO - eval sem WCov of Parallelogram  0.338053
+2021-12-08 13:01:06,007 - Model - INFO - eval sem WCov of Ladder shaped  0.368642
+2021-12-08 13:01:06,007 - Model - INFO - eval  Cov of Roof           0.512097
+2021-12-08 13:01:06,007 - Model - INFO - eval WCov of Roof           0.515331
+2021-12-08 13:01:06,007 - Model - INFO - Epoch 53 test Accuracy: 0.634578  Cov: 0.512097   WCov: 0.515331
+2021-12-08 13:01:06,007 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:01:06,007 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:01:06,007 - Model - INFO - Best WCov is: 0.51533
+2021-12-08 13:01:06,007 - Model - INFO - Epoch 54 (54/251):
+2021-12-08 13:01:06,007 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:02:03,131 - Model - INFO - Train accuracy is: 0.67102
+2021-12-08 13:02:08,008 - Model - INFO - eval sem  Cov of Rectangular    0.838308
+2021-12-08 13:02:08,008 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.663486
+2021-12-08 13:02:08,008 - Model - INFO - eval sem  Cov of Triangular     0.556327
+2021-12-08 13:02:08,008 - Model - INFO - eval sem  Cov of Parallelogram  0.354571
+2021-12-08 13:02:08,008 - Model - INFO - eval sem  Cov of Ladder shaped  0.409702
+2021-12-08 13:02:08,008 - Model - INFO - eval sem WCov of Rectangular    0.845075
+2021-12-08 13:02:08,008 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.662723
+2021-12-08 13:02:08,009 - Model - INFO - eval sem WCov of Triangular     0.556381
+2021-12-08 13:02:08,009 - Model - INFO - eval sem WCov of Parallelogram  0.362352
+2021-12-08 13:02:08,009 - Model - INFO - eval sem WCov of Ladder shaped  0.412718
+2021-12-08 13:02:08,009 - Model - INFO - eval  Cov of Roof           0.564479
+2021-12-08 13:02:08,009 - Model - INFO - eval WCov of Roof           0.567850
+2021-12-08 13:02:08,009 - Model - INFO - Epoch 54 test Accuracy: 0.630450  Cov: 0.564479   WCov: 0.567850
+2021-12-08 13:02:08,009 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:02:08,009 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:02:08,009 - Model - INFO - Best WCov is: 0.56785
+2021-12-08 13:02:08,009 - Model - INFO - Epoch 55 (55/251):
+2021-12-08 13:02:08,009 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:03:05,324 - Model - INFO - Train accuracy is: 0.67153
+2021-12-08 13:03:10,186 - Model - INFO - eval sem  Cov of Rectangular    0.811945
+2021-12-08 13:03:10,186 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.665706
+2021-12-08 13:03:10,186 - Model - INFO - eval sem  Cov of Triangular     0.429928
+2021-12-08 13:03:10,186 - Model - INFO - eval sem  Cov of Parallelogram  0.324727
+2021-12-08 13:03:10,187 - Model - INFO - eval sem  Cov of Ladder shaped  0.386683
+2021-12-08 13:03:10,187 - Model - INFO - eval sem WCov of Rectangular    0.818332
+2021-12-08 13:03:10,187 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.665012
+2021-12-08 13:03:10,187 - Model - INFO - eval sem WCov of Triangular     0.430040
+2021-12-08 13:03:10,187 - Model - INFO - eval sem WCov of Parallelogram  0.331443
+2021-12-08 13:03:10,187 - Model - INFO - eval sem WCov of Ladder shaped  0.393595
+2021-12-08 13:03:10,187 - Model - INFO - eval  Cov of Roof           0.523798
+2021-12-08 13:03:10,187 - Model - INFO - eval WCov of Roof           0.527685
+2021-12-08 13:03:10,187 - Model - INFO - Epoch 55 test Accuracy: 0.640373  Cov: 0.523798   WCov: 0.527685
+2021-12-08 13:03:10,187 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:03:10,187 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:03:10,187 - Model - INFO - Best WCov is: 0.52768
+2021-12-08 13:03:10,187 - Model - INFO - Epoch 56 (56/251):
+2021-12-08 13:03:10,187 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:04:07,261 - Model - INFO - Train accuracy is: 0.67437
+2021-12-08 13:04:12,070 - Model - INFO - eval sem  Cov of Rectangular    0.836831
+2021-12-08 13:04:12,070 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.709119
+2021-12-08 13:04:12,070 - Model - INFO - eval sem  Cov of Triangular     0.506857
+2021-12-08 13:04:12,070 - Model - INFO - eval sem  Cov of Parallelogram  0.347562
+2021-12-08 13:04:12,070 - Model - INFO - eval sem  Cov of Ladder shaped  0.413956
+2021-12-08 13:04:12,070 - Model - INFO - eval sem WCov of Rectangular    0.842806
+2021-12-08 13:04:12,070 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.710724
+2021-12-08 13:04:12,070 - Model - INFO - eval sem WCov of Triangular     0.504699
+2021-12-08 13:04:12,070 - Model - INFO - eval sem WCov of Parallelogram  0.355537
+2021-12-08 13:04:12,070 - Model - INFO - eval sem WCov of Ladder shaped  0.417623
+2021-12-08 13:04:12,070 - Model - INFO - eval  Cov of Roof           0.562865
+2021-12-08 13:04:12,070 - Model - INFO - eval WCov of Roof           0.566278
+2021-12-08 13:04:12,070 - Model - INFO - Epoch 56 test Accuracy: 0.645740  Cov: 0.562865   WCov: 0.566278
+2021-12-08 13:04:12,070 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:04:12,070 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:04:12,070 - Model - INFO - Best WCov is: 0.56628
+2021-12-08 13:04:12,070 - Model - INFO - Epoch 57 (57/251):
+2021-12-08 13:04:12,070 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:05:09,349 - Model - INFO - Train accuracy is: 0.67670
+2021-12-08 13:05:14,083 - Model - INFO - eval sem  Cov of Rectangular    0.806122
+2021-12-08 13:05:14,084 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.563228
+2021-12-08 13:05:14,084 - Model - INFO - eval sem  Cov of Triangular     0.450714
+2021-12-08 13:05:14,084 - Model - INFO - eval sem  Cov of Parallelogram  0.334871
+2021-12-08 13:05:14,084 - Model - INFO - eval sem  Cov of Ladder shaped  0.399348
+2021-12-08 13:05:14,084 - Model - INFO - eval sem WCov of Rectangular    0.812978
+2021-12-08 13:05:14,084 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.564504
+2021-12-08 13:05:14,084 - Model - INFO - eval sem WCov of Triangular     0.450160
+2021-12-08 13:05:14,084 - Model - INFO - eval sem WCov of Parallelogram  0.348199
+2021-12-08 13:05:14,084 - Model - INFO - eval sem WCov of Ladder shaped  0.402522
+2021-12-08 13:05:14,084 - Model - INFO - eval  Cov of Roof           0.510857
+2021-12-08 13:05:14,084 - Model - INFO - eval WCov of Roof           0.515673
+2021-12-08 13:05:14,084 - Model - INFO - Epoch 57 test Accuracy: 0.635195  Cov: 0.510857   WCov: 0.515673
+2021-12-08 13:05:14,084 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:05:14,084 - Model - INFO - Best Cov is: 0.57462
+2021-12-08 13:05:14,084 - Model - INFO - Best WCov is: 0.51567
+2021-12-08 13:05:14,084 - Model - INFO - Epoch 58 (58/251):
+2021-12-08 13:05:14,084 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:06:11,253 - Model - INFO - Train accuracy is: 0.68026
+2021-12-08 13:06:16,121 - Model - INFO - eval sem  Cov of Rectangular    0.815052
+2021-12-08 13:06:16,121 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.682445
+2021-12-08 13:06:16,121 - Model - INFO - eval sem  Cov of Triangular     0.616253
+2021-12-08 13:06:16,121 - Model - INFO - eval sem  Cov of Parallelogram  0.342703
+2021-12-08 13:06:16,121 - Model - INFO - eval sem  Cov of Ladder shaped  0.429134
+2021-12-08 13:06:16,121 - Model - INFO - eval sem WCov of Rectangular    0.821921
+2021-12-08 13:06:16,121 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.682279
+2021-12-08 13:06:16,121 - Model - INFO - eval sem WCov of Triangular     0.613494
+2021-12-08 13:06:16,121 - Model - INFO - eval sem WCov of Parallelogram  0.351350
+2021-12-08 13:06:16,121 - Model - INFO - eval sem WCov of Ladder shaped  0.430733
+2021-12-08 13:06:16,121 - Model - INFO - eval  Cov of Roof           0.577117
+2021-12-08 13:06:16,121 - Model - INFO - eval WCov of Roof           0.579955
+2021-12-08 13:06:16,121 - Model - INFO - Epoch 58 test Accuracy: 0.631461  Cov: 0.577117   WCov: 0.579955
+2021-12-08 13:06:16,121 - Model - INFO - Save model...
+2021-12-08 13:06:16,121 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 13:06:16,181 - Model - INFO - Saving model....
+2021-12-08 13:06:16,182 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:06:16,182 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:06:16,182 - Model - INFO - Best WCov is: 0.57996
+2021-12-08 13:06:16,182 - Model - INFO - Epoch 59 (59/251):
+2021-12-08 13:06:16,183 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:07:13,505 - Model - INFO - Train accuracy is: 0.68435
+2021-12-08 13:07:18,401 - Model - INFO - eval sem  Cov of Rectangular    0.818609
+2021-12-08 13:07:18,401 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.676968
+2021-12-08 13:07:18,401 - Model - INFO - eval sem  Cov of Triangular     0.499888
+2021-12-08 13:07:18,401 - Model - INFO - eval sem  Cov of Parallelogram  0.326028
+2021-12-08 13:07:18,401 - Model - INFO - eval sem  Cov of Ladder shaped  0.454022
+2021-12-08 13:07:18,401 - Model - INFO - eval sem WCov of Rectangular    0.825483
+2021-12-08 13:07:18,401 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.677722
+2021-12-08 13:07:18,401 - Model - INFO - eval sem WCov of Triangular     0.494911
+2021-12-08 13:07:18,401 - Model - INFO - eval sem WCov of Parallelogram  0.332837
+2021-12-08 13:07:18,401 - Model - INFO - eval sem WCov of Ladder shaped  0.458969
+2021-12-08 13:07:18,401 - Model - INFO - eval  Cov of Roof           0.555103
+2021-12-08 13:07:18,401 - Model - INFO - eval WCov of Roof           0.557984
+2021-12-08 13:07:18,401 - Model - INFO - Epoch 59 test Accuracy: 0.638884  Cov: 0.555103   WCov: 0.557984
+2021-12-08 13:07:18,401 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:07:18,401 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:07:18,401 - Model - INFO - Best WCov is: 0.55798
+2021-12-08 13:07:18,401 - Model - INFO - Epoch 60 (60/251):
+2021-12-08 13:07:18,401 - Model - INFO - Learning rate:0.000250
+2021-12-08 13:08:15,426 - Model - INFO - Train accuracy is: 0.68817
+2021-12-08 13:08:20,212 - Model - INFO - eval sem  Cov of Rectangular    0.844119
+2021-12-08 13:08:20,212 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.686122
+2021-12-08 13:08:20,212 - Model - INFO - eval sem  Cov of Triangular     0.460313
+2021-12-08 13:08:20,212 - Model - INFO - eval sem  Cov of Parallelogram  0.338370
+2021-12-08 13:08:20,212 - Model - INFO - eval sem  Cov of Ladder shaped  0.421220
+2021-12-08 13:08:20,212 - Model - INFO - eval sem WCov of Rectangular    0.849736
+2021-12-08 13:08:20,212 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.687042
+2021-12-08 13:08:20,212 - Model - INFO - eval sem WCov of Triangular     0.460100
+2021-12-08 13:08:20,212 - Model - INFO - eval sem WCov of Parallelogram  0.350783
+2021-12-08 13:08:20,212 - Model - INFO - eval sem WCov of Ladder shaped  0.424332
+2021-12-08 13:08:20,212 - Model - INFO - eval  Cov of Roof           0.550029
+2021-12-08 13:08:20,212 - Model - INFO - eval WCov of Roof           0.554399
+2021-12-08 13:08:20,212 - Model - INFO - Epoch 60 test Accuracy: 0.644339  Cov: 0.550029   WCov: 0.554399
+2021-12-08 13:08:20,213 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:08:20,213 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:08:20,213 - Model - INFO - Best WCov is: 0.55440
+2021-12-08 13:08:20,213 - Model - INFO - Epoch 61 (61/251):
+2021-12-08 13:08:20,213 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:09:17,354 - Model - INFO - Train accuracy is: 0.69237
+2021-12-08 13:09:22,247 - Model - INFO - eval sem  Cov of Rectangular    0.822923
+2021-12-08 13:09:22,248 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.677792
+2021-12-08 13:09:22,248 - Model - INFO - eval sem  Cov of Triangular     0.489920
+2021-12-08 13:09:22,248 - Model - INFO - eval sem  Cov of Parallelogram  0.335001
+2021-12-08 13:09:22,248 - Model - INFO - eval sem  Cov of Ladder shaped  0.438304
+2021-12-08 13:09:22,248 - Model - INFO - eval sem WCov of Rectangular    0.830430
+2021-12-08 13:09:22,248 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.678112
+2021-12-08 13:09:22,248 - Model - INFO - eval sem WCov of Triangular     0.489001
+2021-12-08 13:09:22,248 - Model - INFO - eval sem WCov of Parallelogram  0.339179
+2021-12-08 13:09:22,248 - Model - INFO - eval sem WCov of Ladder shaped  0.441144
+2021-12-08 13:09:22,248 - Model - INFO - eval  Cov of Roof           0.552788
+2021-12-08 13:09:22,248 - Model - INFO - eval WCov of Roof           0.555573
+2021-12-08 13:09:22,248 - Model - INFO - Epoch 61 test Accuracy: 0.634149  Cov: 0.552788   WCov: 0.555573
+2021-12-08 13:09:22,248 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:09:22,248 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:09:22,248 - Model - INFO - Best WCov is: 0.55557
+2021-12-08 13:09:22,248 - Model - INFO - Epoch 62 (62/251):
+2021-12-08 13:09:22,248 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:10:19,378 - Model - INFO - Train accuracy is: 0.70696
+2021-12-08 13:10:24,134 - Model - INFO - eval sem  Cov of Rectangular    0.811689
+2021-12-08 13:10:24,134 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.686421
+2021-12-08 13:10:24,134 - Model - INFO - eval sem  Cov of Triangular     0.508822
+2021-12-08 13:10:24,134 - Model - INFO - eval sem  Cov of Parallelogram  0.311053
+2021-12-08 13:10:24,134 - Model - INFO - eval sem  Cov of Ladder shaped  0.440657
+2021-12-08 13:10:24,134 - Model - INFO - eval sem WCov of Rectangular    0.819169
+2021-12-08 13:10:24,134 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.685621
+2021-12-08 13:10:24,134 - Model - INFO - eval sem WCov of Triangular     0.507844
+2021-12-08 13:10:24,134 - Model - INFO - eval sem WCov of Parallelogram  0.316586
+2021-12-08 13:10:24,134 - Model - INFO - eval sem WCov of Ladder shaped  0.443827
+2021-12-08 13:10:24,134 - Model - INFO - eval  Cov of Roof           0.551728
+2021-12-08 13:10:24,134 - Model - INFO - eval WCov of Roof           0.554610
+2021-12-08 13:10:24,134 - Model - INFO - Epoch 62 test Accuracy: 0.647274  Cov: 0.551728   WCov: 0.554610
+2021-12-08 13:10:24,134 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:10:24,134 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:10:24,134 - Model - INFO - Best WCov is: 0.55461
+2021-12-08 13:10:24,134 - Model - INFO - Epoch 63 (63/251):
+2021-12-08 13:10:24,134 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:11:20,967 - Model - INFO - Train accuracy is: 0.70361
+2021-12-08 13:11:25,797 - Model - INFO - eval sem  Cov of Rectangular    0.834436
+2021-12-08 13:11:25,797 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.682070
+2021-12-08 13:11:25,797 - Model - INFO - eval sem  Cov of Triangular     0.592199
+2021-12-08 13:11:25,797 - Model - INFO - eval sem  Cov of Parallelogram  0.273732
+2021-12-08 13:11:25,797 - Model - INFO - eval sem  Cov of Ladder shaped  0.440547
+2021-12-08 13:11:25,797 - Model - INFO - eval sem WCov of Rectangular    0.840430
+2021-12-08 13:11:25,797 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.682932
+2021-12-08 13:11:25,797 - Model - INFO - eval sem WCov of Triangular     0.591034
+2021-12-08 13:11:25,797 - Model - INFO - eval sem WCov of Parallelogram  0.277048
+2021-12-08 13:11:25,797 - Model - INFO - eval sem WCov of Ladder shaped  0.443874
+2021-12-08 13:11:25,797 - Model - INFO - eval  Cov of Roof           0.564597
+2021-12-08 13:11:25,797 - Model - INFO - eval WCov of Roof           0.567064
+2021-12-08 13:11:25,797 - Model - INFO - Epoch 63 test Accuracy: 0.634154  Cov: 0.564597   WCov: 0.567064
+2021-12-08 13:11:25,797 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:11:25,797 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:11:25,797 - Model - INFO - Best WCov is: 0.56706
+2021-12-08 13:11:25,797 - Model - INFO - Epoch 64 (64/251):
+2021-12-08 13:11:25,797 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:12:22,841 - Model - INFO - Train accuracy is: 0.70218
+2021-12-08 13:12:27,611 - Model - INFO - eval sem  Cov of Rectangular    0.829091
+2021-12-08 13:12:27,611 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.687953
+2021-12-08 13:12:27,611 - Model - INFO - eval sem  Cov of Triangular     0.467836
+2021-12-08 13:12:27,611 - Model - INFO - eval sem  Cov of Parallelogram  0.337374
+2021-12-08 13:12:27,611 - Model - INFO - eval sem  Cov of Ladder shaped  0.433299
+2021-12-08 13:12:27,611 - Model - INFO - eval sem WCov of Rectangular    0.835546
+2021-12-08 13:12:27,611 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.688824
+2021-12-08 13:12:27,611 - Model - INFO - eval sem WCov of Triangular     0.464191
+2021-12-08 13:12:27,611 - Model - INFO - eval sem WCov of Parallelogram  0.344504
+2021-12-08 13:12:27,612 - Model - INFO - eval sem WCov of Ladder shaped  0.438103
+2021-12-08 13:12:27,612 - Model - INFO - eval  Cov of Roof           0.551111
+2021-12-08 13:12:27,612 - Model - INFO - eval WCov of Roof           0.554234
+2021-12-08 13:12:27,612 - Model - INFO - Epoch 64 test Accuracy: 0.621488  Cov: 0.551111   WCov: 0.554234
+2021-12-08 13:12:27,612 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:12:27,612 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:12:27,612 - Model - INFO - Best WCov is: 0.55423
+2021-12-08 13:12:27,612 - Model - INFO - Epoch 65 (65/251):
+2021-12-08 13:12:27,612 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:13:24,568 - Model - INFO - Train accuracy is: 0.69895
+2021-12-08 13:13:29,353 - Model - INFO - eval sem  Cov of Rectangular    0.805505
+2021-12-08 13:13:29,353 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.725999
+2021-12-08 13:13:29,354 - Model - INFO - eval sem  Cov of Triangular     0.499718
+2021-12-08 13:13:29,354 - Model - INFO - eval sem  Cov of Parallelogram  0.357397
+2021-12-08 13:13:29,354 - Model - INFO - eval sem  Cov of Ladder shaped  0.461865
+2021-12-08 13:13:29,354 - Model - INFO - eval sem WCov of Rectangular    0.811692
+2021-12-08 13:13:29,354 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.726859
+2021-12-08 13:13:29,354 - Model - INFO - eval sem WCov of Triangular     0.496771
+2021-12-08 13:13:29,354 - Model - INFO - eval sem WCov of Parallelogram  0.364580
+2021-12-08 13:13:29,354 - Model - INFO - eval sem WCov of Ladder shaped  0.466036
+2021-12-08 13:13:29,354 - Model - INFO - eval  Cov of Roof           0.570097
+2021-12-08 13:13:29,354 - Model - INFO - eval WCov of Roof           0.573188
+2021-12-08 13:13:29,354 - Model - INFO - Epoch 65 test Accuracy: 0.646904  Cov: 0.570097   WCov: 0.573188
+2021-12-08 13:13:29,354 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:13:29,354 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:13:29,354 - Model - INFO - Best WCov is: 0.57319
+2021-12-08 13:13:29,354 - Model - INFO - Epoch 66 (66/251):
+2021-12-08 13:13:29,354 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:14:26,501 - Model - INFO - Train accuracy is: 0.70254
+2021-12-08 13:14:31,242 - Model - INFO - eval sem  Cov of Rectangular    0.820015
+2021-12-08 13:14:31,243 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.690761
+2021-12-08 13:14:31,243 - Model - INFO - eval sem  Cov of Triangular     0.414886
+2021-12-08 13:14:31,243 - Model - INFO - eval sem  Cov of Parallelogram  0.350622
+2021-12-08 13:14:31,243 - Model - INFO - eval sem  Cov of Ladder shaped  0.471983
+2021-12-08 13:14:31,243 - Model - INFO - eval sem WCov of Rectangular    0.826991
+2021-12-08 13:14:31,243 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.690676
+2021-12-08 13:14:31,243 - Model - INFO - eval sem WCov of Triangular     0.414235
+2021-12-08 13:14:31,243 - Model - INFO - eval sem WCov of Parallelogram  0.357223
+2021-12-08 13:14:31,243 - Model - INFO - eval sem WCov of Ladder shaped  0.476416
+2021-12-08 13:14:31,243 - Model - INFO - eval  Cov of Roof           0.549653
+2021-12-08 13:14:31,243 - Model - INFO - eval WCov of Roof           0.553108
+2021-12-08 13:14:31,243 - Model - INFO - Epoch 66 test Accuracy: 0.642292  Cov: 0.549653   WCov: 0.553108
+2021-12-08 13:14:31,243 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:14:31,243 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:14:31,243 - Model - INFO - Best WCov is: 0.55311
+2021-12-08 13:14:31,243 - Model - INFO - Epoch 67 (67/251):
+2021-12-08 13:14:31,243 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:15:28,506 - Model - INFO - Train accuracy is: 0.71058
+2021-12-08 13:15:33,371 - Model - INFO - eval sem  Cov of Rectangular    0.818955
+2021-12-08 13:15:33,371 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.690107
+2021-12-08 13:15:33,371 - Model - INFO - eval sem  Cov of Triangular     0.515848
+2021-12-08 13:15:33,371 - Model - INFO - eval sem  Cov of Parallelogram  0.349975
+2021-12-08 13:15:33,371 - Model - INFO - eval sem  Cov of Ladder shaped  0.440246
+2021-12-08 13:15:33,371 - Model - INFO - eval sem WCov of Rectangular    0.825088
+2021-12-08 13:15:33,371 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.691095
+2021-12-08 13:15:33,371 - Model - INFO - eval sem WCov of Triangular     0.513348
+2021-12-08 13:15:33,371 - Model - INFO - eval sem WCov of Parallelogram  0.356397
+2021-12-08 13:15:33,371 - Model - INFO - eval sem WCov of Ladder shaped  0.443356
+2021-12-08 13:15:33,371 - Model - INFO - eval  Cov of Roof           0.563026
+2021-12-08 13:15:33,371 - Model - INFO - eval WCov of Roof           0.565857
+2021-12-08 13:15:33,371 - Model - INFO - Epoch 67 test Accuracy: 0.651357  Cov: 0.563026   WCov: 0.565857
+2021-12-08 13:15:33,371 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:15:33,371 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:15:33,371 - Model - INFO - Best WCov is: 0.56586
+2021-12-08 13:15:33,371 - Model - INFO - Epoch 68 (68/251):
+2021-12-08 13:15:33,371 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:16:30,656 - Model - INFO - Train accuracy is: 0.71404
+2021-12-08 13:16:35,455 - Model - INFO - eval sem  Cov of Rectangular    0.830437
+2021-12-08 13:16:35,455 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.671486
+2021-12-08 13:16:35,455 - Model - INFO - eval sem  Cov of Triangular     0.510144
+2021-12-08 13:16:35,455 - Model - INFO - eval sem  Cov of Parallelogram  0.323803
+2021-12-08 13:16:35,455 - Model - INFO - eval sem  Cov of Ladder shaped  0.428271
+2021-12-08 13:16:35,455 - Model - INFO - eval sem WCov of Rectangular    0.835892
+2021-12-08 13:16:35,456 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.672453
+2021-12-08 13:16:35,456 - Model - INFO - eval sem WCov of Triangular     0.508373
+2021-12-08 13:16:35,456 - Model - INFO - eval sem WCov of Parallelogram  0.334874
+2021-12-08 13:16:35,456 - Model - INFO - eval sem WCov of Ladder shaped  0.432705
+2021-12-08 13:16:35,456 - Model - INFO - eval  Cov of Roof           0.552828
+2021-12-08 13:16:35,456 - Model - INFO - eval WCov of Roof           0.556859
+2021-12-08 13:16:35,456 - Model - INFO - Epoch 68 test Accuracy: 0.640980  Cov: 0.552828   WCov: 0.556859
+2021-12-08 13:16:35,456 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:16:35,456 - Model - INFO - Best Cov is: 0.57712
+2021-12-08 13:16:35,456 - Model - INFO - Best WCov is: 0.55686
+2021-12-08 13:16:35,456 - Model - INFO - Epoch 69 (69/251):
+2021-12-08 13:16:35,456 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:17:32,429 - Model - INFO - Train accuracy is: 0.71033
+2021-12-08 13:17:37,256 - Model - INFO - eval sem  Cov of Rectangular    0.824738
+2021-12-08 13:17:37,257 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.717513
+2021-12-08 13:17:37,257 - Model - INFO - eval sem  Cov of Triangular     0.591007
+2021-12-08 13:17:37,257 - Model - INFO - eval sem  Cov of Parallelogram  0.337396
+2021-12-08 13:17:37,257 - Model - INFO - eval sem  Cov of Ladder shaped  0.447307
+2021-12-08 13:17:37,257 - Model - INFO - eval sem WCov of Rectangular    0.831811
+2021-12-08 13:17:37,257 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.719144
+2021-12-08 13:17:37,257 - Model - INFO - eval sem WCov of Triangular     0.589861
+2021-12-08 13:17:37,257 - Model - INFO - eval sem WCov of Parallelogram  0.341632
+2021-12-08 13:17:37,257 - Model - INFO - eval sem WCov of Ladder shaped  0.450786
+2021-12-08 13:17:37,257 - Model - INFO - eval  Cov of Roof           0.583593
+2021-12-08 13:17:37,257 - Model - INFO - eval WCov of Roof           0.586647
+2021-12-08 13:17:37,257 - Model - INFO - Epoch 69 test Accuracy: 0.625483  Cov: 0.583593   WCov: 0.586647
+2021-12-08 13:17:37,257 - Model - INFO - Save model...
+2021-12-08 13:17:37,257 - Model - INFO - Saving at log/inst_seg/pointnet2_inst_seg_msg_tr3d/checkpoints/best_model.pth
+2021-12-08 13:17:37,310 - Model - INFO - Saving model....
+2021-12-08 13:17:37,310 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:17:37,310 - Model - INFO - Best Cov is: 0.58359
+2021-12-08 13:17:37,311 - Model - INFO - Best WCov is: 0.58665
+2021-12-08 13:17:37,311 - Model - INFO - Epoch 70 (70/251):
+2021-12-08 13:17:37,311 - Model - INFO - Learning rate:0.000125
+2021-12-08 13:18:34,384 - Model - INFO - Train accuracy is: 0.70863
+2021-12-08 13:18:39,208 - Model - INFO - eval sem  Cov of Rectangular    0.812234
+2021-12-08 13:18:39,208 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.714781
+2021-12-08 13:18:39,208 - Model - INFO - eval sem  Cov of Triangular     0.508781
+2021-12-08 13:18:39,208 - Model - INFO - eval sem  Cov of Parallelogram  0.305897
+2021-12-08 13:18:39,208 - Model - INFO - eval sem  Cov of Ladder shaped  0.443403
+2021-12-08 13:18:39,208 - Model - INFO - eval sem WCov of Rectangular    0.820292
+2021-12-08 13:18:39,208 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.715727
+2021-12-08 13:18:39,208 - Model - INFO - eval sem WCov of Triangular     0.506964
+2021-12-08 13:18:39,208 - Model - INFO - eval sem WCov of Parallelogram  0.307586
+2021-12-08 13:18:39,208 - Model - INFO - eval sem WCov of Ladder shaped  0.445368
+2021-12-08 13:18:39,208 - Model - INFO - eval  Cov of Roof           0.557019
+2021-12-08 13:18:39,208 - Model - INFO - eval WCov of Roof           0.559188
+2021-12-08 13:18:39,208 - Model - INFO - Epoch 70 test Accuracy: 0.631328  Cov: 0.557019   WCov: 0.559188
+2021-12-08 13:18:39,208 - Model - INFO - Best accuracy is: 0.66752
+2021-12-08 13:18:39,208 - Model - INFO - Best Cov is: 0.58359
+2021-12-08 13:18:39,208 - Model - INFO - Best WCov is: 0.55919
+2021-12-08 13:18:39,208 - Model - INFO - Epoch 71 (71/251):
+2021-12-08 13:18:39,208 - Model - INFO - Learning rate:0.000125

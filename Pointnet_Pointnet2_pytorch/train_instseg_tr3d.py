@@ -124,7 +124,7 @@ def main(args):
 
     classifier = MODEL.get_model(num_inst, normal_channel=args.normal).cuda()
     criterion = MODEL.get_loss().cuda()
-    
+
     classifier.apply(inplace_relu)
 
     def weights_init(m):
@@ -216,11 +216,11 @@ def main(args):
 
 
             # Map instance seg to semantic
-            pred_inst = seg_pred.data.numpy()
-            pred_sem = np.vectorize(inst_label_to_sem.get)(pred_inst)
+            pred_inst_all = seg_pred.data.numpy()
+            pred_sem_all = np.vectorize(inst_label_to_sem.get)(pred_inst_all)
 
-            gt_inst = target.data.numpy()
-            gt_sem = np.vectorize(inst_label_to_sem.get)(gt_inst)
+            gt_inst_all = target.data.numpy()
+            gt_sem_all = np.vectorize(inst_label_to_sem.get)(gt_inst_all)
             
             # Find which pred_inst group is covering the most of each corresponding instance label.
             # Say we have two groups for one samantic label
@@ -229,9 +229,40 @@ def main(args):
             # Say two groups have inst label 0 and 1. 
             # But the group with instance label 1 covers most of the points for inst label 0, and vice versa
             # Then we want to swap the instance labels of the two groups.
-            
+            cur_batch_size, NUM_POINT, _ = points.size()
+            for i in range(cur_batch_size):
+                pred_inst = pred_inst_all[i]
+                gt_inst = gt_inst_all[i]
+                pred_sem = pred_sem_all[i]
+                gt_sem = gt_sem_all[i]
+
+                un = np.unique(pred_inst)
+                pts_in_pred = [[] for _ in range(num_sem)]
+                for ig, g in enumerate(un): # each object in prediction
+                    if g == -1:
+                        continue
+                    tmp = (pred_inst == g) # the predicted group of points in this instance
+                    sem_seg_i = int(stats.mode(pred_sem[tmp])[0])
+                    pts_in_pred[sem_seg_i] += [tmp]
+
+                un = np.unique(gt_inst)
+                pts_in_gt = [[] for _ in range(num_sem)]
+                for ig, g in enumerate(un):
+                    tmp = (gt_inst == g) # the true group of points in this instance
+                    sem_seg_i = int(stats.mode(gt_sem[tmp])[0])
+                    pts_in_gt[sem_seg_i] += [tmp]
+
+                # len_in_gt = [[len(x) for x in lst] for lst in pts_in_gt]
+
+                for ig, g in enumerate(pts_in_gt):
+                    # ig is now the same as seg_sem_i
+                    # sorted_i based on length in g
+                    sorted_i = sorted(range(len(g)), key=lambda k: len(g[k]))
+                    for 
+
             pred_sem = torch.Tensor(pred_sem).float().cuda()
             gt_sem = torch.Tensor(gt_sem).float().cuda()
+
 
 
             # loss = criterion(seg_pred, target, trans_feat)
