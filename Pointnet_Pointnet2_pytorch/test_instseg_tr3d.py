@@ -239,6 +239,24 @@ def main(args):
             # Mean for all the instances of Roof, so not mCov as mCov is over all classes and we only have one class Roof
             Cov = np.mean(Cov_sem)
             WCov = np.mean(WCov_sem)
+
+            # Should be done for all classes, but we only have Roof so don't bother
+            Prec_sem = np.zeros(num_sem)
+            Rec_sem = np.zeros(num_sem)
+            for i_sem in range(num_sem):
+                tp = np.asarray(tpsins[i_sem]).astype(np.float)
+                fp = np.asarray(fpsins[i_sem]).astype(np.float)
+                tp = np.sum(tp)
+                fp = np.sum(fp)
+                rec = tp / total_gt_ins[i_sem]
+                prec = tp / (tp + fp)
+
+                Prec_sem[i_sem] = prec
+                Rec_sem[i_sem] = rec
+            
+            # Mean for all the instances of Roof, so not mPrec and mRec as mPrec and mRec is over all classes and we only have one class Roof
+            Prec = np.mean(Prec_sem)
+            Rec = np.mean(Rec_sem)
             
             test_metrics['accuracy'] = total_correct / float(total_seen)
             test_metrics['inst_avg_accuracy'] = np.mean(
@@ -261,6 +279,25 @@ def main(args):
             log_string('eval WCov of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), WCov))
             test_metrics['cov'] = Cov
             test_metrics['wcov'] = WCov
+
+        
+            # Log Prec for each semantic label
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem Prec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Prec_sem[i_sem]))
+
+            # Log Rec for each semantic label
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem Rec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Rec_sem[i_sem]))
+            
+            # Log Cov and WCov for the roof class
+            log_string('eval Prec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Prec))
+            log_string('eval  Rec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Rec))
+            test_metrics['prec'] = Prec
+            test_metrics['rec'] = Rec
 
     log_string('Accuracy is: %.5f' % test_metrics['accuracy'])
     log_string('Instance avg accuracy is: %.5f' % test_metrics['inst_avg_accuracy'])

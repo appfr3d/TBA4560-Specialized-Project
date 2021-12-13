@@ -465,7 +465,7 @@ def main(args):
             WCov = np.mean(WCov_sem)
             
 
-
+            # Should be done for all classes, but we only have Roof so don't bother
             Prec_sem = np.zeros(num_sem)
             Rec_sem = np.zeros(num_sem)
             for i_sem in range(num_sem):
