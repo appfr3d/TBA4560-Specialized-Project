@@ -482,6 +482,24 @@ def main(args):
             WCov = np.mean(WCov_sem)
             
 
+            # Should be done for all classes, but we only have Roof so don't bother
+            Prec_sem = np.zeros(num_sem)
+            Rec_sem = np.zeros(num_sem)
+            for i_sem in range(num_sem):
+                tp = np.asarray(tpsins[i_sem]).astype(np.float)
+                fp = np.asarray(fpsins[i_sem]).astype(np.float)
+                tp = np.sum(tp)
+                fp = np.sum(fp)
+                rec = tp / total_gt_ins[i_sem]
+                prec = tp / (tp + fp)
+
+                Prec_sem[i_sem] = prec
+                Rec_sem[i_sem] = rec
+            
+            # Mean for all the instances of Roof, so not mPrec and mRec as mPrec and mRec is over all classes and we only have one class Roof
+            Prec = np.mean(Prec_sem)
+            Rec = np.mean(Rec_sem)
+
             '''
             all_shape_ious = []
             for cat in shape_ious.keys():
@@ -519,11 +537,29 @@ def main(args):
             test_metrics['cov'] = Cov
             test_metrics['wcov'] = WCov
 
+            # Log Prec for each semantic label
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem Prec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Prec_sem[i_sem]))
+
+            # Log Rec for each semantic label
+            for i_sem in range(num_sem):
+                inst_label = sem_label_to_inst[i_sem][0]
+                plane_label = plane_label_to_cat[inst_label]
+                log_string('eval sem Rec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Rec_sem[i_sem]))
+            
+            # Log Cov and WCov for the roof class
+            log_string('eval Prec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Prec))
+            log_string('eval  Rec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Rec))
+            test_metrics['prec'] = Prec
+            test_metrics['rec'] = Rec
+
         log_string('Epoch %d test Accuracy: %f  Cov: %f   WCov: %f' % (
             epoch + 1, test_metrics['accuracy'], test_metrics['cov'], test_metrics['wcov']))
         
         
-        # TODO: Check if shit is appropriate...
+        # TODO: Check if this is appropriate...
         if (test_metrics['cov'] >= best_cov):
             logger.info('Save model...')
             savepath = str(checkpoints_dir) + '/best_model.pth'
@@ -535,6 +571,8 @@ def main(args):
                 # 'class_avg_iou': test_metrics['class_avg_iou'],
                 'cov': test_metrics['cov'],
                 'wcov': test_metrics['wcov'],
+                'prec': test_metrics['prec'],
+                'rec': test_metrics['rec'],
                 'model_state_dict': classifier.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
             }
