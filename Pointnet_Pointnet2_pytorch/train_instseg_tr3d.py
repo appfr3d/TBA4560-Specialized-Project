@@ -257,8 +257,25 @@ def main(args):
                 for ig, g in enumerate(pts_in_gt):
                     # ig is now the same as seg_sem_i
                     # sorted_i based on length in g
-                    sorted_i = sorted(range(len(g)), key=lambda k: len(g[k]))
-                    for 
+                    # sorted_i = sorted(range(len(g)), key=lambda k: len(g[k]))
+                    if (len(pts_in_pred[ig]) == len(pts_in_gt[ig])):
+                        # We have predicted the same amount of instance groups as in gt
+                        cover = {}
+                        for i_gt in range(len(pts_in_gt[ig])):
+                            instance_label = ig + i_gt
+                            for i_pred in range(len(pts_in_gt[ig])):
+                                intersect = (pts_in_pred[ig][i_pred] & pts_in_gt[ig][i_gt])
+                                inst_cover = np.float(np.sum(intersect) / np.sum(pts_in_gt[ig][i_gt]))
+                                cover[inst_cover] = { 'p': i_pred, 'i': instance_label }
+                        
+                        # Set correct instance label for each prediction instance
+                        for key in sorted(cover.keys()):
+                            val = cover[key]
+
+                            # TODO: find out which shape pred_inst_all has, to find out what to change
+                            # pred_inst_all[i][pts_in_pred[ig][val['p']]]
+
+
 
             pred_sem = torch.Tensor(pred_sem).float().cuda()
             gt_sem = torch.Tensor(gt_sem).float().cuda()
