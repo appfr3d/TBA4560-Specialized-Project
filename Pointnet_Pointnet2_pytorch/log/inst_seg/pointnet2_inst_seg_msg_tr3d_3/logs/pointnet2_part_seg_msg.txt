@@ -1,0 +1,21 @@
+2021-12-15 08:45:54,158 - Model - INFO - PARAMETER ...
+2021-12-15 08:45:54,159 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d_3', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-15 08:45:54,162 - Model - INFO - The number of training data is: 887
+2021-12-15 08:45:54,162 - Model - INFO - The number of test data is: 99
+2021-12-15 08:45:55,450 - Model - INFO - No existing model, starting training from scratch...
+2021-12-15 08:45:55,451 - Model - INFO - Epoch 1 (1/251):
+2021-12-15 08:45:55,451 - Model - INFO - Learning rate:0.001000
+2021-12-15 08:46:58,134 - Model - INFO - PARAMETER ...
+2021-12-15 08:46:58,134 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d_3', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-15 08:46:58,138 - Model - INFO - The number of training data is: 887
+2021-12-15 08:46:58,138 - Model - INFO - The number of test data is: 99
+2021-12-15 08:46:59,387 - Model - INFO - No existing model, starting training from scratch...
+2021-12-15 08:46:59,388 - Model - INFO - Epoch 1 (1/251):
+2021-12-15 08:46:59,388 - Model - INFO - Learning rate:0.001000
+2021-12-15 08:51:12,340 - Model - INFO - PARAMETER ...
+2021-12-15 08:51:12,340 - Model - INFO - Namespace(batch_size=8, decay_rate=0.0001, epoch=251, gpu='1', learning_rate=0.001, log_dir='pointnet2_inst_seg_msg_tr3d_3', lr_decay=0.5, model='pointnet2_part_seg_msg', normal=False, npoint=2048, optimizer='Adam', step_size=20)
+2021-12-15 08:51:12,343 - Model - INFO - The number of training data is: 887
+2021-12-15 08:51:12,343 - Model - INFO - The number of test data is: 99
+2021-12-15 08:51:13,581 - Model - INFO - No existing model, starting training from scratch...
+2021-12-15 08:51:13,582 - Model - INFO - Epoch 1 (1/251):
+2021-12-15 08:51:13,582 - Model - INFO - Learning rate:0.001000

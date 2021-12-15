@@ -173,6 +173,8 @@ def main(args):
     # best_inctance_avg_iou = 0
     best_cov = 0
     best_wcov = 0
+    best_prec = 0
+    best_rec = 0
 
     for epoch in range(start_epoch, args.epoch):
         mean_correct = []
@@ -204,24 +206,22 @@ def main(args):
             points = points.transpose(2, 1)
 
             seg_pred, trans_feat = classifier(points, to_categorical(label, num_classes))
-            seg_pred = seg_pred.contiguous().view(-1, num_inst)
-            target = target.view(-1, 1)[:, 0]
 
 
-            # TODO: This should also be based on samantic label, not instance label...
-            # But how should it be able to differentiate between label 0 and 1... it could be all 0 and all 1 and get full score...
-            pred_choice = seg_pred.data.max(1)[1]
-            correct = pred_choice.eq(target.data).cpu().sum()
-            mean_correct.append(correct.item() / (args.batch_size * args.npoint))
+            # ----- Post process -----
+            pred_inst_whole = seg_pred.data.cpu().numpy()
 
+
+            ###  Swap  ###
+            
+            # index = semantic label, so can use argmax
+            pred_inst_all = pred_inst_whole.argmax(axis=2)
 
             # Map instance seg to semantic
-            pred_inst_all = seg_pred.data.numpy()
             pred_sem_all = np.vectorize(inst_label_to_sem.get)(pred_inst_all)
 
-            gt_inst_all = target.data.numpy()
+            gt_inst_all = target.data.cpu().numpy()
             gt_sem_all = np.vectorize(inst_label_to_sem.get)(gt_inst_all)
-            
             # Find which pred_inst group is covering the most of each corresponding instance label.
             # Say we have two groups for one samantic label
             # look at each group with the corresponding gt_inst labels and choose instance label based on which covers most of each...
@@ -252,38 +252,75 @@ def main(args):
                     sem_seg_i = int(stats.mode(gt_sem[tmp])[0])
                     pts_in_gt[sem_seg_i] += [tmp]
 
-                # len_in_gt = [[len(x) for x in lst] for lst in pts_in_gt]
-
                 for ig, g in enumerate(pts_in_gt):
                     # ig is now the same as seg_sem_i
-                    # sorted_i based on length in g
-                    # sorted_i = sorted(range(len(g)), key=lambda k: len(g[k]))
+                    i_inst = sem_label_to_inst[ig][0]
                     if (len(pts_in_pred[ig]) == len(pts_in_gt[ig])):
                         # We have predicted the same amount of instance groups as in gt
                         cover = {}
                         for i_gt in range(len(pts_in_gt[ig])):
-                            instance_label = ig + i_gt
+                            # np.unique sorts the output, so this works as the correct instance label
+                            instance_label = i_inst + i_gt
                             for i_pred in range(len(pts_in_gt[ig])):
                                 intersect = (pts_in_pred[ig][i_pred] & pts_in_gt[ig][i_gt])
                                 inst_cover = np.float(np.sum(intersect) / np.sum(pts_in_gt[ig][i_gt]))
                                 cover[inst_cover] = { 'p': i_pred, 'i': instance_label }
-                        
-                        # Set correct instance label for each prediction instance
+                    
+                        # Find out which instance labels that should be swapped
+                        # swap = { instance_label_from: instance_label_to }
+                        swap = {}
+                        all_same = True
                         for key in sorted(cover.keys()):
                             val = cover[key]
+                            i_pred = val['p']
+                            instance_label_to = val['i']            # The instance label we want it to have
+                            instance_label_from = i_inst + i_pred   # The instance label it currently has
 
-                            # TODO: find out which shape pred_inst_all has, to find out what to change
-                            # pred_inst_all[i][pts_in_pred[ig][val['p']]]
+                            
+                            if not instance_label_from in swap.keys() and not instance_label_to in swap.values():
+                                # Not added to swap already
+
+                                # if not instance_label_from in swap.values() and not instance_label_to in swap.keys():
+                                # Do not add oposite of already existing swap
+
+                                # Add swap
+                                swap[instance_label_from] = instance_label_to
+
+                                if instance_label_from != instance_label_to:
+                                    # No need to swap if every swap is already in the correct place
+                                    all_same = False
+                        
+                        if not all_same:
+                            # Swap the instance labels
+                            i_from = np.array([list(swap.keys())]).T
+                            i_to = np.array([list(swap.values())]).T
+                            i_swap = np.logical_or.reduce(pts_in_pred[ig])
+                            pred_inst_whole[i, i_swap, i_from] = pred_inst_whole[i, i_swap, i_to]
+            
 
 
+            ### Re-weight ###
+            # Because of log_softmax in end of forward, pred_inst_whole values are between -inf and 0
+            # Roof planes of same semantic label should have around the same amount of points...
+            # Exeption: flat roofs in T-element.
+            # Need to punish the network exponentially for a large difference.
 
-            pred_sem = torch.Tensor(pred_sem).float().cuda()
-            gt_sem = torch.Tensor(gt_sem).float().cuda()
+            # Translate back to cuda memory
+            seg_pred.data = torch.Tensor(pred_inst_whole).float().cuda()
 
+            seg_pred = seg_pred.contiguous().view(-1, num_inst)
+            target = target.view(-1, 1)[:, 0]
 
+            pred_choice = seg_pred.data.max(1)[1]
+            correct = pred_choice.eq(target.data).cpu().sum()
+            mean_correct.append(correct.item() / (args.batch_size * args.npoint))
 
-            # loss = criterion(seg_pred, target, trans_feat)
-            loss = criterion(pred_sem, gt_sem, trans_feat)
+            # only test semantic label
+            # pred_sem = torch.Tensor(pred_sem).float().cuda()
+            # gt_sem = torch.Tensor(gt_sem).float().cuda()
+            # loss = criterion(pred_sem, gt_sem, trans_feat)
+
+            loss = criterion(seg_pred, target, trans_feat)
             loss.backward()
             optimizer.step()
 
@@ -523,17 +560,17 @@ def main(args):
             for i_sem in range(num_sem):
                 inst_label = sem_label_to_inst[i_sem][0]
                 plane_label = plane_label_to_cat[inst_label]
-                log_string('eval sem  Cov of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Cov_sem[i_sem]))
+                log_string('eval sem  Cov of %s %f' % (plane_label + ' ' * (20 - len(plane_label)), Cov_sem[i_sem]))
 
             # Log WCov for each semantic class
             for i_sem in range(num_sem):
                 inst_label = sem_label_to_inst[i_sem][0]
                 plane_label = plane_label_to_cat[inst_label]
-                log_string('eval sem WCov of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), WCov_sem[i_sem]))
+                log_string('eval sem WCov of %s %f' % (plane_label + ' ' * (20 - len(plane_label)), WCov_sem[i_sem]))
             
             # Log Cov and WCov for the roof class
-            log_string('eval  Cov of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Cov))
-            log_string('eval WCov of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), WCov))
+            log_string('eval      Cov of %s %f' % ('Roof' + ' ' * (20 - len('Roof')), Cov))
+            log_string('eval     WCov of %s %f' % ('Roof' + ' ' * (20 - len('Roof')), WCov))
             test_metrics['cov'] = Cov
             test_metrics['wcov'] = WCov
 
@@ -541,22 +578,22 @@ def main(args):
             for i_sem in range(num_sem):
                 inst_label = sem_label_to_inst[i_sem][0]
                 plane_label = plane_label_to_cat[inst_label]
-                log_string('eval sem Prec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Prec_sem[i_sem]))
+                log_string('eval sem Prec of %s %f' % (plane_label + ' ' * (20 - len(plane_label)), Prec_sem[i_sem]))
 
             # Log Rec for each semantic label
             for i_sem in range(num_sem):
                 inst_label = sem_label_to_inst[i_sem][0]
                 plane_label = plane_label_to_cat[inst_label]
-                log_string('eval sem Rec of %s %f' % (plane_label + ' ' * (14 - len(plane_label)), Rec_sem[i_sem]))
+                log_string('eval sem  Rec of %s %f' % (plane_label + ' ' * (20 - len(plane_label)), Rec_sem[i_sem]))
             
             # Log Cov and WCov for the roof class
-            log_string('eval Prec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Prec))
-            log_string('eval  Rec of %s %f' % ('Roof' + ' ' * (14 - len('Roof')), Rec))
+            log_string('eval     Prec of %s %f' % ('Roof' + ' ' * (20 - len('Roof')), Prec))
+            log_string('eval      Rec of %s %f' % ('Roof' + ' ' * (20 - len('Roof')), Rec))
             test_metrics['prec'] = Prec
             test_metrics['rec'] = Rec
 
-        log_string('Epoch %d test Accuracy: %f  Cov: %f   WCov: %f' % (
-            epoch + 1, test_metrics['accuracy'], test_metrics['cov'], test_metrics['wcov']))
+        log_string('Epoch %d test Accuracy: %f  Cov: %f   WCov: %f  Prec: %f    Rec: %f' % (
+            epoch + 1, test_metrics['accuracy'], test_metrics['cov'], test_metrics['wcov'], test_metrics['prec'], test_metrics['rec']))
         
         
         # TODO: Check if this is appropriate...
@@ -585,10 +622,16 @@ def main(args):
             best_cov = test_metrics['cov']
         if test_metrics['wcov'] > best_wcov:
             best_wcov = test_metrics['wcov']
+        if test_metrics['prec'] > best_prec:
+            best_prec = test_metrics['prec']
+        if test_metrics['rec'] > best_rec:
+            best_rec = test_metrics['rec']
 
         log_string('Best accuracy is: %.5f' % best_acc)
-        log_string('Best Cov is: %.5f' % best_cov)
-        log_string('Best WCov is: %.5f' % WCov)
+        log_string('Best  Cov is: %.5f' % best_cov)
+        log_string('Best WCov is: %.5f' % best_wcov)
+        log_string('Best Prec is: %.5f' % best_prec)
+        log_string('Best  Rec is: %.5f' % best_rec)
         global_epoch += 1
 
 

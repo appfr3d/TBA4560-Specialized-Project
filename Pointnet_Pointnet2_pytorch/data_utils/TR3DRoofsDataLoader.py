@@ -158,6 +158,7 @@ if __name__ == '__main__':
 
     # fn[0:-4] is file extention '.txt' so remove it
     all_total = 0
+    viz_roofs = [[] for _ in range(7)]
     for split in ['train', 'val', 'test']:
         if split == 'trainval':
             current_fns = [fn for fn in fns if ((fn[0:-4] in train_ids) or (fn[0:-4] in val_ids))]
@@ -173,7 +174,7 @@ if __name__ == '__main__':
         
         sem_to_label = { 0: 'Flat', 1: 'Hipped', 2: 'Gabled', 3: 'Corner Element', 4: 'T-Element', 5: 'Cross Element', 6: 'Combination' }
         class_distribution = {'Flat': 0, 'Hipped': 0, 'Gabled': 0, 'Corner Element': 0, 'T-Element': 0, 'Cross Element': 0, 'Combination': 0}
-
+        
         for fn in current_fns:
             # Read data
             data = np.loadtxt(fn).astype(np.float32)
@@ -182,6 +183,20 @@ if __name__ == '__main__':
             # OBS: Since the roof_types are 1-indexed in the dataset we need to 0-index it here
             roof_type = data[:, 3].astype(np.int32)
             roof_type = int(roof_type[0] - 1)
+
+            if len(viz_roofs[roof_type]) < 3:
+                viz_roofs[roof_type].append(str(fn.split('/')[-1]))
+            
+            '''
+            Old
+            "10448891",
+            "10546495",
+            "10444896",
+            "10457076",
+            "10444144",
+            "10445957",
+            "10460476-2",
+            '''
 
             # Update distribution
             class_distribution[sem_to_label[roof_type]] += 1
@@ -197,6 +212,10 @@ if __name__ == '__main__':
     
     print('Total number of instances in total:', all_total)
 
+
+    print('\nViz roofs:')
+    for i in range(7):
+        print('\t', sem_to_label[i], viz_roofs[i])
 
     '''
     npoints = 1024

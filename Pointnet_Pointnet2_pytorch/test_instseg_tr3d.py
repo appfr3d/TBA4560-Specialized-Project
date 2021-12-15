@@ -303,6 +303,8 @@ def main(args):
     log_string('Instance avg accuracy is: %.5f' % test_metrics['inst_avg_accuracy'])
     log_string('Cov is: %.5f' % test_metrics['cov'])
     log_string('WCov is: %.5f' % test_metrics['wcov'])
+    log_string('Prec is: %.5f' % test_metrics['prec'])
+    log_string('Rec is: %.5f' % test_metrics['rec'])
 
     root = 'data/tr3d_roof_segmented_dataset/'
 
