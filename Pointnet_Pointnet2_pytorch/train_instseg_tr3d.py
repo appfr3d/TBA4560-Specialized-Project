@@ -210,9 +210,6 @@ def main(args):
 
             # ----- Post process -----
             pred_inst_whole = seg_pred.data.cpu().numpy()
-
-
-            ###  Swap  ###
             
             # index = semantic label, so can use argmax
             pred_inst_all = pred_inst_whole.argmax(axis=2)
@@ -253,6 +250,9 @@ def main(args):
                     pts_in_gt[sem_seg_i] += [tmp]
 
                 for ig, g in enumerate(pts_in_gt):
+
+
+                    ###  Swap  ###
                     # ig is now the same as seg_sem_i
                     i_inst = sem_label_to_inst[ig][0]
                     if (len(pts_in_pred[ig]) == len(pts_in_gt[ig])):
@@ -281,7 +281,7 @@ def main(args):
                                 # Not added to swap already
 
                                 # if not instance_label_from in swap.values() and not instance_label_to in swap.keys():
-                                # Do not add oposite of already existing swap
+                                # Do not add opposite of already existing swap
 
                                 # Add swap
                                 swap[instance_label_from] = instance_label_to
@@ -299,11 +299,22 @@ def main(args):
             
 
 
-            ### Re-weight ###
-            # Because of log_softmax in end of forward, pred_inst_whole values are between -inf and 0
-            # Roof planes of same semantic label should have around the same amount of points...
-            # Exeption: flat roofs in T-element.
-            # Need to punish the network exponentially for a large difference.
+                    ### Re-weight ###
+                    # Because of log_softmax in end of forward, pred_inst_whole values are between -inf and 0
+                    # A premise that I assume: Roof planes of same semantic label should have around the same amount of points...
+                    # Exception: rectangle roofs in T-element. The rectangle with the T sticking out has a triangle without points
+                    # Need to punish the network exponentially for a large difference.
+                    lengths = [len(x) for x in pts_in_pred[ig]]
+                    total_length = sum(lengths)
+
+                    # Small differences in lengths = small change of prediction
+                    # Large differences in lengths = large change in prediction
+                    # Negative logarithmically larger change for larger differences in lengths
+                    scale = lambda x: 0.5*np.log10(x + 0.01) + 1
+                    for li, l in enumerate(lengths):
+                        pred_inst_whole[i, pts_in_pred[ig][li]] = pred_inst_whole[i, pts_in_pred[ig][li]] * scale(l*2 / total_length )
+                        
+
 
             # Translate back to cuda memory
             seg_pred.data = torch.Tensor(pred_inst_whole).float().cuda()
