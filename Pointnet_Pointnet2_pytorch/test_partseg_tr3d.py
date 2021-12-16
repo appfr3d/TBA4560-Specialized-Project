@@ -22,6 +22,11 @@ for cat in seg_classes.keys():
     for label in seg_classes[cat]:
         seg_label_to_cat[label] = cat
 
+plane_classes = { 'Rectangular': 0, 'Isosceles trapezoid': 1, 'Triangular': 2, 'Parallelogram': 3, 'Ladder shaped': 4}
+plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
+for cat in plane_classes.keys():
+    for label in plane_classes[cat]:
+        plane_label_to_cat[label] = cat
 
 def to_categorical(y, num_classes):
     """ 1-hot encodes a tensor """
@@ -137,7 +142,9 @@ def main(args):
 
         all_shape_ious = []
         for cat in shape_ious.keys():
-            for iou in shape_ious[cat]:
+            for i_iou, iou in enumerate(shape_ious[cat]):
+                label = plane_label_to_cat[i_iou]
+                log_string('eval mIoU of %s %f' % (label + ' ' * (20 - len(label)), shape_ious[cat][i_iou]))
                 all_shape_ious.append(iou)
             shape_ious[cat] = np.mean(shape_ious[cat])
         mean_shape_ious = np.mean(list(shape_ious.values()))
@@ -145,7 +152,7 @@ def main(args):
         test_metrics['class_avg_accuracy'] = np.mean(
             np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
         for cat in sorted(shape_ious.keys()):
-            log_string('eval mIoU of %s %f' % (cat + ' ' * (14 - len(cat)), shape_ious[cat]))
+            log_string('eval mIoU of %s %f' % (cat + ' ' * (20 - len(cat)), shape_ious[cat]))
         test_metrics['class_avg_iou'] = mean_shape_ious
         test_metrics['inctance_avg_iou'] = np.mean(all_shape_ious)
 
