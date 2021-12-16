@@ -241,7 +241,7 @@ def main(args):
                     tmp = (pred_inst == g) # the predicted group of points in this instance
                     sem_seg_i = int(stats.mode(pred_sem[tmp])[0])
                     pts_in_pred[sem_seg_i] += [tmp]
-                '''
+                
 
                 un = np.unique(gt_inst)
                 pts_in_gt = [[] for _ in range(num_sem)]
@@ -252,7 +252,7 @@ def main(args):
 
                 for ig, g in enumerate(pts_in_gt):
 
-
+                    '''
                     ###  Swap  ###
                     # ig is now the same as seg_sem_i
                     i_inst = sem_label_to_inst[ig][0]

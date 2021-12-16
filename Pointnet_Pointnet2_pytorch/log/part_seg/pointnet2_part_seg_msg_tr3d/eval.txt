@@ -270,3 +270,63 @@
 2021-12-05 14:12:39,937 - Model - INFO - Class avg accuracy is: 0.83436
 2021-12-05 14:12:39,937 - Model - INFO - Class avg mIOU is: 0.94933
 2021-12-05 14:12:39,937 - Model - INFO - Inctance avg mIOU is: 0.94933
+2021-12-16 21:57:46,489 - Model - INFO - PARAMETER ...
+2021-12-16 21:57:46,495 - Model - INFO - Namespace(batch_size=24, gpu='1', log_dir='pointnet2_part_seg_msg_tr3d', normal=False, num_point=2048, num_votes=3)
+2021-12-16 21:57:46,496 - Model - INFO - The number of test data is: 99
+2021-12-16 21:57:57,963 - Model - INFO - eval mIoU of Rectangular          0.976968
+2021-12-16 21:57:57,963 - Model - INFO - eval mIoU of Isosceles trapezoid  0.993544
+2021-12-16 21:57:57,963 - Model - INFO - eval mIoU of Triangular           1.000000
+2021-12-16 21:57:57,963 - Model - INFO - eval mIoU of Parallelogram        0.991012
+2021-12-16 21:57:57,963 - Model - INFO - eval mIoU of Ladder shaped        1.000000
+2021-12-16 22:09:51,653 - Model - INFO - PARAMETER ...
+2021-12-16 22:09:51,653 - Model - INFO - Namespace(batch_size=24, gpu='1', log_dir='pointnet2_part_seg_msg_tr3d', normal=False, num_point=2048, num_votes=3)
+2021-12-16 22:09:51,654 - Model - INFO - The number of test data is: 99
+2021-12-16 22:11:26,596 - Model - INFO - PARAMETER ...
+2021-12-16 22:11:26,596 - Model - INFO - Namespace(batch_size=24, gpu='1', log_dir='pointnet2_part_seg_msg_tr3d', normal=False, num_point=2048, num_votes=3)
+2021-12-16 22:11:26,597 - Model - INFO - The number of test data is: 99
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Rectangular          0.944785
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Isosceles trapezoid  0.973491
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Triangular           0.956249
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Parallelogram        0.961353
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Ladder shaped        0.912314
+2021-12-16 22:11:37,990 - Model - INFO - eval mIoU of Roof                 0.949638
+2021-12-16 22:11:37,990 - Model - INFO - Accuracy is: 0.94447
+2021-12-16 22:11:37,991 - Model - INFO - Class avg accuracy is: 0.83209
+2021-12-16 22:11:37,991 - Model - INFO - Class avg mIOU is: 0.94964
+2021-12-16 22:11:37,991 - Model - INFO - Inctance avg mIOU is: 0.94964
+2021-12-16 22:15:14,412 - Model - INFO - PARAMETER ...
+2021-12-16 22:15:14,412 - Model - INFO - Namespace(batch_size=24, gpu='1', log_dir='pointnet2_part_seg_msg_tr3d', normal=False, num_point=2048, num_votes=3)
+2021-12-16 22:15:14,414 - Model - INFO - The number of test data is: 99
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Rectangular          0.946127
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Isosceles trapezoid  0.973546
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Triangular           0.945700
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Parallelogram        0.961112
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Ladder shaped        0.917896
+2021-12-16 22:15:25,824 - Model - INFO - eval  OA of Rectangular          140516.000000
+2021-12-16 22:15:25,824 - Model - INFO - eval  OA of Isosceles trapezoid  23859.000000
+2021-12-16 22:15:25,824 - Model - INFO - eval  OA of Triangular           9997.000000
+2021-12-16 22:15:25,824 - Model - INFO - eval  OA of Parallelogram        2420.000000
+2021-12-16 22:15:25,824 - Model - INFO - eval  OA of Ladder shaped        15036.000000
+2021-12-16 22:15:25,824 - Model - INFO - eval mIoU of Roof                 0.948876
+2021-12-16 22:15:25,824 - Model - INFO - Accuracy is: 0.94612
+2021-12-16 22:15:25,824 - Model - INFO - Class avg accuracy is: 0.83546
+2021-12-16 22:15:25,824 - Model - INFO - Class avg mIOU is: 0.94888
+2021-12-16 22:15:25,824 - Model - INFO - Inctance avg mIOU is: 0.94888
+2021-12-16 22:17:29,868 - Model - INFO - PARAMETER ...
+2021-12-16 22:17:29,869 - Model - INFO - Namespace(batch_size=24, gpu='1', log_dir='pointnet2_part_seg_msg_tr3d', normal=False, num_point=2048, num_votes=3)
+2021-12-16 22:17:29,870 - Model - INFO - The number of test data is: 99
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Rectangular          0.945059
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Isosceles trapezoid  0.973127
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Triangular           0.956336
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Parallelogram        0.961370
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Ladder shaped        0.914806
+2021-12-16 22:17:41,252 - Model - INFO - eval  OA of Rectangular          0.982330
+2021-12-16 22:17:41,252 - Model - INFO - eval  OA of Isosceles trapezoid  0.983409
+2021-12-16 22:17:41,252 - Model - INFO - eval  OA of Triangular           0.924055
+2021-12-16 22:17:41,252 - Model - INFO - eval  OA of Parallelogram        0.555362
+2021-12-16 22:17:41,252 - Model - INFO - eval  OA of Ladder shaped        0.740545
+2021-12-16 22:17:41,252 - Model - INFO - eval mIoU of Roof                 0.950140
+2021-12-16 22:17:41,252 - Model - INFO - Accuracy is: 0.94532
+2021-12-16 22:17:41,252 - Model - INFO - Class avg accuracy is: 0.83714
+2021-12-16 22:17:41,252 - Model - INFO - Class avg mIOU is: 0.95014
+2021-12-16 22:17:41,252 - Model - INFO - Inctance avg mIOU is: 0.95014
