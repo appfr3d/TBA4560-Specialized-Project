@@ -152,9 +152,13 @@ def main(args):
         test_metrics['class_avg_accuracy'] = np.mean(
             np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
 
-        for i_iou in range(num_part):
-            label = plane_label_to_cat[i_iou]
-            log_string('eval mIoU of %s %f' % (label + ' ' * (20 - len(label)), np.mean(all_part_ious[i_iou])))
+        for l in range(num_part):
+            label = plane_label_to_cat[l]
+            log_string('eval mIoU of %s %f' % (label + ' ' * (20 - len(label)), np.mean(all_part_ious[l])))
+
+        for l in range(num_part):
+            label = plane_label_to_cat[l]
+            log_string('eval  OA of %s %f' % (label + ' ' * (20 - len(label)), np.mean(total_correct_class[l])))
 
         for cat in sorted(shape_ious.keys()):
             log_string('eval mIoU of %s %f' % (cat + ' ' * (20 - len(cat)), shape_ious[cat]))
