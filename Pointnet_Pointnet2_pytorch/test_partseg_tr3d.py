@@ -25,8 +25,7 @@ for cat in seg_classes.keys():
 plane_classes = { 'Rectangular': 0, 'Isosceles trapezoid': 1, 'Triangular': 2, 'Parallelogram': 3, 'Ladder shaped': 4}
 plane_label_to_cat = {}  # {0:Rectangular, 1:Rectangular, ...11:Ladder shaped}
 for cat in plane_classes.keys():
-    for label in plane_classes[cat]:
-        plane_label_to_cat[label] = cat
+    plane_label_to_cat[plane_classes[cat]] = cat
 
 def to_categorical(y, num_classes):
     """ 1-hot encodes a tensor """
