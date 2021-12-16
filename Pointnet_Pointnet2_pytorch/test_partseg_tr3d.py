@@ -93,6 +93,8 @@ def main(args):
 
         # TODO: ecaluate IoU for each roof type
 
+        all_part_ious = [[] for _ in range(num_part)]
+
         classifier = classifier.eval()
         for batch_id, (points, label, target) in tqdm(enumerate(testDataLoader), total=len(testDataLoader),
                                                       smoothing=0.9):
@@ -137,19 +139,23 @@ def main(args):
                     else:
                         part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(
                             np.sum((segl == l) | (segp == l)))
+                    all_part_ious[l - seg_classes[cat][0]].append(part_ious[l - seg_classes[cat][0]])
                 shape_ious[cat].append(np.mean(part_ious))
 
         all_shape_ious = []
         for cat in shape_ious.keys():
-            for i_iou, iou in enumerate(shape_ious[cat]):
-                label = plane_label_to_cat[i_iou]
-                log_string('eval mIoU of %s %f' % (label + ' ' * (20 - len(label)), shape_ious[cat][i_iou]))
+            for iou in shape_ious[cat]:
                 all_shape_ious.append(iou)
             shape_ious[cat] = np.mean(shape_ious[cat])
         mean_shape_ious = np.mean(list(shape_ious.values()))
         test_metrics['accuracy'] = total_correct / float(total_seen)
         test_metrics['class_avg_accuracy'] = np.mean(
             np.array(total_correct_class) / np.array(total_seen_class, dtype=np.float))
+
+        for i_iou, iou in enumerate(shape_ious[cat]):
+            label = plane_label_to_cat[i_iou]
+            log_string('eval mIoU of %s %f' % (label + ' ' * (20 - len(label)), np.mean(all_part_ious[i_iou])))
+
         for cat in sorted(shape_ious.keys()):
             log_string('eval mIoU of %s %f' % (cat + ' ' * (20 - len(cat)), shape_ious[cat]))
         test_metrics['class_avg_iou'] = mean_shape_ious
