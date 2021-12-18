@@ -157,6 +157,18 @@ if __name__ == '__main__':
     fns = sorted(os.listdir(data_dir)) # file names
 
     # fn[0:-4] is file extention '.txt' so remove it
+
+    sem_to_label = { 0: 'Flat', 1: 'Hipped', 2: 'Gabled', 3: 'Corner Element', 4: 'T-Element', 5: 'Cross Element', 6: 'Combination' }
+    class_distribution = {'Flat': 0, 'Hipped': 0, 'Gabled': 0, 'Corner Element': 0, 'T-Element': 0, 'Cross Element': 0, 'Combination': 0}
+
+    plane_names = { 0: 'Rectangular', 1: 'Isosceles trapezoid', 2: 'Triangular', 3: 'Parallelogram', 4: 'Ladder shapes'}
+    
+    sum_sem_points = [0 for _ in range(5)]
+    sum_sem_planes = [0 for _ in range(5)]
+
+    sum_inst_points = [0 for _ in range(12)]
+    sum_inst_planes = [0 for _ in range(12)]
+
     all_total = 0
     viz_roofs = [[] for _ in range(7)]
     for split in ['train', 'val', 'test']:
@@ -172,8 +184,7 @@ if __name__ == '__main__':
         # Add dir path to file names
         current_fns = [os.path.join(data_dir, fn) for fn in current_fns]
         
-        sem_to_label = { 0: 'Flat', 1: 'Hipped', 2: 'Gabled', 3: 'Corner Element', 4: 'T-Element', 5: 'Cross Element', 6: 'Combination' }
-        class_distribution = {'Flat': 0, 'Hipped': 0, 'Gabled': 0, 'Corner Element': 0, 'T-Element': 0, 'Cross Element': 0, 'Combination': 0}
+        
         
         for fn in current_fns:
             # Read data
@@ -183,6 +194,21 @@ if __name__ == '__main__':
             # OBS: Since the roof_types are 1-indexed in the dataset we need to 0-index it here
             roof_type = data[:, 3].astype(np.int32)
             roof_type = int(roof_type[0] - 1)
+
+            # x, y, z, roof type, instance label, semantic label
+            # TODO: Check if this shit works
+            roof_inst_points = data[:, 4].astype(np.int32)
+            roof_sem_points = data[:, 5].astype(np.int32)
+
+            roof_inst_planes = np.unique(roof_inst_points)
+            for i in roof_inst_planes:
+                sum_inst_points[i] += np.sum(roof_inst_points == i)
+                sum_inst_planes[i] += 1
+
+            roof_sem_planes = np.unique(roof_sem_points)
+            for i in roof_sem_planes:
+                sum_sem_points[i] += np.sum(roof_sem_points == i)
+                sum_sem_planes[i] += 1
 
             if len(viz_roofs[roof_type]) < 3:
                 viz_roofs[roof_type].append(str(fn.split('/')[-1]))
@@ -201,10 +227,12 @@ if __name__ == '__main__':
             # Update distribution
             class_distribution[sem_to_label[roof_type]] += 1
 
+
+        # Class
         print('Class distribution in split:', split)
         total = 0
         for cat in sorted(class_distribution.keys()):
-            print('number of instances in class %s %f' % (cat + ' ' * (14 - len(cat)), class_distribution[cat]))
+            print('number of instances in class %s %f' % (cat + ' ' * (20 - len(cat)), class_distribution[cat]))
             total += class_distribution[cat]
         all_total += total
         print('Total number of instances in split:', total)
@@ -212,6 +240,11 @@ if __name__ == '__main__':
     
     print('Total number of instances in total:', all_total)
 
+    # Plane and point counts
+    for i in range(5):
+        plane_name = plane_names[i] + '' * (20 - len(plane_names[i]))
+        print('%s & %i & %i & %i & %i \\\\' % (plane_name, sum_sem_planes[i], sum_sem_points[i], sum_inst_planes[i], sum_inst_points[i]))
+        print('\\hline')
 
     print('\nViz roofs:')
     for i in range(7):
