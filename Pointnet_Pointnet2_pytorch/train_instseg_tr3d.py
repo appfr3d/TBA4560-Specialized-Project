@@ -251,8 +251,6 @@ def main(args):
                     pts_in_gt[sem_seg_i] += [tmp]
 
                 for ig, g in enumerate(pts_in_gt):
-
-                    '''
                     ###  Swap  ###
                     # ig is now the same as seg_sem_i
                     i_inst = sem_label_to_inst[ig][0]
@@ -297,7 +295,7 @@ def main(args):
                             i_to = np.array([list(swap.values())]).T
                             i_swap = np.logical_or.reduce(pts_in_pred[ig])
                             pred_inst_whole[i, i_swap, i_from] = pred_inst_whole[i, i_swap, i_to]
-                    '''
+                    
                     ### Re-weight ###
                     # Because of log_softmax in end of forward, pred_inst_whole values are between -inf and 0
                     # A premise that I assume: Roof planes of same semantic label should have around the same amount of points...
@@ -311,6 +309,8 @@ def main(args):
                     # Large differences in lengths = large change in prediction
                     # Negative logarithmically larger change for larger differences in lengths
                     scale = lambda x: 0.5*np.log10(x + 0.01) + 1
+
+                    # l*2 perfomed better than l*num_inst_in_pred
                     for li, l in enumerate(lengths):
                         pred_inst_whole[i, pts_in_pred[ig][li]] = pred_inst_whole[i, pts_in_pred[ig][li]] * scale(l*2 / total_length)
 
