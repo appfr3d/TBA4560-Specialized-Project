@@ -1,0 +1,66 @@
+2021-12-19 09:00:42,958 - Model - INFO - PARAMETER ...
+2021-12-19 09:00:42,958 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_inst_seg_msg_tr3d_swap_scale_new', normal=False, num_point=2048, num_votes=3)
+2021-12-19 09:00:42,960 - Model - INFO - The number of test data is: 99
+2021-12-19 09:00:48,044 - Model - INFO - eval sem  Cov of Rectangular    0.870385
+2021-12-19 09:00:48,044 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.694789
+2021-12-19 09:00:48,044 - Model - INFO - eval sem  Cov of Triangular     0.623917
+2021-12-19 09:00:48,044 - Model - INFO - eval sem  Cov of Parallelogram  0.441428
+2021-12-19 09:00:48,044 - Model - INFO - eval sem  Cov of Ladder shaped  0.509992
+2021-12-19 09:00:48,044 - Model - INFO - eval sem WCov of Rectangular    0.873485
+2021-12-19 09:00:48,044 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.696548
+2021-12-19 09:00:48,044 - Model - INFO - eval sem WCov of Triangular     0.622306
+2021-12-19 09:00:48,045 - Model - INFO - eval sem WCov of Parallelogram  0.447598
+2021-12-19 09:00:48,045 - Model - INFO - eval sem WCov of Ladder shaped  0.513474
+2021-12-19 09:00:48,045 - Model - INFO - eval  Cov of Roof           0.628102
+2021-12-19 09:00:48,045 - Model - INFO - eval WCov of Roof           0.630682
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Prec of Rectangular    0.875000
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Prec of Isosceles trapezoid 0.722222
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Prec of Triangular     0.692308
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Prec of Parallelogram  0.444444
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Prec of Ladder shaped  0.522388
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Rec of Rectangular    0.930070
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Rec of Isosceles trapezoid 0.764706
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Rec of Triangular     0.710526
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Rec of Parallelogram  0.400000
+2021-12-19 09:00:48,045 - Model - INFO - eval sem Rec of Ladder shaped  0.514706
+2021-12-19 09:00:48,045 - Model - INFO - eval Prec of Roof           0.651272
+2021-12-19 09:00:48,045 - Model - INFO - eval  Rec of Roof           0.664002
+2021-12-19 09:00:48,045 - Model - INFO - Accuracy is: 0.61540
+2021-12-19 09:00:48,045 - Model - INFO - Instance avg accuracy is: 0.43124
+2021-12-19 09:00:48,045 - Model - INFO - Cov is: 0.62810
+2021-12-19 09:00:48,045 - Model - INFO - WCov is: 0.63068
+2021-12-19 09:00:48,045 - Model - INFO - Prec is: 0.65127
+2021-12-19 09:00:48,045 - Model - INFO - Rec is: 0.66400
+2021-12-19 09:01:04,341 - Model - INFO - PARAMETER ...
+2021-12-19 09:01:04,341 - Model - INFO - Namespace(batch_size=24, gpu='0', log_dir='pointnet2_inst_seg_msg_tr3d_swap_scale_new', normal=False, num_point=2048, num_votes=3)
+2021-12-19 09:01:04,342 - Model - INFO - The number of test data is: 99
+2021-12-19 09:01:09,375 - Model - INFO - eval sem  Cov of Rectangular    0.868146
+2021-12-19 09:01:09,375 - Model - INFO - eval sem  Cov of Isosceles trapezoid 0.682987
+2021-12-19 09:01:09,375 - Model - INFO - eval sem  Cov of Triangular     0.613732
+2021-12-19 09:01:09,375 - Model - INFO - eval sem  Cov of Parallelogram  0.463237
+2021-12-19 09:01:09,375 - Model - INFO - eval sem  Cov of Ladder shaped  0.506966
+2021-12-19 09:01:09,375 - Model - INFO - eval sem WCov of Rectangular    0.872037
+2021-12-19 09:01:09,375 - Model - INFO - eval sem WCov of Isosceles trapezoid 0.685188
+2021-12-19 09:01:09,375 - Model - INFO - eval sem WCov of Triangular     0.612108
+2021-12-19 09:01:09,375 - Model - INFO - eval sem WCov of Parallelogram  0.472233
+2021-12-19 09:01:09,375 - Model - INFO - eval sem WCov of Ladder shaped  0.509058
+2021-12-19 09:01:09,375 - Model - INFO - eval  Cov of Roof           0.627014
+2021-12-19 09:01:09,375 - Model - INFO - eval WCov of Roof           0.630125
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Prec of Rectangular    0.888158
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Prec of Isosceles trapezoid 0.702703
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Prec of Triangular     0.666667
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Prec of Parallelogram  0.625000
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Prec of Ladder shaped  0.522388
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Rec of Rectangular    0.944056
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Rec of Isosceles trapezoid 0.764706
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Rec of Triangular     0.684211
+2021-12-19 09:01:09,375 - Model - INFO - eval sem Rec of Parallelogram  0.500000
+2021-12-19 09:01:09,376 - Model - INFO - eval sem Rec of Ladder shaped  0.514706
+2021-12-19 09:01:09,376 - Model - INFO - eval Prec of Roof           0.680983
+2021-12-19 09:01:09,376 - Model - INFO - eval  Rec of Roof           0.681536
+2021-12-19 09:01:09,376 - Model - INFO - Accuracy is: 0.62847
+2021-12-19 09:01:09,376 - Model - INFO - Instance avg accuracy is: 0.43016
+2021-12-19 09:01:09,376 - Model - INFO - Cov is: 0.62701
+2021-12-19 09:01:09,376 - Model - INFO - WCov is: 0.63012
+2021-12-19 09:01:09,376 - Model - INFO - Prec is: 0.68098
+2021-12-19 09:01:09,376 - Model - INFO - Rec is: 0.68154
