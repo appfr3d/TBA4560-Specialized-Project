@@ -297,6 +297,7 @@ def main(args):
                             pred_inst_whole[i, i_swap, i_from] = pred_inst_whole[i, i_swap, i_to]
                     
                     ### Re-weight ###
+                    
                     # Because of log_softmax in end of forward, pred_inst_whole values are between -inf and 0
                     # A premise that I assume: Roof planes of same semantic label should have around the same amount of points...
                     # Exception: rectangle roofs in T-element. The rectangle with the T sticking out has a triangle without points
@@ -313,7 +314,7 @@ def main(args):
                     # l*2 perfomed better than l*num_inst_in_pred
                     for li, l in enumerate(lengths):
                         pred_inst_whole[i, pts_in_pred[ig][li]] = pred_inst_whole[i, pts_in_pred[ig][li]] * scale(l*2 / total_length)
-
+                    
 
             # Translate back to cuda memory
             seg_pred.data = torch.Tensor(pred_inst_whole).float().cuda()
