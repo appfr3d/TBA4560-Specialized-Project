@@ -203,11 +203,11 @@ if __name__ == '__main__':
 
     data_root = 'data/tr3d_roof_segmented_dataset/'
 
-    print('\n\nVisualizing gt...', end='')
-    visualize_gt(data_root)
-    print(' done!')
+    # print('\n\nVisualizing gt...', end='')
+    # visualize_gt(data_root)
+    # print(' done!')
 
-    '''
+    
 
     # Read the data
     with open(os.path.join(data_root, 'train_test_split', 'shuffled_train_file_list.json'), 'r') as f:
@@ -303,7 +303,7 @@ if __name__ == '__main__':
     for i in range(7):
         print('\t', sem_to_label[i], viz_roofs[i])
 
-    '''
+    
 
     '''
     npoints = 1024
